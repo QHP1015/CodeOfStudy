@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+            position: relative;
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: absolute;
+            /* 
+                水平布局
+                    七个值+left+right=包含块的内容区的宽度
+
+                当开启绝对定位，水平方向的布局等式需要添加left和right两个值
+                    规则与之前一样，只是多添加了两个值
+                        当发生过度约束时
+                            若9个值中没有auto，则自动调整right值以使等式成立
+                            如果有auto，则自动调整auto的值以使等式满足
+
+                            可设置auto的值
+                                margin width left right
+
+                            left和right值默认为auto，所以如果不设置left和right，则等式不满足时，会自动调整
+                
+                垂直方向
+                    七个值+top+bottom=包含块得内容区得高度
+                    垂直居中可通过margin-top和margin-bottom为auto实现
+            
+            
+            
+             */
+            left: 0;
+            right: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+
+</body>
+</html>

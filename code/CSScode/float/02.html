@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+
+            /* 
+                浮动元素不会盖住文字，文字会自动环绕在浮动元素的周围，可以利用浮动来设置文字环绕图片的效果
+            
+             */
+            float: left;
+        }
+
+        .box2{
+            background-color: yellowgreen;
+            /* 
+                元素设置浮动后，将会从文档流中脱离，从文档流脱离后，元素的一些特点也会发生变化
+                脱离文档流的特点：
+                    块元素：    
+                        块元素不在独占页面的一行
+                        脱离后，块元素的宽度和高度默认都被内容撑开
+                    行内元素：
+                        行内元素脱离文档流以后会变成块元素，特点和块元素一样
+                    脱离文档流后，不需要在区分块和行内
+             */
+            float: left;
+        }
+
+        .s1{
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- <div class="box1"></div>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod consectetur, sapiente iure magni aut quia? Ducimus quasi repellat amet vero alias excepturi placeat odit laborum praesentium. Dolores velit rerum veniam?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod consectetur, sapiente iure magni aut quia? Ducimus quasi repellat amet vero alias excepturi placeat odit laborum praesentium. Dolores velit rerum veniam?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod consectetur, sapiente iure magni aut quia? Ducimus quasi repellat amet vero alias excepturi placeat odit laborum praesentium. Dolores velit rerum veniam?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod consectetur, sapiente iure magni aut quia? Ducimus quasi repellat amet vero alias excepturi placeat odit laborum praesentium. Dolores velit rerum veniam?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod consectetur, sapiente iure magni aut quia? Ducimus quasi repellat amet vero alias excepturi placeat odit laborum praesentium. Dolores velit rerum veniam?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod consectetur, sapiente iure magni aut quia? Ducimus quasi repellat amet vero alias excepturi placeat odit laborum praesentium. Dolores velit rerum veniam?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod consectetur, sapiente iure magni aut quia? Ducimus quasi repellat amet vero alias excepturi placeat odit laborum praesentium. Dolores velit rerum veniam?
+    </p> -->
+    <span class="s1">我是一个span</span>
+    <div class="box2">hello</div>
+</body>
+</html>

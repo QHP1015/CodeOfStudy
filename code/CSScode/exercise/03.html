@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易右侧新闻列表</title>
+    <link rel="stylesheet" href="./picture/css/reset.css">
+    <style>
+        /* 设置超链接无下划线 */
+        a {
+            text-decoration: none;
+        }
+
+        /* 设置容器样式 */
+        .news {
+            width: 300px;
+            height: 357px;
+            margin: 50px auto;
+            ;
+            background-color: #fff;
+
+            /* 设置上边框 */
+            border-top: 1px solid #ddd;
+        }
+
+        /* 设置news-title */
+        .news-title {
+            /* 为了边框和文字宽度一致，需要将h2转换为行内块元素 */
+            display: inline-block;
+            height: 40px;
+            border-top: 1px solid red;
+            /* 通过margin-top将h2上移，盖住上边框 */
+            margin-top: -1px;
+        }
+
+        /* 设置title中的超链接 */
+        .news-title a {
+            /* 去除下划线 */
+            text-decoration: none;
+            /* 设置颜色 */
+            color: #40406b;
+            /* 设置文字的加粗效果 */
+            font-weight: bold;
+        }
+
+        /* 设置图片容器的高度，避免下面的元素向上 */
+        .news-img {
+            height: 150px;
+        }
+
+        /* 设置图片的文字效果 */
+        .news-img .img-title {
+            /* 向上移动文字 */
+            margin-top: -30px;
+            /* 设置字体颜色 */
+            color: #fff;
+            /* 设置加粗 */
+            font-weight: bold;
+            /* 设置padding */
+            padding-left: 30px;
+        }
+
+        /* 设置新闻列表 */
+        .news-list {
+            /* 设置上外边距 */
+            margin-top: 20px;
+            /* 设置左侧的padding */
+            /* padding-left: 14px; */
+
+        }
+
+        /* 设置li */
+        .news-list li {
+
+            margin-bottom: 17px;
+        }
+
+        /* 设置li中文字 */
+        .news-list li a {
+            /* 设置字体大小 */
+            font-size: 14px;
+            /* 设置字体颜色 */
+            color: #666;
+        }
+
+        /* 通过before伪元素，来为每一个li添加项目符号 */
+        .news-list li::before {
+            display: inline-block;
+            content: '■';
+            color: rgb(218, 218, 218);
+            font-size: 1px;
+            margin-right: 4px;
+            margin-bottom: 1px;
+        }
+
+        /* 设置超链接鼠标移入的效果 */
+        .news-list li a:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建新闻列表的外侧的容器 -->
+    <div class="news">
+        <!-- 创建一个标题标签 -->
+        <h2 class="news-title">
+            <a href="https://sports.163.com/">体育</a>
+        </h2>
+        <!-- 创建一个图片的容器 -->
+        <div class="news-img">
+            <a href="https://sports.163.com/20/1123/07/FS3NU1BF0005877V.html">
+                <img src="./picture/03/349ee823j00qk8kqd001fc0009c0070c.webp" alt="">
+                <!-- 创建图片标题 -->
+                <h3 class="img-title">
+                    杨鸣：我一直想做个儒雅的教练
+                </h3>
+            </a>
+        </div>
+        <ul class="news-list">
+            <li>
+                <a href="https://sports.163.com/20/1123/09/FS3UCLSK0005877U.html">12年前湖人打劫灰熊签大加，小加成了交易添头</a>
+            </li>
+            <li>
+                <a href="https://sports.163.com/20/1123/08/FS3TBI1N00058781.html">鲁尼变了，但还是那个爱着足球的胖子</a>
+            </li>
+            <li>
+                <a href="https://sports.163.com/20/1121/19/FRVT8PFE00058781.html">1567天不胜!英超最倒霉的男人 离榜首只差3分了</a>
+            </li>
+            <li>
+                <a href="https://sports.163.com/20/1121/01/FRTURE9600059A81.html">CBA老熟人</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

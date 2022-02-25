@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片列表</title>
+    <link rel="stylesheet" href="./picture/css/reset.css">
+    <style>
+        
+        /* 设置body的背景颜色 */
+        body{
+            background-color: antiquewhite;
+        }
+        
+        /* 
+            设置外部ul的样式
+        */
+        .img-list{
+            /* 设置ul的宽度 */
+            width: 190px;
+            /* 设置ul的高度 */
+            height: 470px;
+            /* 裁剪溢出的内容 */
+            overflow: hidden;
+
+            /* 使ul在页面中居中（实际示例中不需要 */
+            margin: 50px auto;
+            background-color: #f4f4f4;
+        }
+
+        /* 设置li的位置 */
+        /* 否定选择器 */
+        .img-list li:not(:last-child){
+            margin-bottom: 9px;
+        }
+
+        /* 设置图片大小 */
+        .img-list img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div> -->
+
+
+    <ul class="img-list">
+        <li>
+            <a href="https://channel-m.jd.com/pc/psp/37918528929?imup=ChYKEGpkXzQxNmMwNzZkMjc3YzMSABgAEhIIoav7oI0BENeaKBoAINEIKAEY2iEgAColbWl4dGFnX2ksdWEseGdoLGdpYSxjaWUsZl9iYV9mbF9sNDkzOTIIbWl4dGFnX2lKjwFJfE1JWFRBR19JUixJX0FfRkxfUixJX0FfUkVfTDgxMzgsSV9BX1BMX1IsSV9BX1NMX1IsSV9VX0ZMX0w4MTAyLElfU19GTF9SLElfUl9GTF9SLElfUF9GTF9MQyxJX0dfWEdfUixJX0JfRkxfTEMsR0lBfDtGfE1JWFRBR19GUixGX0JBX0ZMX0w0OTM5fA&extension_id=eyJhZCI6IjQzMTQiLCJjaCI6IjIiLCJza3UiOiIzNzkxODUyODkyOSIsInRzIjoiMTYwNjEyODI2MSIsInVuaXFpZCI6IntcImNsaWNrX2lkXCI6XCIxNjdlMjcyZC01NzRjLTQ5ZWYtOWI0MC01ZTY0NzMwNjBhNTdcIixcIm1hdGVyaWFsX2lkXCI6XCI4MjIzNjg5NzMyMDMwOTY1MDYxXCIsXCJwb3NfaWRcIjpcIjQzMTRcIixcInNpZFwiOlwiYzMxZTkwNDYtOWEyMC00MDE3LWJkOWEtNzI5ZjI4OWI5MDZiXCJ9In0=&jd_pop=167e272d-574c-49ef-9b40-5e6473060a57&abt=0">
+                <img src="./picture/01/730dae254d896192.png.webp" alt="">
+            </a>
+        </li>
+
+        <li>
+            <a href="https://channel-m.jd.com/pc/psp/49602117886?imup=ChYKEGpkXzQxNmMwNzZkMjc3YzMSABgAEhQI_oGR5LgBEKm65AQaACDSpwEoARjaISAAKiVtaXh0YWdfaSx1YSx4Z2gsZ2lhLGNpZSxmX2JhX2ZsX2w0OTM5MghtaXh0YWdfaTopCgdjYW4xMTA4EJPrSRgCIK3-sLfsnOHofyjn6clJMObpyUk4E0CAgCBKjwFJfE1JWFRBR19JUixJX0FfRkxfUixJX0FfUkVfTDgxMzgsSV9BX1BMX1IsSV9BX1NMX1IsSV9VX0ZMX0w4MTAyLElfU19GTF9SLElfUl9GTF9SLElfUF9GTF9MQyxJX0dfWEdfUixJX0JfRkxfTEMsR0lBfDtGfE1JWFRBR19GUixGX0JBX0ZMX0w0OTM5fA&extension_id=eyJhZCI6IiIsImNoIjoiIiwic2hvcCI6IiIsInNrdSI6IiIsInRzIjoiIiwidW5pcWlkIjoie1wiY2xpY2tfaWRcIjpcImYzZjljYWZhLTQ0YTctNDkxZS04ZGFkLTc0NzUwZWYxZDZiMFwiLFwibWF0ZXJpYWxfaWRcIjpcIjkyMTAyODg4Mzk2NjQwOTA5MjVcIixcInBvc19pZFwiOlwiNDMxNFwiLFwic2lkXCI6XCJjMzFlOTA0Ni05YTIwLTQwMTctYmQ5YS03MjlmMjg5YjkwNmJcIn0ifQ==&jd_pop=f3f9cafa-44a7-491e-8dad-74750ef1d6b0&abt=0">
+                <img src="./picture/01/1249eb4dfc2cda03.png.webp" alt="">
+            </a>
+        </li>
+
+        <li>
+            <a href="https://pro.jd.com/mall/active/HkuJmKguhv6jGeEXdrKPR4ygyje/index.html">
+                <img src="./picture/01/0d228ffdb8f8c808.jpg.webp" alt="">
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

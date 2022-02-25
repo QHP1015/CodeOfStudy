@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3school导航条</title>
+    <link rel="stylesheet" href="./picture/css/reset.css">
+    <style>
+        /* 设置nav的大小 */
+        .nav{
+            width: 1210px;
+            height: 48px;
+            background-color: #e8e7e3;
+
+            margin: 100px auto;
+        }
+
+        /* 设置nav中li */
+        .nav li{
+            /* 设置li向左浮动，使菜单横向排列 */
+            float: left;
+            /* 设置li的高度 */
+            height: 48px;
+            /* 将文字在父元素中垂直居中 */
+            line-height: 48px;
+        }
+
+        /* 设置a的样式 */
+        .nav a{
+            /* 将a转换为块元素 */
+            display: block;
+            /* 去除下划线 */
+            text-decoration: none;
+
+            color: #777777;
+            font-size: 18px;
+            padding: 0px 39px;
+        }
+
+        .nav li:last-child a{
+            padding: 0px 42px 0px 41px ;
+        }
+
+        /* 设置鼠标移入的效果 */
+        .nav a:hover{
+            background-color: #3f3f3f;
+            color:#e8e7e3;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 创建导航条的结构 -->
+    <ul class="nav">
+        <li>
+            <a href="">HTML/CSS</a>
+        </li>
+        <li>
+            <a href="">Browser Side</a>
+        </li>
+        <li>
+            <a href="">Server Side</a>
+        </li>
+        <li>
+            <a href="">Programming</a>
+        </li>
+        <li>
+            <a href="">XML</a>
+        </li>
+        <li>
+            <a href="">Web Building</a>
+        </li>
+        <li>
+            <a href="">Reference</a>
+        </li>
+    </ul>
+
+</body>
+</html>

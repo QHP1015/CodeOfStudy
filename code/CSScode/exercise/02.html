@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东左侧导航条</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /* 设置body */
+        body {
+            /* 设置背景颜色，为了方便查看 */
+            background-color: #bfa;
+        }
+
+        /* 设置菜单外部容器 */
+        .left-nav {
+            width: 190px;
+            height: 450px;
+            padding: 10px 0;
+            background-color: #fff;
+            margin: 50px auto;
+        }
+
+        /* 设置菜单内部的item */
+        .left-nav .item {
+            height: 25px;
+            /* 要让一个文字在父元素中垂直居中，只需要将父元素的line-height设置为一个和父元素height相同 */
+            line-height: 25px;
+            /* 设置item的右内边距，将文字向内移动 */
+            padding-left: 18px;
+            font-size: 12px;
+        }
+
+        /* 为item设置一个鼠标移入的效果 */
+        .item:hover {
+            background-color: #d9d9d9;
+        }
+
+        /* 设置超链接的样式 */
+        .item a {
+            /* 设置字体的大小 */
+            font-size: 14px;
+            /* 设置字体的颜色 */
+            color: #333;
+            /* 去除下划线 */
+            text-decoration: none;
+        }
+
+        .span{
+            font-size: 12px;
+            padding: 0px 2px;
+            color: #636363;
+        }
+
+        .item a:hover{
+            color: #c81623;
+        }
+    </style>
+
+<body>
+
+    <!-- 创建一个外部容器   nav(div)  div(div)  ul(li) -->
+    <nav class="left-nav">
+        <div class="item">
+            <a href="//jiadian.jd.com">家用电器</a>
+        </div>
+
+        <div class="item">
+            <a href="https://shouji.jd.com/">手机</a>
+            <span>/</span>
+            <a href="https://wt.jd.com/">运营商</a>
+            <span>/</span>
+            <a href="//shuma.jd.com/">数码</a>
+        </div>
+        <div class="item">
+            <a href="//diannao.jd.com/">电脑</a>
+            <span>/</span>
+            <a href="//bg.jd.com">办公</a>
+
+        </div>
+        <div class="item">
+            <a href="//channel.jd.com/home.html">家居</a> 
+            <span>/</span>
+            <a href="//channel.jd.com/furniture.html">家具</a>
+            <span>/</span>
+            <a href="//jzjc.jd.com/">家装</a>
+            <span>/</span>
+            <a href="//channel.jd.com/kitchenware.html">厨具</a>
+
+        </div>
+        <div class="item">
+            <a href="//channel.jd.com/1315-1342.html">男装</a>
+            <span>/</span>
+            <a href="//channel.jd.com/1315-1343.html">女装</a>
+            <span>/</span>
+            <a href="//phat.jd.com/10-156.html">童装</a>
+              <span>/</span>
+            <a href="//channel.jd.com/1315-1345.html">内衣</a>
+        </div>
+        <div class="item">
+            <a href="//beauty.jd.com/">美妆</a>
+            <span>/</span>
+            <a href="//channel.jd.com/beauty.html">个护清洁</a>
+            <span>/</span>
+            <a href="//channel.jd.com/pet.html">宠物</a>
+        </div>
+        <div class="item">
+            <a href="//phat.jd.com/10-184.html">女鞋</a>
+            <span>/</span>
+            <a href="//phat.jd.com/10-183.html">箱包</a>
+            <span>/</span>
+            <a href="//channel.jd.com/watch.html">钟表</a>
+            <span>/</span>
+            <a href="//channel.jd.com/jewellery.html">珠宝</a>
+        </div>
+        <div class="item">
+            <a href="//phat.jd.com/10-185.html">男鞋</a>
+            <span>/</span>
+            <a href="//phat.jd.com/10-109.html">运动</a>
+            <span>/</span>
+            <a href="//phat.jd.com/10-272.html">户外</a>
+        </div>
+        <div class="item">
+            <a href="//xinfang.jd.com/">房产</a>
+            <span>/</span>
+            <a href="//car.jd.com/">汽车</a>
+            <span>/</span>
+            <a href="//che.jd.com/">汽车用品</a>
+        </div>
+        <div class="item">
+            <a href="//baby.jd.com">母婴</a>
+            <span>/</span>
+            <a href="//toy.jd.com/">玩具乐器</a>
+        </div>
+        <div class="item">
+            <a href="//food.jd.com/">食品</a>
+            <span>/</span>
+            <a href="//jiu.jd.com">酒类</a>
+            <span>/</span>
+            <a href="//fresh.jd.com">生鲜</a>
+            <span>/</span>
+            <a href="//china.jd.com">特产</a>
+        </div>
+        <div class="item">
+            <a href="//art.jd.com">艺术</a>
+            <span>/</span>
+            <a href="//channel.jd.com/1672-2599.html">礼品鲜花</a>
+            <span>/</span>
+            <a href="//nong.jd.com">农资绿植</a>
+        </div>
+        <div class="item">
+            <a href="//health.jd.com">医药保健</a>
+            <span>/</span>
+            <a href="//channel.jd.com/9192-9196.html">计生情趣</a>
+        </div>
+        <div class="item">
+            <a href="//book.jd.com/">图书</a>
+            <span>/</span>
+            <a href="//mvd.jd.com/">文娱</a>
+            <span>/</span>
+            <a href="//education.jd.com">教育</a>
+            <span>/</span>
+            <a href="//e.jd.com/ebook.html">电子书</a>
+        </div>
+        <div class="item">
+            <a href="//jipiao.jd.com/">机票</a>
+            <span>/</span>
+            <a href="//trip.jd.com/">酒店</a>
+            <span>/</span>
+            <a href="//trip.jd.com/">旅游</a>
+            <span>/</span>
+            <a href="//ish.jd.com/">生活</a>
+        </div>
+        <div class="item">
+            <a href="//licai.jd.com/">理财</a>
+            <span>/</span>
+            <a href="//z.jd.com/">众筹</a>
+            <span>/</span>
+            <a href="//baitiao.jd.com">白条</a>
+            <span>/</span>
+            <a href="//bao.jd.com/">保险</a>
+        </div>
+        <div class="item">
+            <a href="//anzhuang.jd.com">安装</a>
+            <span>/</span>
+            <a href="//jdwx.jd.com">维修</a>
+            <span>/</span>
+            <a href="//cleanclean.jd.com">清洗</a>
+            <span>/</span>
+            <a href="//2.jd.com/">二手</a>
+        </div>
+        <div class="item">
+            <a href="#">工业品</a>
+
+        </div>
+        </div>
+    </nav>
+
+</body>
+
+</html>

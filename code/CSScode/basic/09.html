@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            font-size: 20px;
+        }
+
+        /* 
+        伪元素，表示页面中一些特殊的并不真实的存在的元素（特殊的位置）
+            伪元素使用：：开头
+                ：：first-letter 表示第一个字母
+                ；；first-line  表示第一行
+                ；；selection  表示选中的内容
+                ；；before  元素的开始 
+                ；；after   元素的结尾
+                    before和after必须结合content属性来使用
+                    before和after的内容是无法选中的
+                    可以通过CSS给页面中添加内容
+                    */
+        p::first-letter{
+            font-size: 50px;
+        }
+        p::first-line{
+            background-color: yellow;
+        }
+        p::selection{
+            background-color:yellowgreen;
+        }
+
+        div::before{
+            content:'abc';
+            color: red;
+        }
+        div::after{
+            content:"HAHA";
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>Hello Hello How are you</div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero ullam voluptas iure aut vitae cupiditate, deleniti inventore ex autem est? Dolorum, rem reprehenderit. Impedit, corrupti tenetur modi odit cupiditate ratione.</p>
+</body>
+</html>

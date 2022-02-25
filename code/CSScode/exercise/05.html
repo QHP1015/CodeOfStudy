@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东轮播图</title>
+    <link rel="stylesheet" href="./picture/css/reset.css">
+    <style>
+        /* 设置图片的容器 */
+        .img-list{
+            width: 590px;
+            height: 470px;
+            margin: 100px auto;
+            position: relative;
+        }
+        /* 设置li */
+        .img-list li{
+            position: absolute;
+        }
+        .img-list img{
+            width: 590px;
+            height: 470px;
+            margin: 100px auto;
+            /* 为ul开启相对定位，目的是使导航点可以相对于 */
+        }
+        /* 通过修改元素的层级来显示指定的图片 */
+        .img-list li:nth-child(3){
+            z-index: 1;
+        }
+
+        .pointer{
+            position: absolute;
+            z-index: 9999;
+            bottom: -70px;
+            left: 40px;
+            
+        }
+        /* 设置导航点的样式 */
+        .pointer a{
+            /* 设置元素向左浮动 */
+            float: left;
+            width: 10px;
+            height: 10px;
+            margin: 0px 3px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, .3);
+            /* 将背景颜色只设置到内容区，边框和内边距不在有背景色 */
+            background-clip: content-box;
+            border: 2px solid transparent;
+
+        }
+        .pointer a.active,
+        .pointer a:hover{
+            background-color: #fff;
+            border: 2px solid rgba(255, 255, 255, .3);
+        }
+    </style>
+</head>
+<body>
+    <ul class="img-list">
+        <li><a href="javascript:;"><img src="./picture/05/1.webp"></a></li>
+        <li><a href="javascript:;"><img src="./picture/05/2.webp"></a></li>
+        <li><a href="javascript:;"><img src="./picture/05/3.webp"></a></li>
+        <li><a href="javascript:;"><img src="./picture/05/4.webp"></a></li>
+        <li><a href="javascript:;"><img src="./picture/05/5.webp"></a></li>
+        <li><a href="javascript:;"><img src="./picture/05/6.webp"></a></li>
+        <li><a href="javascript:;"><img src="./picture/05/7.jpg"></a></li>
+        <li><a href="javascript:;"><img src="./picture/05/8.jpg"></a></li>
+
+        <div class="pointer">
+            <a class="active" href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+          
+        </div>
+    </ul>
+</body>
+</html>
