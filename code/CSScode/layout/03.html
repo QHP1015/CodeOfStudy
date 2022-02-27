@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-        .box1{
+        .box1 {
             width: 200px;
             height: 200px;
             background-color: #bfa;
@@ -40,7 +40,7 @@
 
                 默认值为none
              */
-            border-style:solid dotted dashed double;
+            border-style: solid dotted dashed double;
 
 
             /* 
@@ -53,13 +53,19 @@
                     border-bottom
                     border-left
              */
-
             border: double orange 10px;
+
+
+            /* 合并相邻的边框 */
+            border-collapse: collapse;
+
         }
     </style>
 </head>
+
 <body>
-    
+
     <div class="box1"></div>
 </body>
+
 </html>

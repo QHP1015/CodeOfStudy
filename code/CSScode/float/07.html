@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .box1{
+        .box1 {
             border: 10px red solid;
 
             /* overflow: hidden; */
         }
 
-        .box2{
+        .box2 {
             width: 100px;
             height: 100px;
             background-color: #bfa;
             float: left;
         }
 
-        .box3{
+        .box3 {
             clear: both;
         }
+
         /* 利用after伪元素来解决高度塌陷问题,基本上是最好的解决方法 */
-        .box1::after{
+        .box1::after {
             content: '';
             display: block;
             clear: both;
         }
+
+        /*声明清除浮动的样式*/
+        /* 需要使用时直接复制，添加类名 clearfix 即可 */
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+            /*ie6,7 专门清除浮动的样式*/
+        }
     </style>
 </head>
+
 <body>
-    
-    <div class="box1">
+
+    <div class="box1 clearfix">
         <div class="box2"></div>
         <!-- <div class="box3">
             
@@ -40,4 +58,5 @@
 
 
 </body>
+
 </html>

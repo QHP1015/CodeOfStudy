@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    width: 1200px;
+    margin: auto;
+}
+
+.header {
+    height: 42px;
+    background-color: pink;
+    /* 此处会层叠 w 里面的margin */
+    margin: 30px auto;
+}

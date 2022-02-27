@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
     <style>
-
         /* 
             ：link 用来表示没访问过的链接（正常的链接）
             ：visited 用来表示访问过的链接
                 由于隐私的原因，所以visited这个伪类只能修改链接的颜色
             这两个只能用于a标签
            
-                ：hover  用来表示鼠标移入的状态
+            ：hover  用来表示鼠标移入的状态
             ：active  用来表示鼠标点击的状态
                 */
-        a:link{
+        a:link {
             color: red;
         }
-        a:visited{
+
+        a:visited {
             color: orange;
             /* font-size: 50px; */
         }
-        a:hover{
+
+        a:hover {
             color: aquamarine;
             font-size: 50px;
         }
 
-        a:active{
+        a:active {
             color: yellow;
         }
-
-
     </style>
 </head>
+
 <body>
-    
+
     <!-- 
         1.没有访问过的链接
         2.访问过的链接
@@ -46,4 +47,5 @@
     <br>
     <a href="http://www.baidu123.com">没访问过的链接</a>
 </body>
+
 </html>

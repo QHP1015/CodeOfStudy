@@ -30,6 +30,19 @@
             display: table;
             clear: both;
         }
+
+        /*声明清除浮动的样式*/
+		.clearfix:before,
+		.clearfix:after {
+			content: "";
+			display: table;
+		}
+		.clearfix:after {
+			clear: both;
+		}
+		.clearfix {
+			*zoom: 1;
+		}
     </style>
 </head>
 <body>
