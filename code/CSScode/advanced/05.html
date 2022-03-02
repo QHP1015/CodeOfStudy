@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片底部空白缝隙解决</title>
+    <style>
+        div {
+            border: 2px solid red;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 图片底侧一个空白缝隙是因为行内块元素会和文字地基线对齐 -->
+    <!-- 解决方法有两种：
+        1.给图片添加vertical-align属性
+        2.将图片转换为块级元素 -->
+    <div><img src="images/2.jpg" alt="">
+    </div>
+</body>
+
+</html>

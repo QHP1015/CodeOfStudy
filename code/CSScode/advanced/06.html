@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多余文字用省略号显示</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 80px;
+            background-color: skyblue;
+            margin: 100px auto;
+            /* 单行文字显示省略号 */
+            /*1.先强制一行内显示文本   (默认normal自动换行)*/
+            white-space: nowrap;
+            /*2.超出的部分隐藏*/
+            overflow: hidden;
+            /*3.文字用省略号替代超出的部分*/
+            text-overflow: ellipsis;
+        }
+
+        .box2 {
+            width: 150px;
+            background-color: skyblue;
+            margin: 100px auto;
+            /* 多行文字显示省略号 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 弹性伸缩盒子模型显示*/
+            display: -webkit-box;
+            /* 限制在一个块元素显示的文本的行数*/
+            -webkit-line-clamp: 2;
+            /* 设置或检索伸缩盒对象的子元素的排列方式*/
+            -webkit-box-orient: vertical;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        你问我爱你多深，我爱你有几分，轻轻的一个吻
+    </div>
+    <div class="box2"> 你问我爱你多深，我爱你有几分，轻轻的一个吻</div>
+</body>
+
+</html>
