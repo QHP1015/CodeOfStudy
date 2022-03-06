@@ -6,23 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        :root {
+            --myColor: green;
+        }
         div{
             width: 200px;
             height: 200px;
-            background-color: red;
-            overflow: hidden;
+            background-color: var(--myColor);
         }
-        p{
-            width: 100px;
-            height: 100px;
-            background-color: blue;
+        div:nth-child(1){
+            display: inline-block;
+            margin-bottom: 100px;
+        }
+        div:nth-child(2){
             margin-top: 100px;
+        }
+        span{
+            /* border: 1px solid blue; */
+            border-radius: 10%;
+            background-color: var(--myColor);
+        }
+        span::selection{
+            background-color: rgb(224, 43, 19);
+            
         }
     </style>
 </head>
 <body>
-    <div>
-        <p></p>
-    </div>
+    <div></div>
+    <div></div>
+<hr>
+    <span>gsdugadfjkghdfgdfjkdfhkghdfjkghjkdhgfdjkghdfjg</span>
+<hr>
+    <div></div>
+    <input type="text" list="list">
+    <datalist id="list">
+        <option>陕西</option>
+        <option>山西</option>
+    </datalist>
+
+
 </body>
 </html>
