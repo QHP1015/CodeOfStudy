@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 80px;
+    background-color: #07cbc9;
+    overflow: hidden;
+}
+
+header .logo-and-nav {
+    width: 1200px;
+    height: 48px;
+    margin: 0 auto;
+}
+
+header .logo-and-nav .logo {
+    float: left;
+    height: 48px;
+    padding-top: 16px;
+}
+
+
+header .logo-and-nav .main-nav ul {
+    height: 48px;
+    padding-top: 16px;
+}
+
+header .logo-and-nav .main-nav ul li {
+    float: right;
+    text-align: center;
+    line-height: 48px;
+}
+
+header .logo-and-nav .main-nav ul li a {
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+/* banner区域 */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.banner .banner-img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+.banner .formdata {
+    position: absolute;
+    top: 100px;
+    width: 504px;
+    left: 50%;
+    /* margin-left: -252px; */
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.banner .formdata .formitem {
+    border: 1px solid #808080;
+}
+
+/* .banner .formdata .formitem::-webkit-input-placeholder {
+    color: #808080;
+    line-height: 40;
+    text-align: center;
+} */
+
+
+.banner .formdata .formitem::-webkit-input-placeholder {
+    color: #808080;
+}
+
+.banner .formdata input {
+    width: 502px;
+    height: 40px;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.banner .formdata textarea {
+    width: 502px;
+    height: 110px;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.banner .formdata .submit {
+    width: 200px;
+    color: #808080;
+}

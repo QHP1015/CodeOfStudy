@@ -6,42 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Builder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- header区域 -->
     <header>
-        <!-- logo -->
-        <div class="logo">
-            <img src="images/logo.png" alt="">
+        <div class="logo-and-nav">
+            <!-- logo -->
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <!-- 导航区域 -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a href="">EVENTS</a></li>
+                    <li><a href="">FACULTY</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">HOME</a></li>
+                </ul>
+            </nav>
         </div>
-        <!-- 导航区域 -->
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">GALLERY</a></li>
-                <li><a href="">FACULTY</a></li>
-                <li><a href="">EVENTS</a></li>
-                <li><a href="">CONTACT</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- banner区域 -->
     <section class="banner">
         <!-- banner图片 -->
-        <div><img src="images/banner3.jpg" alt=""></div>
+        <img class="banner-img" src="images/banner3.jpg" alt="">
         <!-- banner遮罩层 -->
-        <div>banner遮罩层</div>
+        <div class="mask"></div>
         <!-- banner表单 -->
-        <div>
+        <div class="formdata">
             <form action="">
-                <input type="text" placeholder="your Name">
-                <input type="text" placeholder="your Phone">
-                <input type="email" placeholder="your Email">
-                <textarea name=""  id="" cols="30" rows="10" placeholder="Write Your Comment Here"></textarea>
-                <input type="submit" value="SEND MESSAGE">
+                <input class="formitem" type="text" placeholder="your Name">
+                <input class="formitem" type="text" placeholder="your Phone">
+                <input class="formitem" type="email" placeholder="your Email">
+                <textarea class="formitem" name="" id="" cols="30" rows="10" placeholder="Write Your Comment Here"></textarea>
+                <input class="submit formitem" type="submit" value="SEND MESSAGE">
             </form>
         </div>
     </section>

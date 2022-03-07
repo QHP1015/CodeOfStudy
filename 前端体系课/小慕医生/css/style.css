@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 去掉所有ul，ol的小圆点 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 去掉所有超级链接的下划线 */
+a {
+    text-decoration: none;
+}
+
+/* 使用继承性，给body标签设置字体 */
+body {
+    font: normal 14px/25px '微软雅黑';
+}
+
+header {}
+
+header .header-top {
+    width: 1201px;
+    margin: 0 auto;
+    /* 清楚浮动 */
+    overflow: hidden;
+}
+
+header .header-top .logo {
+    float: left;
+    padding-top: 27px;
+    width: 221px;
+    height: 63px;
+    color: #015e58;
+    font-size: 20px;
+}
+
+header .header-top .logo h1 {
+    width: 221px;
+    height: 63px;
+}
+
+header .header-top .tool {
+    float: right;
+    width: 266px;
+    height: 77px;
+    padding-top: 22px;
+}
+
+header .header-top .tool .r1 {
+    margin-bottom: 14px;
+}
+
+header .header-top .tool .r1 .tel {
+    width: 30px;
+    height: 25px;
+}
+
+header .header-top .tool .r1 .telnumber {
+    font-size: 20px;
+    color: #00978e;
+    display: inline-block;
+    width: 158px;
+    height: 26px;
+    text-align: center;
+}
+
+header .header-top .tool .r1 .icon {
+    width: 24px;
+    height: 24px;
+}
+
+header .header-top .tool .r1 .chinese_icon {
+    margin-right: 15px;
+}
+
+header .header-top .tool .r2 {
+    width: 264px;
+    height: 28px;
+    border: 1px solid rgba(202, 202, 202, .6);
+}
+
+header .header-top .tool .r2 input {
+    float: left;
+    width: 224px;
+    height: 28px;
+    /* 去掉边框线 */
+    border: none;
+    padding-left: 20px;
+    /* 去掉鼠标点击时的蓝色康 */
+    outline: none;
+}
+
+header .header-top .tool .r2 button {
+    float: left;
+    width: 20px;
+    height: 20px;
+    /* 去掉背景 */
+    background: none;
+    /* 去掉边框 */
+    border: none;
+    /* 去掉鼠标点击时的蓝色框 */
+    outline: none;
+    /* 设置触碰时的鼠标样式 */
+    cursor: pointer;
+    /* 相对定位微调 */
+    position: relative;
+    top: 4px;
+    right: 4px;
+}
+
+header .main-nav {
+    /* 不写宽度，自动撑开 */
+    height: 60px;
+    background-color: #00978e;
+    margin-top: 20px;
+}
+
+header .main-nav ul {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+header .main-nav ul li {
+    float: left;
+    width: 150px;
+    text-align: center;
+    line-height: 60px;
+}
+
+header .main-nav ul li.cur {
+    background-color: #015e58;
+}
+
+header .main-nav ul li a {
+    /* 转为块级元素 */
+    display: block;
+    width: 150px;
+    height: 60px;
+    font-family: Helvetica;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+header .main-nav ul li a:hover {
+    background-color: orange;
+}
+
+/* banner区域 */
+.banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner .banner-img {
+    width: 100%;
+}
+
+.banner .center {
+    position: absolute;
+    width: 1200px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -600px;
+}
+
+.banner .center .left-btn {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    margin-top: -37px;
+    width: 56px;
+    height: 74px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.banner .center .right-btn {
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    margin-top: -37px;
+    width: 56px;
+    height: 74px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.banner .center h2 {
+    position: absolute;
+    width: 504px;
+    height: 79px;
+    font-weight: normal;
+    font-family: Helvetica;
+    font-size: 60px;
+    color: #015E58;
+    top: 50%;
+    margin-top: -50px;
+    left: 114px;
+}
+
+.banner ol {
+    position: absolute;
+    width: 120px;
+    height: 12px;
+    bottom: 20px;
+    left: 50%;
+    /* 水平居中，拉回负的width的一半 */
+    margin-left: -60px;
+}
+
+.banner ol li {
+    float: left;
+    width: 20px;
+    height: 12px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+/* 最后一个没有margin */
+.banner ol li:last-child {
+    margin-right: 0;
+}
+
+.banner ol li.cur {
+    width: 30px;
+    background-color: #00978e;
+}
