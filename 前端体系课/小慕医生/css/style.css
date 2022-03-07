@@ -129,6 +129,7 @@ header .main-nav ul li {
     width: 150px;
     text-align: center;
     line-height: 60px;
+    transition: all .3s linear;
 }
 
 header .main-nav ul li.cur {
@@ -145,7 +146,7 @@ header .main-nav ul li a {
     color: #FFFFFF;
 }
 
-header .main-nav ul li a:hover {
+header .main-nav ul li:hover {
     background-color: orange;
 }
 
