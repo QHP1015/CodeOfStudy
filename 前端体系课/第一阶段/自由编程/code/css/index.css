@@ -1,0 +1,235 @@
+/* 清除默认的样式 */
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+/* 公共样式 */
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.title {
+  text-align: center;
+  font-size: 32px;
+}
+.sub-title {
+  text-align: center;
+  color: gray;
+  font-size: 14px;
+}
+.line {
+  width: 60px;
+  height: 3px;
+  background: #07cbc9;
+  margin: 10px auto;
+}
+.btn {
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 30px;
+  text-align: center;
+  color: #fff;
+  background: black;
+}
+
+/* 顶部样式 */
+.header {
+  background: #07cbc9;
+  overflow: hidden;
+}
+.header .logo {
+  float: left;
+}
+.header .logo img {
+  height: 48px;
+  margin-top: 16px;
+}
+.header .nav {
+  float: right;
+}
+.header .nav li {
+  float: left;
+  padding-left: 20px;
+  height: 80px;
+  line-height: 80px;
+  color: #fff;
+}
+/* banner区域 */
+.banner {
+  position: relative;
+  height: 600px;
+}
+.banner img {
+  display: block;
+  width: 100%;
+  height: 600px;
+}
+.banner .layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.banner .form {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  width: 504px;
+  margin-left: -252px;
+  text-align: center;
+}
+.banner .form .text {
+  width: 500px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: 2px solid gray;
+  background: none;
+}
+.banner .form textarea.text {
+  height: 110px;
+}
+.banner .form input.button {
+  width: 200px;
+  color: gray;
+}
+
+/* abour区域 */
+.about {
+  margin: 20px 0;
+}
+.about-bottom {
+  position: relative;
+  margin-top: 30px;
+  overflow: hidden;
+}
+.about-bottom .left {
+  float: left;
+}
+.about-bottom .left h4 {
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.about-bottom .left .content {
+  position: absolute;
+  width: 300px;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid gray;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.about-bottom img {
+  float: left;
+  width: 650px;
+  margin-left: 120px;
+}
+.about-bottom .right {
+  float: right;
+}
+.about-bottom .right .item {
+  width: 260px;
+  padding: 40px 0;
+  text-align: center;
+  border: 1px solid #07cbc9;
+}
+.about-bottom .right .item p {
+  font-size: 28px;
+  font-weight: bold;
+}
+.about-bottom .right .item:first-child {
+  margin-bottom: 30px;
+}
+/* 图文混排区域 */
+.pic-word {
+  overflow: hidden;
+}
+.pic-word .item {
+  float: left;
+  width: 25%;
+  height: 380px;
+}
+.pic-word .content {
+  position: relative;
+  line-height: 1.5;
+  color: #fff;
+  background: #07cbc9;
+}
+.pic-word .item img {
+  display: block;
+  height: 380px;
+  width: 100%;
+}
+.pic-word .content h3 {
+  font-size: 24px;
+  padding: 20px;
+}
+.pic-word .content p {
+  padding: 10px 20px;
+}
+.pic-word .content p.param {
+  font-size: 14px;
+  color: gray;
+}
+.pic-word .content .btn {
+  display: block;
+  margin: 20px auto;
+}
+/* 三角形 */
+.pic-word .content::before {
+  content: "";
+  display: block;
+  width:0;
+  height: 0;
+  border: 20px solid transparent;
+  position:absolute;
+  top:50%;
+  margin-top: -20px;
+}
+.pic-word .arrow-left::before {
+  border-right-color: #07cbc9;
+  left: -40px;
+}
+.pic-word .arrow-right::before {
+  border-left-color: #07cbc9;
+  right: -40px;
+}
+/* gallery区域 */
+.gallery {
+  margin: 30px 0;
+}
+.gallery-content {
+  width: 1200px;
+  margin: 20px auto;
+}
+.gallery-content dl {
+  float: left;
+  width: 360px;
+  margin: 15px 20px;
+}
+
+.gallery-content dt img {
+  display: block;
+}
+.gallery-content dd {
+  height: 50px;
+  line-height: 50px;
+  text-indent: 20px;
+  background: black;
+  color: #fff;
+}
+/* 页脚 */
+.footer {
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background: #07cbc9;
+}

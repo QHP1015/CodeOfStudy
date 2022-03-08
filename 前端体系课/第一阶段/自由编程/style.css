@@ -113,3 +113,239 @@ header .logo-and-nav .main-nav ul li a {
     width: 200px;
     color: #808080;
 }
+
+/* about区域 */
+section .about {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+section .about .split-line {
+    width: 60px;
+    height: 3px;
+    background-color: #07cbc9;
+    margin: 10px auto;
+}
+
+section .about .about-top {
+    width: 430px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section .about .about-top h2 {
+    font-size: 32px;
+    margin-top: 30px;
+}
+
+section .about .about-top p {
+    color: grey;
+    font-size: 14px;
+}
+
+section .about .about-bottom {
+    position: relative;
+    width: 1200px;
+    height: 464px;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+section .about .about-bottom h2 {
+    float: left;
+    width: 200px;
+    font-size: 32px;
+}
+
+section .about .about-bottom .image {
+    float: left;
+    width: 650px;
+    height: 435px;
+    margin-left: 75px;
+}
+
+section .about .about-bottom .right-aside {
+    float: right;
+
+}
+
+section .about .about-bottom .right-aside .box {
+    width: 260px;
+    height: 100px;
+    padding: 40px 0;
+    text-align: center;
+    border: 1px solid #07cbc9;
+}
+
+section .about .about-bottom .right-aside .seven {
+    margin-bottom: 30px;
+}
+
+section .about .about-bottom .right-aside .title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+section .about .about-bottom .right-aside .message {
+    font-size: 20px;
+}
+
+section .about .about-bottom .indru {
+    position: absolute;
+    left: 0;
+    top: 133px;
+    width: 300px;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid gray;
+    background: rgba(255, 255, 255, .5);
+}
+
+section .about .about-bottom .indru .btn {
+    width: 140px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 25px;
+}
+
+/* 图文混排区域 */
+.image-text {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-text div {
+    flex: 25%;
+}
+
+.image-text div {
+    height: 380px;
+}
+
+.image-text div img {
+    width: 100%;
+    height: 100%;
+}
+
+div[class^="text"] {
+    position: relative;
+    background-color: #07cbc9;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+div[class^="text"] h3 {
+    font-size: 24px;
+}
+
+div[class^="text"] p:nth-of-type(1) {
+    margin-top: 30px;
+    font-style: 14px;
+}
+
+div[class^="text"] p:nth-of-type(2) {
+    margin-top: 20px;
+    color: gray;
+    font-size: 14px;
+}
+
+div[class^="text"] .btn {
+    width: 138px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin: 30px auto 0;
+}
+
+div[class^="text"] .right-triangle {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    margin-top: -10px;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-left-color: #07cbc9;
+}
+
+div[class^="text"] .left-triangle {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    margin-top: -10px;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-right-color: #07cbc9;
+}
+
+/* gallery区域 */
+section .gallery {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+section .gallery .split-line {
+    width: 60px;
+    height: 3px;
+    background-color: #07cbc9;
+    margin: 10px auto;
+}
+
+section .gallery .gallery-top {
+    width: 430px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section .gallery .gallery-top h2 {
+    font-size: 32px;
+    margin-top: 30px;
+}
+
+section .gallery .gallery-top p {
+    color: grey;
+    font-size: 14px;
+}
+
+section .gallery .gallery-bottom {
+    width: 1200px;
+    height: 653px;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+section .gallery .gallery-bottom dl {
+    float: left;
+    width: 360px;
+    height: 290px;
+    margin: 15px 20px;
+}
+
+section .gallery .gallery-bottom dl dt img {
+    /* img是行内元素，存在默认间隙，转化成块级元素消除间隙 */
+    display: block;
+}
+
+section .gallery .gallery-bottom dl dd {
+    width: 340px;
+    height: 50px;
+    background-color: #000;
+    color: white;
+    line-height: 50px;
+    padding-left: 20px;
+}
+
+/* 页脚 */
+footer {
+    height: 80px;
+    background-color: #07cbc9;
+    text-align: center;
+    line-height: 80px;
+}

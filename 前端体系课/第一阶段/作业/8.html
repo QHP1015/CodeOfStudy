@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <style>
+        .nav {
+            width: 700px;
+            height: 200px;
+            margin: 0 auto;
+            overflow: hidden;
+            line-height: 200px;
+        }
+
+        .nav .image {
+            float: left;
+        }
+
+        .nav .cart {
+            float: right;
+            position: relative;
+        }
+
+        .nav .cart .number {
+            position: absolute;
+            right: 4px;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="image"><img src="imgs/btn.png" alt=""></div>
+        <div class="cart"><img src="imgs/cart.png" alt="">
+            <div class="number">3</div>
+        </div>
+    </div>
+</body>
+
+</html>
