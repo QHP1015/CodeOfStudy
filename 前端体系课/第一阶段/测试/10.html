@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过度效果实战4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section{
+            width: 200px;
+            height: 200px;
+            margin: 150px auto;
+            perspective: 10000px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            perspective: 10000px;
+            position: relative;
+            /* 设置变形类型，保证其内部的3D效果
+               为什么设置这个属性？
+                    因为这个盒子即是舞台也是演员，整个box带着里面的p旋转 */
+            transform-style: preserve-3d;
+            transition: all 10s ease 0s;
+        }
+
+        section:hover .box{
+            transform:rotateX(360deg) rotateY(360deg);
+        }
+        .box p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+        }
+
+        .box p:nth-child(1) {
+            background-color: rgba(108, 250, 255, 0.45);
+            /* 前面 */
+            transform: translateZ(100px);
+        }
+
+        .box p:nth-child(2) {
+            background-color: rgba(95, 201, 148, 0.45);
+            /* 顶面 */
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .box p:nth-child(3) {
+            background-color: rgba(114, 63, 209, 0.45);
+            /* 背面 */
+            transform: rotateX(180deg) translateZ(100px);
+        }
+
+        .box p:nth-child(4) {
+            background-color: rgba(235, 193, 103, 0.45);
+            /* 底面 */
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .box p:nth-child(5) {
+            background-color: rgba(45, 165, 235, 0.45);
+            /* 侧面 */
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .box p:nth-child(6) {
+            background-color: rgba(240, 70, 70, 0.45);
+            /* 侧面 */
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="box">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </section>
+</body>
+
+</html>

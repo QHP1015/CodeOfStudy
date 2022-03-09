@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩虹</title>
+    <style>
+        .box1,
+        .box2 {
+            width: 800px;
+            height: 300px;
+            border: 1px solid #000;
+            overflow: hidden;
+            margin: 30px auto;
+        }
+
+        div .jianbian {
+            border-radius: 50%;
+            width: 800px;
+            height: 800px;
+            background-image: radial-gradient(50% 50%, white 0, white 60%, orange 60%, orange 68%, yellow 68%, yellow 76%, green 76%, green 84%, blue 84%, blue 92%, purple 92%, purple 100%);
+        }
+
+        .box2 {
+            position: relative;
+        }
+
+        .box2 div {
+            border: 20px solid #000;
+            border-radius: 50%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        .box2 .radius1 {
+            width: 760px;
+            height: 760px;
+            border-color: purple;
+        }
+
+        .box2 .radius2 {
+            top: 20px;
+            left: 20px;
+            width: 720px;
+            height: 720px;
+            border-color: blue;
+        }
+
+        .box2 .radius3 {
+            top: 40px;
+            left: 40px;
+            width: 680px;
+            height: 680px;
+            border-color: green;
+        }
+
+        .box2 .radius4 {
+            top: 60px;
+            left: 60px;
+            width: 640px;
+            height: 640px;
+            border-color: yellow;
+        }
+
+        .box2 .radius5 {
+            top: 80px;
+            left: 80px;
+            width: 600px;
+            height: 600px;
+            border-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 方法一 -->
+    <div class="box1">
+        <div class="jianbian"></div>
+    </div>
+    <!-- 方法二 -->
+    <div class="box2">
+        <div class="radius1"></div>
+        <div class="radius2"></div>
+        <div class="radius3"></div>
+        <div class="radius4"></div>
+        <div class="radius5"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过度效果实战3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 40px auto;
+            perspective: 500px;
+            position: relative;
+        }
+
+        .box img {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 50%;
+        }
+
+        .box img.dog {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: 0 0;
+            transition: transform 1s ease 0s;
+        }
+
+        .box:hover img.dog {
+            transform: rotateY(-180deg);
+        }
+
+        .number2 img.dog {
+            transform-origin: 100% 100%;
+        }
+
+        .number2:hover img.dog {
+            transform: rotateY(180deg);
+        }
+        .number3 img.dog {
+            transform-origin: 0 0;
+        }
+
+        .number3:hover img.dog {
+            transform: rotateX(180deg);
+        }
+        .number4 img.dog {
+            transform-origin: 0 100%;
+        }
+
+        .number4:hover img.dog {
+            transform: rotateX(-180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img class="cat" src="images/cat.jpg" alt="">
+        <img class="dog" src="images/dog.jpg" alt="">
+    </div>
+
+    <div class="box number2">
+        <img class="cat" src="images/cat.jpg" alt="">
+        <img class="dog" src="images/dog.jpg" alt="">
+    </div>
+
+    <div class="box number3">
+        <img class="cat" src="images/cat.jpg" alt="">
+        <img class="dog" src="images/dog.jpg" alt="">
+    </div>
+
+    <div class="box number4">
+        <img class="cat" src="images/cat.jpg" alt="">
+        <img class="dog" src="images/dog.jpg" alt="">
+    </div>
+</body>
+
+</html>

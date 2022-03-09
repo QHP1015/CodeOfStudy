@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>2-3</title>
+    <style type="text/css">
+        /* 此处写代码*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .red {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background-color: red;
+            margin: 20px auto;
+        }
+
+        .red .star {
+            position: absolute;
+            top: 85px;
+            left: 60px;
+            width: 0;
+            height: 0;
+            border: 60px solid transparent;
+            border-top: 35px solid yellow;
+        }
+
+        .red .star::before {
+            content: '';
+            position: absolute;
+            top: -55px;
+            left: -86px;
+            width: 0;
+            height: 0;
+            border: 60px solid transparent;
+            border-top: 35px solid yellow;
+            transform: rotate(72deg);
+        }
+
+        .red .star::after {
+            content: '';
+            position: absolute;
+            top: -55px;
+            left: -33px;
+            width: 0;
+            height: 0;
+            border: 60px solid transparent;
+            border-top: 35px solid yellow;
+            transform: rotate(-72deg);
+        }
+        .red .small1{
+            transform: scale(.3) translate(360px,-285px) rotate(15deg);
+        }
+        .red .small2{
+            transform: scale(.3) translate(485px,-130px) rotate(-15deg);
+        }
+        .red .small3{
+            transform: scale(.3) translate(485px,40px) rotate(0deg);
+        }
+        .red .small4{
+            transform: scale(.3) translate(360px,185px) rotate(13deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 此处写代码 -->
+    <div class="red">
+        <div class="star"></div>
+        <div class="star small1"></div>
+        <div class="star small2"></div>
+        <div class="star small3"></div>
+        <div class="star small4"></div>
+    </div>
+</body>
+
+</html>

@@ -40,6 +40,10 @@ header .header-top .logo {
 header .header-top .logo h1 {
     width: 221px;
     height: 63px;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    /* 将段首缩进属性设置为负数，是一个很巧妙的做法，可以隐藏文字 */
+    text-indent: -999em;
 }
 
 header .header-top .tool {
@@ -178,10 +182,12 @@ header .main-nav ul li:hover {
     margin-top: -37px;
     width: 56px;
     height: 74px;
-    background-color: rgba(0, 0, 0, .3);
     border-radius: 6px;
+    background: url(../images/icons.png) no-repeat -42px -31px;
 }
-
+.banner .center .left-btn:hover{
+    background-position: -160px -31px;
+}
 .banner .center .right-btn {
     position: absolute;
     right: 0%;
@@ -189,9 +195,12 @@ header .main-nav ul li:hover {
     margin-top: -37px;
     width: 56px;
     height: 74px;
-    background-color: rgba(0, 0, 0, .3);
+    border-radius: 6px;
+    background: url(../images/icons.png) no-repeat -42px -121px;
 }
-
+.banner .center .right-btn:hover{
+    background-position: -160px -121px;
+}
 .banner .center h2 {
     position: absolute;
     width: 504px;
