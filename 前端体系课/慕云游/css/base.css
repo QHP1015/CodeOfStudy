@@ -1,0 +1,45 @@
+/* 公共类 */
+
+/* 自定义字体 */
+@font-face {
+    font-family: "PingFangSCRegular";
+    src: url('../fonts/PingFangSCRegular.ttf') format('truetype');
+}
+
+/* 通过body让元素继承字体 */
+body {
+    font-family: "PingFangSCRegular";
+}
+
+/* 水平居中 版心 */
+.center-wrap {
+    width: 1152px;
+    margin: 0 auto;
+}
+
+/* 清除浮动 */
+.clearfix {
+    overflow: hidden;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+/* 文字居中 */
+.tac {
+    text-align: center;
+}
+
+/* 块级元素 */
+.db {
+    display: block;
+}
+
+/* 行内块元素 */
+.dib {
+    display: inline-block;
+}

@@ -1,0 +1,31 @@
+.site-head {
+    height: 150px;
+}
+
+.site-head .topbar {
+    height: 32px;
+    background-color: #2a2a2a;
+    color: white;
+    line-height: 32px;
+}
+
+.site-head .topbar a {
+    color: white;
+}
+
+.site-head .topbar .shortcut-links {
+    float: left;
+}
+
+.site-head .topbar .shortcut-links ul {
+    /* overflow: hidden; */
+}
+
+/* 设置子元素选择器，防止影响二级菜单里的li */
+.site-head .topbar .shortcut-links>ul>li {
+    float: left;
+    margin-right: 18px;
+    font-size: 14px;
+}
+
+.site-head .topbar .shortcut-links>ul>li.have-meun {}

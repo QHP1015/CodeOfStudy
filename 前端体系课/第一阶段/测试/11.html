@@ -63,6 +63,7 @@
             animation: yd 1s linear 0s infinite;
             opacity: 0;
         }
+
         .line2 {
             width: 2px;
             height: 166px;
@@ -74,6 +75,7 @@
             animation: yd 1s linear .4s infinite;
             opacity: 0;
         }
+
         .line3 {
             width: 2px;
             height: 166px;
@@ -85,6 +87,7 @@
             animation: yd 1s linear .8s infinite;
             opacity: 0;
         }
+
         .line4 {
             width: 2px;
             height: 166px;
@@ -103,12 +106,42 @@
                 transform: rotate(45deg) translateY(-200px);
                 opacity: 0;
             }
-            50%{
+
+            50% {
                 opacity: 1;
             }
+
             100% {
                 transform: rotate(45deg) translateY(200px);
                 opacity: 0;
+            }
+        }
+
+        @keyframes AnimationName {
+
+            /* 起始状态 */
+            from {
+                /* 属性起始值 */
+            }
+
+            /* 结束状态 */
+            to {
+                /* 属性结束值 */
+            }
+        }
+
+        @keyframes AnimationName {
+            /* 起始状态 */
+            0% {
+                /* 属性起始值 */
+            }
+            /* 中间状态 */
+            50% {
+                /* 属性中间值 */
+            }
+            /* 结束状态 */
+            100% {
+                /* 属性结束值 */
             }
         }
     </style>
