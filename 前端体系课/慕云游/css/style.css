@@ -1,8 +1,11 @@
+/* 页面顶部开发 */
 .site-head {
+    min-width: 1152px;
     height: 150px;
 }
 
 .site-head .topbar {
+    min-width: 1152px;
     height: 32px;
     background-color: #2a2a2a;
     color: white;
@@ -28,4 +31,675 @@
     font-size: 14px;
 }
 
-.site-head .topbar .shortcut-links>ul>li.have-meun {}
+.site-head .topbar .shortcut-links>ul>li.have-menu {
+    padding-right: 12px;
+    position: relative;
+}
+
+/* 两个盒子压盖形成三角 */
+.site-head .topbar .shortcut-links>ul>li.have-menu .arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -6px;
+    width: 12px;
+    height: 12px;
+    transition: transform .2s ease 0s;
+}
+
+.site-head .topbar .shortcut-links>ul>li.have-menu:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.site-head .topbar .shortcut-links>ul>li.have-menu .arrow b {
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.site-head .topbar .shortcut-links>ul>li.have-menu .arrow i {
+    position: absolute;
+    left: 3px;
+    top: 0.5px;
+    width: 6px;
+    height: 6px;
+    background-color: #2a2a2a;
+    transform: rotate(45deg);
+}
+
+/* 共性 */
+.site-head .topbar .shortcut-links>ul>li.have-menu .menu {
+    position: absolute;
+    /* top值不能超过宽度，不让无法点击二级菜单 */
+    top: 32px;
+    left: 0;
+    z-index: 9999;
+    padding-top: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20);
+    padding: 10px;
+    /* 先隐藏 */
+    display: none;
+}
+
+.site-head .topbar .shortcut-links>ul>li.have-menu .menu .menu-list li {
+    height: 20px;
+    line-height: 20px;
+}
+
+.site-head .topbar .shortcut-links>ul>li.have-menu .menu .menu-list a {
+    font-size: 12px;
+    color: #1C1F21;
+    line-height: 20px;
+}
+
+.site-head .topbar .shortcut-links>ul>li.have-menu .menu .menu-list a:hover {
+    color: orange;
+}
+
+/* 若存在缝隙，可以利用两个盒子嵌套的方式，让另一个盒子透明或背景色
+.site-head .topbar .shortcut-links>ul>li.have-menu .menu .menu-inner {
+    background-color: blue;
+    height: 400px;
+} */
+
+/* 鼠标触碰时，就让menu出现 */
+.site-head .topbar .shortcut-links>ul>li.have-menu:hover .menu {
+    display: block;
+}
+
+/* 个性menu */
+.site-head .topbar .shortcut-links>ul>li.have-menu .sqmenu {
+    width: 115px;
+}
+
+.site-head .topbar .shortcut-links>ul>li.have-menu .scmenu {
+    width: 80px;
+}
+
+.site-head .topbar .shortcut-links>ul>li.have-menu .jdmsmenu {
+    width: 60px;
+}
+
+.site-head .topbar .topbar-r {
+    float: right;
+    width: 225px;
+}
+
+.site-head .topbar .topbar-r a,
+.site-head .topbar .topbar-r span {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.site-head .topbar .topbar-r a:last-child {
+    margin-right: 0;
+}
+
+.site-head .main-nav {
+    min-width: 1152px;
+    height: 40px;
+    background-color: #20bd9a;
+}
+
+.site-head .main-nav ul {
+    /* overflow: hidden; */
+}
+
+.site-head .main-nav ul li {
+    float: left;
+    margin-right: 18px;
+}
+
+.site-head .main-nav ul li.have-menu {
+    position: relative;
+    padding-right: 16px;
+}
+
+.site-head .main-nav ul li a {
+    line-height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.site-head .main-nav ul li.have-menu::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 18px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid transparent;
+    border-top-color: white;
+    border-bottom: none;
+    transition: transform .5s ease 0s;
+}
+
+.site-head .main-nav ul li.have-menu:hover::before {
+    transform: rotate(180deg);
+}
+
+.site-head .main-nav ul li .menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20);
+    padding: 10px;
+    display: none;
+}
+
+.site-head .main-nav ul li:hover .menu {
+    display: block;
+}
+
+.site-head .main-nav ul li .menu dl dt {
+    font-size: 16px;
+}
+
+.site-head .main-nav ul li .menu dl dd a {
+    color: #1c1f21;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.site-head .main-nav ul li .menu dl dd a:hover {
+    color: orange;
+}
+
+.site-head .main-nav ul li .jjzyxmenu {
+    width: 150px;
+}
+
+.site-head .main-nav ul li .gtymenu {
+    width: 90px;
+}
+
+.site-head .main-nav ul li .ddwlmenu {
+    width: 155px;
+}
+
+.site-head .main-nav ul li .sdlymenu {
+    width: 110px;
+}
+
+.site-head .header-con {
+    height: 36px;
+    padding: 21px 0;
+}
+
+.site-head .header-con h1 {
+    float: left;
+    font-size: 24px;
+    color: #20bd9a;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.site-head .header-con .soso-box {
+    float: left;
+    margin-left: 20px;
+    width: 405px;
+    padding-top: 2px;
+}
+
+.site-head .header-con .soso-box input {
+    float: left;
+    width: 361px;
+    height: 28px;
+    border: 1px solid #20bd9a;
+    /* 分别按四个角设置 */
+    border-radius: 4px 0 0 4px;
+    font-size: 12px;
+    /* 取消默认外线（外线是文本库特有的东西） */
+    outline: none;
+    padding-left: 10px;
+}
+
+.site-head .header-con .soso-box .btn {
+    display: inline-block;
+    width: 32px;
+    height: 30px;
+    border-radius: 0 4px 4px 0;
+    background-color: #20bd9a;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+
+/* banner区域开发 */
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    /* 使用min-width限制最小宽度 */
+    min-width: 1152px;
+    /* 图片和盒子的底部会产生缝隙，可以使用vertical-align: middle; */
+    /* 改变基线位置 */
+    vertical-align: middle;
+}
+
+.banner .center-wrap {
+    /* 压盖，使用绝对定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1152px;
+    left: 50%;
+    margin-left: -576px;
+    height: 100px;
+    /* 这里的100%高度绝对不能省略，如果省略了，它的height就是0 */
+    /* 那么它的子盒子设置16.6%就没有意义 */
+    height: 100%;
+}
+
+.banner .center-wrap .banner-nav {
+    height: 100%;
+}
+
+.banner .center-wrap .banner-nav>ul {
+    height: 100%;
+}
+
+.banner .center-wrap .leftbtn {
+    position: absolute;
+    width: 28px;
+    height: 44px;
+    background: url(../images/icons.png) no-repeat -21px -94px;
+    top: 50%;
+    left: -38px;
+    margin-top: -22px;
+}
+
+.banner .center-wrap .leftbtn:hover {
+    opacity: .8;
+}
+
+.banner .center-wrap .rightbtn {
+    position: absolute;
+    width: 28px;
+    height: 44px;
+    background: url(../images/icons.png) no-repeat -21px -29px;
+    top: 50%;
+    right: -38px;
+    margin-top: -22px;
+}
+
+.banner .center-wrap .rightbtn:hover {
+    opacity: .8;
+}
+
+.banner .center-wrap .banner-nav>ul>li {
+    position: relative;
+    height: 16.66%;
+    width: 296px;
+    background-color: rgba(0, 0, 0, .53);
+    border-bottom: 1px solid #9e9e9e;
+    /* 利用box-sizing: border-box;属性让盒子的总高度为height */
+    /* 当盒子高度是由百分比写，但盒子拥有边框时，利用这个属性让盒子的边框涵盖在height中 */
+    box-sizing: border-box;
+}
+
+.banner .center-wrap .banner-nav>ul>li:last-child {
+    border-bottom: none;
+}
+
+.banner .center-wrap .banner-nav>ul>li dl {
+    position: absolute;
+    height: 48px;
+    top: 50%;
+    left: 42px;
+    margin-top: -24px;
+    color: white;
+}
+
+.banner .center-wrap .banner-nav>ul>li dl dt {
+    font-size: 18px;
+    height: 26px;
+    line-height: 26px;
+}
+
+.banner .center-wrap .banner-nav>ul>li dl dd {
+    font-size: 16px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.banner .center-wrap .banner-nav>ul>li::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/icons.png);
+    top: 50%;
+    left: 10px;
+}
+
+.banner .center-wrap .banner-nav>ul>li.hot::before {
+    width: 22px;
+    height: 18px;
+    background-position: -29px -399px;
+    margin-top: -9px;
+}
+
+.banner .center-wrap .banner-nav>ul>li.hk::before {
+    width: 18px;
+    height: 21px;
+    background-position: -28px -217px;
+    margin-top: -10.5px;
+    left: 13px;
+}
+
+.banner .center-wrap .banner-nav>ul>li.jp::before {
+    width: 24px;
+    height: 19px;
+    background-position: -25px -171px;
+    margin-top: -9.5px;
+}
+
+.banner .center-wrap .banner-nav>ul>li.as::before {
+    width: 18px;
+    height: 19px;
+    background-position: -28px -262px;
+    margin-top: -9.5px;
+    left: 14px;
+}
+
+.banner .center-wrap .banner-nav>ul>li.eu::before {
+    width: 20px;
+    height: 14px;
+    background-position: -29px -351px;
+    margin-top: -7px;
+    left: 11px;
+}
+
+.banner .center-wrap .banner-nav>ul>li.au::before {
+    width: 18px;
+    height: 17px;
+    background-position: -28px -305px;
+    margin-top: -8.5px;
+    left: 12px;
+}
+
+.banner .center-wrap .banner-nav .menus-box .menu {
+    /* 让所有的menu隐藏 */
+    display: none;
+    position: absolute;
+    left: 296px;
+    top: 0;
+    width: 356px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .63);
+    color: white;
+    padding: 16px;
+    /* 设置box-sizing就不用考虑padding导致的盒子大小改变问题 */
+    box-sizing: border-box;
+}
+
+.banner .center-wrap .banner-nav .menus-box .menu a {
+    color: white;
+}
+
+.banner .center-wrap .banner-nav .menus-box .menu dl {
+    margin-bottom: 16px;
+}
+
+.banner .center-wrap .banner-nav .menus-box .menu dl dt {
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.banner .center-wrap .banner-nav .menus-box .menu dl dd {
+    line-height: 25px;
+    font-size: 15px;
+}
+
+/* 热门广告 */
+.hot-ads {
+    margin: 32px 0;
+}
+
+.hot-ads ul li {
+    float: left;
+    width: 264px;
+    height: 110px;
+    margin-right: 32px;
+}
+
+.hot-ads ul li:last-child {
+    margin-right: 0;
+}
+
+/* 新鲜甩尾 */
+.xxsw {
+    height: 698px;
+    background-color: #f7f7f7;
+    padding-top: 40px;
+}
+
+.xxsw .hd {
+    margin-bottom: 32px;
+}
+
+.xxsw .hd h2 {
+    float: left;
+}
+
+.xxsw ul li {
+    float: left;
+    width: 264px;
+    height: 270px;
+    margin-right: 32px;
+    background-color: white;
+    margin-bottom: 32px;
+}
+
+.xxsw ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.xxsw ul li .wordbox {
+    padding: 15px;
+    color: #1C1F21;
+    font-size: 14px;
+}
+
+.xxsw ul li:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.20);
+    transform: translateY(-2px) scale(1.1);
+    transition: transform .5s linear 0s;
+}
+
+/* 机酒自由行 */
+.jjzyx {
+    height: 698px;
+    padding-top: 40px;
+}
+
+.jjzyx .hd h2 {
+    float: left;
+}
+
+.jjzyx .bd {
+    padding-top: 32px;
+}
+
+.jjzyx .bd>ul>li {
+    float: left;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.jjzyx .bd>ul>li:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.jjzyx .bd>ul>li:nth-child(3),
+.jjzyx .bd>ul>li:nth-child(7) {
+    margin-right: 0;
+}
+
+.jjzyx .bd>ul>li.big-grid {
+    position: relative;
+    width: 560px;
+    height: 270px;
+}
+
+.jjzyx .bd>ul>li.big-grid .info {
+    position: absolute;
+    box-sizing: border-box;
+    width: 560px;
+    height: 103px;
+    color: white;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .55);
+    padding: 30px 26px;
+    line-height: 22px;
+}
+
+.jjzyx .bd>ul>li .tag {
+    position: absolute;
+    width: 74px;
+    height: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, .55);
+    bottom: 103px;
+    left: 0;
+    text-align: center;
+    line-height: 40px;
+}
+
+.jjzyx .bd>ul>li.pro-grid {
+    width: 264px;
+    height: 270px;
+}
+
+.jjzyx .bd>ul>li.pro-grid .picbox {
+    position: relative;
+    height: 184px;
+}
+
+.jjzyx .bd>ul>li.pro-grid .picbox .tag {
+    bottom: 0;
+}
+
+.jjzyx .bd>ul>li.pro-grid .wordbox {
+    padding: 14px;
+    font-size: 14px;
+    color: #1C1F21;
+    line-height: 22px;
+}
+
+/* 当地玩乐 */
+.ddwl {
+    height: 586px;
+    background-color: #f7f7f7;
+    padding-top: 40px;
+}
+
+.ddwl h2 {
+    float: left;
+}
+
+.ddwl .hd nav {
+    width: 349px;
+}
+
+.ddwl .bd {
+    padding-top: 32px;
+}
+
+.ddwl .bd .col {
+    float: left;
+    width: 364px;
+    height: 480px;
+    margin-right: 30px;
+}
+
+.ddwl .bd .col:last-child {
+    margin-right: 0;
+}
+
+.ddwl .bd .bigpicbox {
+    position: relative;
+    width: 364px;
+    height: 270px;
+    margin-bottom: 30px;
+}
+
+.ddwl .bd .bigpicbox .info {
+    position: absolute;
+    width: 364px;
+    height: 104px;
+    background-color: rgba(0, 0, 0, .53);
+    bottom: 0;
+    left: 0;
+    padding: 21px 17px 0;
+    box-sizing: border-box;
+    color: white;
+    font-size: 14px;
+}
+
+.ddwl .bd .bigpicbox .info .bottom {
+    padding-top: 6px;
+}
+
+.ddwl .bd .bigpicbox .info .bottom .tag {
+    float: left;
+}
+
+.ddwl .bd .bigpicbox .info .bottom .price {
+    float: right;
+}
+
+.ddwl .bd .bigpicbox .info .bottom .price strong {
+    font-size: 18px;
+    color: #20bd9a;
+}
+
+.ddwl .bd .grid {
+    width: 364px;
+    height: 120px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.ddwl .bd .grid .picbox {
+    float: left;
+    width: 120px;
+    height: 120px;
+}
+
+.ddwl .bd .grid .wordbox {
+    box-sizing: border-box;
+    float: left;
+    width: 244px;
+    height: 120px;
+    padding: 26px 18px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    font-size: 14px;
+    color: #000;
+}
+
+.ddwl .bd .more-grid {
+    width: 364px;
+    background-image: linear-gradient(180deg, #FF6374 1%, #FF7368 98%);
+}
+
+.ddwl .bd .more-grid ul {
+    padding-left: 24px;
+}
+
+.ddwl .bd .grid:hover,
+.ddwl .bd .bigpicbox:hover,
+.ddwl .bd .more-grid:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}

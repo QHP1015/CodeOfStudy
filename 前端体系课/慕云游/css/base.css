@@ -43,3 +43,100 @@ body {
 .dib {
     display: inline-block;
 }
+
+/* h2标题 */
+.content-part h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1c1f21;
+}
+
+/* em标签 */
+.content-part em {
+    float: left;
+    position: relative;
+    top: 25px;
+    left: 10px;
+    color: #1c1f21;
+    font-size: 12px;
+}
+
+
+/* 二级导航栏 */
+.content-part .hd nav {
+    float: right;
+    width: 546px;
+}
+
+.content-part .hd nav ul {
+    padding-top: 16px;
+}
+
+.content-part .hd nav ul li {
+    float: left;
+    margin-right: 16px;
+    font-size: 14px;
+}
+
+.content-part .hd nav ul li:last-child {
+    margin-right: 0;
+}
+
+.content-part .hd nav ul li a {
+    color: rgba(0, 0, 0, .85);
+}
+
+.content-part .hd nav ul li.current {
+    border-bottom: 4px solid #20bd9a;
+    padding-bottom: 4px;
+}
+
+.content-part .hd nav ul li.current a {
+    color: #20bd9a;
+}
+
+/* 查看更多 */
+.content-part .more-grid {
+    position: relative;
+    width: 264px;
+    height: 270px;
+    background-image: linear-gradient(180deg, #34E3BC 0%, #15AF7A 98%);
+    padding-top: 46px;
+    box-sizing: border-box;
+}
+
+.content-part .more-grid p {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+.content-part .more-grid .iconfont {
+    position: absolute;
+    font-size: 48px;
+    color: white;
+    width: 48px;
+    height: 48px;
+    left: 50%;
+    top: 118px;
+    margin-left: -24px;
+}
+
+.content-part .more-grid ul {
+    margin-top: 112px;
+    padding-left: 42px;
+}
+
+.content-part .more-grid ul li {
+    float: left;
+    border-right: 1px solid white;
+    color: white;
+    padding: 6px;
+    height: 10px;
+    line-height: 10px;
+    font-size: 15px;
+}
+
+.content-part .more-grid ul li:last-child {
+    border-right: none;
+}

@@ -6,39 +6,39 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "258564",
-      "name": "qq",
-      "font_class": "tubiao215",
-      "unicode": "e612",
-      "unicode_decimal": 58898
+      "icon_id": "386475",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e632",
+      "unicode_decimal": 58930
     },
     {
-      "icon_id": "778500",
+      "icon_id": "386488",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "4770728",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "4936984",
+      "name": "QQ",
+      "font_class": "QQ",
+      "unicode": "e882",
+      "unicode_decimal": 59522
+    },
+    {
+      "icon_id": "6756192",
       "name": "右箭头",
       "font_class": "youjiantou",
-      "unicode": "e619",
-      "unicode_decimal": 58905
-    },
-    {
-      "icon_id": "1049698",
-      "name": "weibo",
-      "font_class": "weibo",
-      "unicode": "e63e",
-      "unicode_decimal": 58942
-    },
-    {
-      "icon_id": "5802479",
-      "name": "放大镜",
-      "font_class": "Magnifier",
-      "unicode": "e62d",
-      "unicode_decimal": 58925
-    },
-    {
-      "icon_id": "13253930",
-      "name": "weixin",
-      "font_class": "weixin",
-      "unicode": "e61b",
-      "unicode_decimal": 58907
+      "unicode": "e602",
+      "unicode_decimal": 58882
     }
   ]
 }

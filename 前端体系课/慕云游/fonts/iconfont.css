@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1647000799573') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weixin:before {
+  content: "\e632";
+}
+
+.icon-weibo:before {
+  content: "\e635";
+}
+
+.icon-fangdajing:before {
+  content: "\e637";
+}
+
+.icon-QQ:before {
+  content: "\e882";
+}
+
+.icon-youjiantou:before {
+  content: "\e602";
+}
+
