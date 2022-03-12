@@ -517,42 +517,43 @@
 }
 
 /* 机酒自由行 */
-.jjzyx {
+.common-style {
     height: 698px;
     padding-top: 40px;
 }
 
-.jjzyx .hd h2 {
+.common-style .hd h2 {
     float: left;
 }
 
-.jjzyx .bd {
+.common-style .bd {
     padding-top: 32px;
 }
 
-.jjzyx .bd>ul>li {
+.common-style .bd>ul>li {
     float: left;
     margin-right: 32px;
     margin-bottom: 32px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    background-color: #fff;
 }
 
-.jjzyx .bd>ul>li:hover {
+.common-style .bd>ul>li:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.jjzyx .bd>ul>li:nth-child(3),
-.jjzyx .bd>ul>li:nth-child(7) {
+.common-style .bd>ul>li:nth-child(3),
+.common-style .bd>ul>li:nth-child(7) {
     margin-right: 0;
 }
 
-.jjzyx .bd>ul>li.big-grid {
+.common-style .bd>ul>li.big-grid {
     position: relative;
     width: 560px;
     height: 270px;
 }
 
-.jjzyx .bd>ul>li.big-grid .info {
+.common-style .bd>ul>li.big-grid .info {
     position: absolute;
     box-sizing: border-box;
     width: 560px;
@@ -565,7 +566,7 @@
     line-height: 22px;
 }
 
-.jjzyx .bd>ul>li .tag {
+.common-style .bd>ul>li .tag {
     position: absolute;
     width: 74px;
     height: 40px;
@@ -575,23 +576,25 @@
     left: 0;
     text-align: center;
     line-height: 40px;
+    /* 图片触碰会有变形，会盖住tag，利用z-index防止 */
+    z-index: 9999;
 }
 
-.jjzyx .bd>ul>li.pro-grid {
+.common-style .bd>ul>li.pro-grid {
     width: 264px;
     height: 270px;
 }
 
-.jjzyx .bd>ul>li.pro-grid .picbox {
+.common-style .bd>ul>li.pro-grid .picbox {
     position: relative;
     height: 184px;
 }
 
-.jjzyx .bd>ul>li.pro-grid .picbox .tag {
+.common-style .bd>ul>li.pro-grid .picbox .tag {
     bottom: 0;
 }
 
-.jjzyx .bd>ul>li.pro-grid .wordbox {
+.common-style .bd>ul>li.pro-grid .wordbox {
     padding: 14px;
     font-size: 14px;
     color: #1C1F21;
@@ -633,6 +636,7 @@
     width: 364px;
     height: 270px;
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
 .ddwl .bd .bigpicbox .info {
@@ -676,6 +680,7 @@
     float: left;
     width: 120px;
     height: 120px;
+    overflow: hidden;
 }
 
 .ddwl .bd .grid .wordbox {
@@ -695,11 +700,325 @@
 }
 
 .ddwl .bd .more-grid ul {
-    padding-left: 24px;
+    padding-left: 19px;
 }
 
 .ddwl .bd .grid:hover,
 .ddwl .bd .bigpicbox:hover,
 .ddwl .bd .more-grid:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* 特色当地体验 */
+.tsddty {
+    height: 456px;
+}
+
+.tsddty .center-wrap {
+    padding-top: 40px;
+}
+
+.tsddty .center-wrap h2 {
+    text-align: center;
+}
+
+.tsddty .bd {
+    padding-top: 32px;
+}
+
+.tsddty .bd ul li {
+    float: left;
+    width: 264px;
+    height: 290px;
+    margin-right: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.tsddty .bd ul li:last-child {
+    margin-right: 0;
+}
+
+.tsddty .bd ul li .wordbox {
+    padding: 16px 9px 0;
+}
+
+.tsddty .bd ul li .proname {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    height: 48px;
+}
+
+.tsddty .bd ul li .wordbox .score {
+    font-size: 13px;
+    color: #FA6400;
+}
+
+.tsddty .bd ul li .wordbox .comment {
+    font-size: 13px;
+    color: #000;
+}
+
+.tsddty .bd ul li:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.20);
+}
+
+/* 最世界·深度旅行 */
+.zsjsdlx {
+    height: 738px;
+    background-color: #f7f7f7;
+}
+
+.zsjsdlx .center-wrap .hd em {
+    float: left;
+    width: 307px;
+}
+
+.zsjsdlx .center-wrap .hd nav {
+    float: right;
+    width: 85px;
+}
+
+.zsjsdlx .center-wrap .bd .more-grid {
+    background-image: linear-gradient(180deg, #BD5EE8 0%, #832ABB 98%);
+}
+
+.zsjsdlx .center-wrap .bd .more-grid ul {
+    padding-left: 41px;
+}
+
+/* 跟团/半自助游 */
+.gtbzzy .hd nav {
+    width: 157px;
+}
+
+.gtbzzy .center-wrap .bd .more-grid {
+    background-image: linear-gradient(180deg, #41D8E9 0%, #3685EA 98%);
+}
+
+.gtbzzy .center-wrap .bd .more-grid ul {
+    padding-left: 67px;
+}
+
+/* 大图片的特效 */
+.big-grid.havehover .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    opacity: 0;
+    transition: opacity .3 ease 0s;
+}
+
+.big-grid.havehover:hover .mask {
+    opacity: 1;
+}
+
+.big-grid.havehover .circle {
+    box-sizing: border-box;
+    position: absolute;
+    top: -106px;
+    left: 50%;
+    margin-left: -53px;
+    width: 106px;
+    height: 106px;
+    border: 1px solid white;
+    border-radius: 50%;
+    /* padding-top: 25px; */
+    padding-top: 19px;
+    font-size: 18px;
+    transition: top .5s ease 0s;
+}
+
+.big-grid.havehover .circle p {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    line-height: 33px;
+    width: 67px;
+    margin: 0 auto;
+}
+
+.big-grid.havehover:hover .circle {
+    top: 62px;
+}
+
+.big-grid.havehover .word {
+    position: absolute;
+    bottom: -100px;
+    left: 10px;
+    color: white;
+    transition: bottom .5s ease 0s;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.big-grid.havehover:hover .word {
+    bottom: 30px;
+}
+
+.zsjsdlx .big-grid.havehover .circle p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    line-height: 27px;
+    width: 73px;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+/* 页脚 */
+footer .part1 {
+    height: 220px;
+    background-color: #f7f7f7;
+}
+
+footer .part1 ul {
+    padding-top: 36px;
+}
+
+footer .part1 ul li {
+    float: left;
+    border-right: 1px solid #1c1f21;
+    padding: 0 30px;
+    height: 16px;
+    line-height: 16px;
+}
+
+footer .part1 ul li a {
+    color: #1C1F21;
+    font-size: 16px;
+}
+
+footer .part1 ul li:first-child {
+    padding-left: 0;
+}
+
+footer .part1 ul li:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+footer .part1 .dlbox {
+    padding-top: 30px;
+}
+
+footer .part1 dl {
+    position: relative;
+    width: 289px;
+    float: left;
+    padding-left: 75px;
+    margin-right: 30px;
+}
+
+footer .part1 dl:last-child {
+    margin-right: 0;
+}
+
+footer .part1 dl dt {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+footer .part1 dl::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/icons.png);
+}
+
+footer .part1 dl.txfw::before {
+    background-position: -150px -178px;
+}
+
+footer .part1 dl.ccsx::before {
+    background-position: -150px -104px;
+}
+
+footer .part1 dl.axph::before {
+    background-position: -150px -31px;
+}
+
+footer .part1 dl dd {
+    font-size: 14px;
+}
+
+footer .part2 {
+    height: 225px;
+    background-color: #1c1f21;
+}
+
+footer .part2 .r1 {
+    padding-top: 48px;
+    color: white;
+}
+
+footer .part2 .r1 h2 {
+    float: left;
+    font-size: 46px;
+}
+
+footer .part2 .r1 .slogan {
+    float: left;
+    width: 532px;
+    font-size: 14px;
+    margin-left: 21px;
+    position: relative;
+    top: 10px;
+}
+
+footer .part2 .links {
+    padding-top: 30px;
+}
+
+footer .part2 .links li {
+    float: left;
+    border-right: 1px solid white;
+    padding: 0 10px;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+}
+
+footer .part2 .links li a {
+    color: white;
+}
+
+footer .part2 .links li:first-child {
+    padding-left: 0;
+}
+
+footer .part2 .links li:last-child {
+    border-right: none;
+}
+
+footer .copyrights {
+    color: white;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+footer .copyrights a {
+    color: white;
+}
+
+/* 顶部返回按钮 */
+.backtotop {
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 12px;
+    box-sizing: border-box;
+    color: #000;
+    /* 隐藏元素 */
+    display: none;
 }

@@ -1,0 +1,24 @@
+/* 公共类 */
+
+/* 通过body让元素继承字体 */
+body {
+    font-family: "微软雅黑";
+}
+
+/* 水平居中 版心 */
+.center-wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 清除浮动 */
+.clearfix {
+    overflow: hidden;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
