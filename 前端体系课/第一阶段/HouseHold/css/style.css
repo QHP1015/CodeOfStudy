@@ -1,0 +1,711 @@
+/* 顶栏 */
+.top {
+    background-color: #0058AA;
+}
+
+.top .center-wrap {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #FFFFFF;
+    justify-content: flex-end;
+}
+
+/* header区域 */
+header {
+    height: 120px;
+}
+
+header .center-wrap {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .center-wrap .logo {
+    width: 192px;
+    height: 91px;
+    background-image: url(../images/logo.png);
+}
+
+header .center-wrap .main-nav ul {
+    overflow: hidden;
+    height: 120px;
+}
+
+header .center-wrap .main-nav ul li {
+    float: left;
+    width: 70px;
+    height: 120px;
+    margin-right: 60px;
+    text-align: center;
+}
+
+header .center-wrap ul li:last-child {
+    margin-right: 0;
+}
+
+header .center-wrap ul li .icon {
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+header .center-wrap ul li .icon:hover {
+    animation: breath .5s ease 0s infinite alternate;
+}
+
+header .center-wrap ul li .icon.wzsy {
+    background: url(../images/home-gry.png) no-repeat center center;
+    background-size: 33px 33px;
+}
+
+header .center-wrap ul li .icon.wzsy:hover {
+    background: url(../images/home-white.png) no-repeat center center;
+    background-color: #0058AA;
+}
+
+@keyframes breath {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+header .center-wrap ul li .icon.gywm {
+    background: url(../images/abouts-gry.png) no-repeat center center;
+    background-size: 33px 33px;
+}
+
+header .center-wrap ul li .icon.gywm:hover {
+    background: url(../images/abouts-white.png) no-repeat center center;
+    background-color: #0058AA;
+}
+
+header .center-wrap ul li .icon.fwjs {
+    background: url(../images/kefu-gry.png) no-repeat center center;
+    background-size: 33px 33px;
+}
+
+header .center-wrap ul li .icon.fwjs:hover {
+    background: url(../images/kefu-white.png) no-repeat center center;
+    background-color: #0058AA;
+}
+
+header .center-wrap ul li .icon.cpzx {
+    background: url(../images/chanpin-gry.png) no-repeat center center;
+    background-size: 33px 33px;
+}
+
+header .center-wrap ul li .icon.cpzx:hover {
+    background: url(../images/chanpin-white.png) no-repeat center center;
+    background-color: #0058AA;
+}
+
+header .center-wrap ul li .icon.fwdt {
+    background: url(../images/fuwu-gry.png) no-repeat center center;
+    background-size: 33px 33px;
+}
+
+header .center-wrap ul li .icon.fwdt:hover {
+    background: url(../images/fuwu-white.png) no-repeat center center;
+    background-color: #0058AA;
+}
+
+header .center-wrap ul li .wordbox {
+    font-size: 16px;
+    color: #545454;
+}
+
+header .center-wrap .search {
+    box-sizing: border-box;
+    width: 277px;
+    height: 39px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+header .center-wrap .search input {
+    float: left;
+    width: 217px;
+    height: 37px;
+    border: 1px solid #D3D3D3;
+    outline: none;
+    padding-left: 10px;
+}
+
+header .center-wrap .search button {
+    float: left;
+    width: 48px;
+    height: 39px;
+    background-color: #0058AA;
+    border: none;
+    cursor: pointer;
+}
+
+header .center-wrap .search button img {
+    width: 100%;
+}
+
+/* banner区域 */
+.banner {
+    position: relative;
+    height: 650px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner ol {
+    width: 42px;
+    height: 10px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -25px;
+    overflow: hidden;
+}
+
+.banner ol li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.banner ol li:last-child {
+    margin-right: 0;
+}
+
+.banner ol li.cur {
+    background-color: #0058AA;
+}
+
+/* 商品区域 */
+.goods {
+    height: 343px;
+}
+
+.goods .center-wrap {
+    position: relative;
+}
+
+.goods .center-wrap .btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    width: 48px;
+    height: 48px;
+    background: url(../images/icon.png) no-repeat;
+    cursor: pointer;
+}
+
+.goods .center-wrap .leftbtn {
+    left: 0;
+    background-position: -397px 0;
+}
+
+.goods .center-wrap .leftbtn:hover {
+    background-position: -339px 0;
+}
+
+.goods .center-wrap .rightbtn {
+    right: 0;
+    background-position: -285px -3px;
+}
+
+.goods .center-wrap .rightbtn:hover {
+    background-position: -227px -3px;
+}
+
+.goods .center-wrap ul {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 1056px;
+    height: 234px;
+    margin: 0 auto;
+    margin-top: 38.3px;
+    margin-bottom: 75px;
+}
+
+.goods .center-wrap ul li {
+    float: left;
+    width: 171px;
+    height: 234px;
+    margin-right: 50px;
+}
+
+.goods .center-wrap ul li:last-child {
+    margin-right: 0;
+}
+
+.goods .center-wrap ul li .picbox {
+    width: 171px;
+    height: 175.5px;
+    margin-bottom: 10px;
+}
+
+.goods .center-wrap ul li .wordbox {
+    width: 162px;
+    height: 48px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #838383;
+}
+
+/* 了解我们区域 */
+.about {
+    position: relative;
+    height: 411px;
+}
+
+.about .center-wrap {
+    position: relative;
+    width: 1155px;
+    height: 411px;
+    border-top: 1px solid #808080;
+}
+
+/* 使用绝对定位盖在盒子上面 */
+.about .center-wrap .title {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    margin-left: -77.5px;
+    width: 155px;
+    height: 79px;
+    background-color: #fff;
+    z-index: 9999;
+    text-align: center;
+}
+
+.about .center-wrap .title h2 {
+    font-size: 32px;
+    color: #696868;
+}
+
+.about .center-wrap .title p {
+    font-size: 18px;
+    color: #9B9B9B;
+}
+
+/* 利用伪元素添加下面一横 */
+.about .center-wrap .title p::after {
+    content: '';
+    display: block;
+    width: 93px;
+    height: 3px;
+    background-color: #0058AA;
+    margin: 11px auto;
+}
+
+.about .center-wrap .gywm {
+    float: left;
+    width: 238px;
+    height: 242px;
+    margin: 73px 147px 96px 0;
+}
+
+.about .center-wrap .gywm h2 {
+    font-size: 26px;
+    color: #0058AA;
+}
+
+.about .center-wrap .gywm p:nth-of-type(1) {
+    font-size: 21px;
+    color: #5A5A5A;
+    line-height: 41px;
+}
+
+.about .center-wrap .gywm p:nth-of-type(1)::after {
+    content: '';
+    display: block;
+    width: 142px;
+    height: 4px;
+    background-color: #0058AA;
+}
+
+.about .center-wrap .gywm p:nth-of-type(2) {
+    margin-top: 20px;
+    margin-bottom: 27px;
+    font-size: 17px;
+    color: #7B7C7C;
+    line-height: 26px;
+}
+
+.about .center-wrap .gywm button {
+    width: 130px;
+    height: 38px;
+    background-color: #0058AA;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+}
+
+.about .center-wrap .gywm button:hover {
+    animation: shake .5s linear 0s alternate infinite;
+}
+
+@keyframes shake {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(15deg);
+    }
+}
+
+.about .center-wrap .image {
+    overflow: hidden;
+    float: left;
+    width: 384px;
+    height: 256px;
+    margin: 73px 113px 82px 0;
+}
+
+.about .center-wrap .image img {
+    width: 100%;
+}
+
+.about .center-wrap .image img:hover {
+    transform: scale(1.2);
+    transition: transform 1s linear 0s;
+}
+
+.about .center-wrap .second-nav {
+    float: left;
+    width: 273px;
+    height: 203px;
+    margin-top: 83px;
+    margin-bottom: 125px;
+}
+
+.about .center-wrap .second-nav .navbox {
+    box-sizing: border-box;
+    position: relative;
+    width: 273px;
+    height: 61px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px 0;
+    padding-left: 89px;
+    transition: background-color 1s ease 0s;
+    cursor: pointer;
+}
+
+.about .center-wrap .second-nav .navbox:hover {
+    background-color: #0058AA;
+}
+
+.about .center-wrap .second-nav .navbox div {
+    width: 184px;
+}
+
+.about .center-wrap .second-nav .navbox p:nth-of-type(1) {
+    text-align: left;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+/* 通过伪元素来放置icon */
+.about .center-wrap .second-nav .navbox p:nth-of-type(1)::before {
+    position: absolute;
+    top: 50%;
+    margin-top: -17px;
+    left: 30px;
+    content: '';
+    display: block;
+    width: 40px;
+    height: 34px;
+}
+
+/* 不同的类名icon图片不同 */
+.about .center-wrap .second-nav .navbox.zxly p:nth-of-type(1)::before {
+    background-image: url(../images/liuyan.png);
+}
+
+.about .center-wrap .second-nav .navbox.ggjy p:nth-of-type(1)::before {
+    background-image: url(../images/gg.png);
+    background-size: contain;
+}
+
+.about .center-wrap .second-nav .navbox.wlzx p:nth-of-type(1)::before {
+    background-image: url(../images/wangluo.png);
+}
+
+.about .center-wrap .second-nav .navbox p:nth-of-type(2) {
+    text-align: left;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+/* 精品推荐区域 */
+.jptj {
+    box-sizing: border-box;
+    height: 590px;
+    background-color: #EFF0F4;
+    padding: 70px 0;
+}
+
+.jptj .center-wrap .title {
+    width: 232px;
+    height: 79px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.jptj .center-wrap .title h2 {
+    font-size: 32px;
+    color: #696868;
+}
+
+.jptj .center-wrap .title p {
+    font-size: 18px;
+    color: #9B9B9B;
+}
+
+/* 利用伪元素添加下面一横 */
+.jptj .center-wrap .title p::after {
+    content: '';
+    display: block;
+    width: 93px;
+    height: 3px;
+    background-color: #0058AA;
+    margin: 11px auto;
+}
+
+.jptj .center-wrap ul {
+    box-sizing: border-box;
+    position: relative;
+    height: 326px;
+
+    overflow: hidden;
+    margin: 41px auto;
+    padding: 0 58.7px;
+}
+
+.jptj .center-wrap ul li {
+    position: relative;
+    float: left;
+    margin-right: 23px;
+    width: 345px;
+    height: 326px;
+}
+
+.jptj .center-wrap ul li:last-child {
+    margin-right: 0;
+}
+
+.jptj .center-wrap ul li .mask {
+    box-sizing: border-box;
+    position: absolute;
+    width: 345px;
+    height: 45px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    line-height: 45px;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding-left: 20px;
+}
+
+.jptj .center-wrap .btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    width: 48px;
+    height: 48px;
+    background: url(../images/icon.png) no-repeat;
+    cursor: pointer;
+}
+
+.jptj .center-wrap .leftbtn {
+    left: 0;
+    background-position: -397px 0;
+}
+
+.jptj .center-wrap .leftbtn:hover {
+    background-position: -339px 0;
+}
+
+.jptj .center-wrap .rightbtn {
+    right: 0;
+    background-position: -285px -3px;
+}
+
+.jptj .center-wrap .rightbtn:hover {
+    background-position: -227px -3px;
+}
+
+/* 新闻中心区域 */
+.news {
+    height: 545px;
+    box-sizing: border-box;
+    padding-top: 120px;
+}
+
+.news .center-wrap {
+    position: relative;
+    border-top: 1px solid #9B9B9B;
+}
+
+/* 使用绝对定位盖在盒子上面 */
+.news .center-wrap .title {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    margin-left: -77.5px;
+    width: 155px;
+    height: 79px;
+    background-color: #fff;
+    z-index: 9999;
+    text-align: center;
+}
+
+.news .center-wrap .title h2 {
+    font-size: 32px;
+    color: #696868;
+}
+
+.news .center-wrap .title p {
+    font-size: 18px;
+    color: #9B9B9B;
+}
+
+/* 利用伪元素添加下面一横 */
+.news .center-wrap .title p::after {
+    content: '';
+    display: block;
+    width: 93px;
+    height: 3px;
+    background-color: #0058AA;
+    margin: 11px auto;
+}
+
+.news .center-wrap ol {
+    box-sizing: border-box;
+    margin-top: 116px;
+}
+
+.news .center-wrap ol li {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 512px;
+    height: 109px;
+    margin-bottom: 40px;
+    margin-right: 70px;
+    padding-left: 112px;
+}
+
+.news .center-wrap ol li:nth-child(2n) {
+    margin-right: 0;
+}
+
+.news .center-wrap ol li .wordbox p:nth-of-type(1) {
+    font-size: 21px;
+    color: #4A4A4A;
+    margin-bottom: 12px;
+}
+
+.news .center-wrap ol li .wordbox p:nth-of-type(2) {
+    font-size: 18px;
+    color: #4A4A4A;
+}
+
+.news .center-wrap ol li .wordbox::before {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '01';
+    display: block;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    font-size: 35px;
+    color: #FFFFFF;
+    background-image: url(../images/talk-bg.png);
+    padding-left: 4px;
+}
+
+.news .center-wrap ol li:nth-child(2) .wordbox:before {
+    content: '02';
+}
+
+.news .center-wrap ol li:nth-child(3) .wordbox:before {
+    content: '03';
+}
+
+.news .center-wrap ol li:nth-child(4) .wordbox:before {
+    content: '04';
+}
+
+.news .center-wrap ol li .wordbox:hover::before {
+    animation: sx .5s ease 0s alternate infinite;
+}
+
+@keyframes sx {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -15px;
+    }
+}
+
+/* 页脚区域 */
+.foot {
+    overflow: hidden;
+    height: 210px;
+    background-color: #06142F;
+}
+
+.foot .center-wrap .title {
+    float: left;
+    font-size: 48px;
+    height: 210px;
+    color: #FFFFFF;
+    margin-right: 101px;
+    line-height: 210px;
+}
+
+.foot .center-wrap .message {
+    box-sizing: border-box;
+    float: left;
+    height: 210px;
+    width: 300px;
+    text-align: left;
+    padding-top: 53px;
+    padding-bottom: 35px;
+}
+
+.foot .center-wrap p {
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 40px;
+}
+
+footer {
+    height: 30px;
+    background-color: #202C46;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #FFFFFF;
+}

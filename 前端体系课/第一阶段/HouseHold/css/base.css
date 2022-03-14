@@ -3,6 +3,7 @@
 /* 通过body让元素继承字体 */
 body {
     font-family: "微软雅黑";
+    background-color: #fff;
 }
 
 /* 水平居中 版心 */
