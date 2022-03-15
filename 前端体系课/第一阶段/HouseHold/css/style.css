@@ -30,11 +30,13 @@ header .center-wrap .logo {
     background-image: url(../images/logo.png);
 }
 
+/* 导航栏里用ul加li分布 */
 header .center-wrap .main-nav ul {
     overflow: hidden;
     height: 120px;
 }
 
+/* li浮动，并向右隔开 */
 header .center-wrap .main-nav ul li {
     float: left;
     width: 70px;
@@ -43,6 +45,7 @@ header .center-wrap .main-nav ul li {
     text-align: center;
 }
 
+/* 最后一个孩子不用隔开 */
 header .center-wrap ul li:last-child {
     margin-right: 0;
 }
@@ -55,6 +58,7 @@ header .center-wrap ul li .icon {
     margin-bottom: 10px;
 }
 
+/* 呼吸动效 */
 header .center-wrap ul li .icon:hover {
     animation: breath .5s ease 0s infinite alternate;
 }
@@ -64,6 +68,7 @@ header .center-wrap ul li .icon.wzsy {
     background-size: 33px 33px;
 }
 
+/* 图片变换 */
 header .center-wrap ul li .icon.wzsy:hover {
     background: url(../images/home-white.png) no-repeat center center;
     background-color: #0058AA;
@@ -124,6 +129,7 @@ header .center-wrap ul li .wordbox {
     color: #545454;
 }
 
+/* 搜索框布局 */
 header .center-wrap .search {
     box-sizing: border-box;
     width: 277px;
@@ -164,6 +170,7 @@ header .center-wrap .search button img {
     width: 100%;
 }
 
+/* 使用绝对定位将小圆点定在底部 */
 .banner ol {
     width: 42px;
     height: 10px;
@@ -210,6 +217,7 @@ header .center-wrap .search button img {
     cursor: pointer;
 }
 
+/* 两边按钮使用精灵图 */
 .goods .center-wrap .leftbtn {
     left: 0;
     background-position: -397px 0;
@@ -321,6 +329,7 @@ header .center-wrap .search button img {
     color: #0058AA;
 }
 
+/* 第一行文字的样式 */
 .about .center-wrap .gywm p:nth-of-type(1) {
     font-size: 21px;
     color: #5A5A5A;
@@ -335,6 +344,7 @@ header .center-wrap .search button img {
     background-color: #0058AA;
 }
 
+/* 第二行文字的样式 */
 .about .center-wrap .gywm p:nth-of-type(2) {
     margin-top: 20px;
     margin-bottom: 27px;
@@ -509,6 +519,7 @@ header .center-wrap .search button img {
     margin-right: 0;
 }
 
+/* 放置图片下面遮罩的样式 */
 .jptj .center-wrap ul li .mask {
     box-sizing: border-box;
     position: absolute;
