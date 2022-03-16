@@ -10,12 +10,23 @@
 
 <body>
     <script>
-        function sum(n) {
-            if (n == 1) return 1;
-            return sum(n + (n - 1));
+        function fn1(){
+            var num1 = 1;
+            var num2 = 100;
+            numadd = function(){
+                num2+=10;
+                alert(num2)
+            }
+            function fn2(){
+                num1+=1;
+                alert(num1)
+            }
+            return fn2;
         }
-        alert(sum(2))
-        document.write
+        var result = fn1();
+        result();
+        numadd();
+        result();
     </script>
 </body>
 
