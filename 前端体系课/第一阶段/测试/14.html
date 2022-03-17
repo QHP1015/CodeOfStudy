@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>函数封装</title>
 </head>
 
 <body>
@@ -48,6 +48,53 @@
 
         console.log(getChildren(box));
         console.log(getChildren(para));
+
+        // 封装一个函数，这个函数可以返回元素的前一个元素兄弟节点（兼容到IE6），类似previousElementSibling的功能
+        function getElementPrevSibling(node) {
+            let o = node;
+            // 使用while语句
+            while (o.previousSibling != null) {
+                // 结束循环，找到了
+                if (o.previousSibling.nodeType == 1) {
+                    return o.previousSibling;
+                }
+                // 让o成为它的前一个节点，就有点“递归”的感觉
+                o = o.previousSibling
+            }
+            return null;
+        }
+
+        console.log(getElementPrevSibling(para));
+        console.log(getElementPrevSibling(fpara));
+
+        // 封装一个函数，这个函数可以返回元素的所有元素兄弟节点
+        function getAllElementSibling(node) {
+            // 存放前面的元素兄弟节点
+            let prevs = [];
+            // 存放后面的元素兄弟节点
+            let nexts = [];
+
+            let o = node;
+            // 遍历node的前面的节点
+            while (o.previousSibling != null) {
+                if (o.previousSibling.nodeType == 1) {
+                    prevs.unshift(o.previousSibling);
+                }
+                o = o.previousSibling;
+            }
+            o = node
+            // 遍历node的后面的节点
+            while (o.nextSibling != null) {
+                if (o.nextSibling.nodeType == 1) {
+                    nexts.push(o.nextSibling);
+                }
+                o = o.nextSibling;
+            }
+            // 将两个数组进行合并，然后返回
+            return prevs.concat(nexts);
+        }
+
+        console.log(getAllElementSibling(para));
     </script>
 </body>
 

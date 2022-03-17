@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <input type="text" class="textInput">
+    <button id="btn">添加</button>
+    <ul class="list">
+        <li class="li">吃饭</li>
+        <li class="li">睡觉</li>
+        <li class="li">打豆豆</li>
+    </ul>
+    <script>
+        // 获取元素
+        let textInput = document.querySelector(".textInput")
+        let btn = document.querySelector("#btn")
+        let list = document.querySelector(".list")
+        let li = document.querySelectorAll(".li")
+        // 给按钮绑定点击事件
+        btn.onclick = function () {
+            let li = document.createElement("li")
+            li.className = "li"
+            li.innerHTML = textInput.value;
+            list.appendChild(li)
+            textInput.value = ""
+        }
+        // 给li绑定点击事件
+        list.onclick = (e)=>{
+            list.removeChild(e.target)
+        }
+
+    </script>
+</body>
+
+</html>

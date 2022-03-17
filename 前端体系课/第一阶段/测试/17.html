@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange()</title>
+    <style type="text/css">
+        #div {
+            width: 300px;
+            height: 300px;
+            border: 2px solid gray;
+            margin: 100px 0 0 200px;
+        }
+    </style>
+    <script type="text/javascript">
+        //补充代码
+        window.onload = () => {
+            let odiv = document.querySelector('#div');
+            let oselect = document.querySelector('#color');
+            oselect.onchange = () => {
+                if (oselect.value == 0) {
+                    odiv.style.backgroundColor = 'black';
+                    odiv.innerHTML = '我没有发生任何变化';
+                } else {
+                    odiv.style.backgroundColor = `${oselect.value}`;
+                    odiv.innerHTML = `我的背景颜色变成了${oselect.value}色`;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <span>请选择您喜欢的颜色:</span>
+        <select id="color">
+            <option value="0">请选择</option>
+            <option value="yellow">黄色</option>
+            <option value="orange">橘色</option>
+            <option value="pink">粉色</option>
+            <option value="purple">紫色</option>
+        </select>
+    </div>
+    <div id="div">我是div</div>
+</body>
+
+</html>

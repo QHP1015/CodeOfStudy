@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制文本框</title>
+</head>
+
+<body>
+    <p>
+        只能输入小写字母和数字：
+        <input type="text" id="field">
+    </p>
+    <script>
+        let oField = document.getElementById('field');
+
+        oField.onkeypress = function (e) {
+            console.log(e.charCode);
+            if (!(e.charCode >= 48 && e.charCode <= 57 || e.charCode >= 97 && e.charCode <= 122)) {
+                // 阻止浏览器的默认行为
+                e.preventDefault();
+            }
+        };
+    </script>
+</body>
+
+</html>
