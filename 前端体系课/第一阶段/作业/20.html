@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆验证</title>
+    <style>
+        .box {
+            margin: 300px auto;
+            text-align: center;
+        }
+
+        .box div {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>用户名：<input type="text" class="name"></div>
+        <div>密&nbsp;&nbsp;&nbsp;码：<input type="password" class="psd"></div>
+        <button class="btn">提交</button>
+    </div>
+
+    <script>
+        let btn = document.querySelector('.btn');
+
+        btn.onclick = () => {
+            let name = document.querySelector('.name').value;
+            let psd = document.querySelector('.psd').value;
+            if (name == '张三' && psd == '123456') {
+                window.location = 'https://www.imooc.com';
+            } else {
+                alert('信息不对')
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

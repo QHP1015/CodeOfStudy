@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS和CSS3结合实现动画案例：呼吸轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel {
+            width: 650px;
+            height: 360px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .carousel .leftbtn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            margin-top: -25px;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(80, 198, 245);
+            border-radius: 50%;
+        }
+
+        .carousel .rightbtn {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            margin-top: -25px;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(80, 198, 245);
+            border-radius: 50%;
+        }
+
+        .carousel ul {
+            list-style: none;
+        }
+
+        .carousel ul li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 透明度都为0 */
+            opacity: 0;
+            transition: opacity 1s ease 0s;
+        }
+
+        .carousel ul li:first-child {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <ul class="list">
+            <li><img src="images/beijing/0.jpg" alt=""></li>
+            <li><img src="images/beijing/1.jpg" alt=""></li>
+            <li><img src="images/beijing/2.jpg" alt=""></li>
+            <li><img src="images/beijing/3.jpg" alt=""></li>
+            <li><img src="images/beijing/4.jpg" alt=""></li>
+        </ul>
+        <a href="javascript:;" class="leftbtn"></a>
+        <a href="javascript:;" class="rightbtn"></a>
+    </div>
+
+    <script>
+        // 得到按钮和ul，ul整体移动
+        let leftbtn = document.querySelector('.leftbtn');
+        let rightbtn = document.querySelector('.rightbtn');
+        let list = document.querySelector('.list');
+        let lis = list.getElementsByTagName('li')
+
+        // 当前显示第几张
+        let idx = 0;
+        // 函数节流锁
+        let lock = true;
+        // 右按钮监听
+        rightbtn.onclick = function () {
+            // 判断锁的状态
+            if (!lock) return;
+            // 上锁
+            lock = false;
+
+            // 还未改idx，老图淡出
+            lis[idx].style.opacity = 0;
+            idx++;
+            if (idx > 4) {
+                idx = 0;
+            }
+            // 改了idx，新图淡入
+            lis[idx].style.opacity = 1;
+
+            // 开锁
+            setTimeout(() => {
+                lock = true
+            }, 1000);
+        }
+
+        // 左按钮监听
+        leftbtn.onclick = function () {
+            // 判断锁的状态
+            if (!lock) return;
+            // 上锁
+            lock = false;
+
+            // 还未改idx，老图淡出
+            lis[idx].style.opacity = 0;
+            idx--;
+            if (idx < 0) {
+                idx = 4;
+            }
+            // 改了idx，新图淡入
+            lis[idx].style.opacity = 1;
+
+            // 开锁
+            setTimeout(() => {
+                lock = true
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

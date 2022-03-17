@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS和CSS3结合实现动画案例：无缝连接滚动特效</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 1000px;
+            height: 130px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        #box ul {
+            position: relative;
+            list-style: none;
+            width: 3000px;
+        }
+
+        #box ul li {
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul id="list">
+            <li><img src="images/number/0.png" alt=""></li>
+            <li><img src="images/number/1.png" alt=""></li>
+            <li><img src="images/number/2.png" alt=""></li>
+            <li><img src="images/number/3.png" alt=""></li>
+            <li><img src="images/number/4.png" alt=""></li>
+            <li><img src="images/number/5.png" alt=""></li>
+        </ul>
+    </div>
+
+    <script>
+        let box = document.getElementById('box');
+        let list = document.getElementById('list')
+        // 复制一份li
+        list.innerHTML += list.innerHTML;
+
+        // 全局变量，表示当前list的left值
+        let left = 0;
+        // 定义定时器，全局变量
+        let timer
+
+        move();
+        // 动画封装成函数
+        function move() {
+            // 设表先关，防止动画积累
+            clearInterval(timer)
+            // 设置定时器
+            timer = setInterval(() => {
+                left -= 4;
+                if (left <= -1260) {
+                    left = 0;
+                }
+                list.style.left = left + 'px';
+            }, 20);
+        }
+
+
+        // 鼠标进入，停止计时器
+        box.onmouseenter = function () {
+            clearInterval(timer);
+        }
+        // 鼠标离开，继续计时器
+        box.onmouseleave = function () {
+            move();
+        }
+    </script>
+</body>
+
+</html>

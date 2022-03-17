@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS和CSS3结合实现动画案例：走马灯轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel {
+            width: 650px;
+            height: 360px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel .leftbtn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            margin-top: -25px;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(80, 198, 245);
+            border-radius: 50%;
+        }
+
+        .carousel .rightbtn {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            margin-top: -25px;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(80, 198, 245);
+            border-radius: 50%;
+        }
+
+        .carousel ul {
+            list-style: none;
+            width: 6000px;
+            position: relative;
+            left: 0;
+            transition: left .5s ease 0s;
+        }
+
+        .carousel ul li {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <ul class="list">
+            <Li><img src="images/beijing/0.jpg" alt=""></Li>
+            <Li><img src="images/beijing/1.jpg" alt=""></Li>
+            <Li><img src="images/beijing/2.jpg" alt=""></Li>
+            <Li><img src="images/beijing/3.jpg" alt=""></Li>
+            <Li><img src="images/beijing/4.jpg" alt=""></Li>
+        </ul>
+        <a href="javascript:;" class="leftbtn"></a>
+        <a href="javascript:;" class="rightbtn"></a>
+    </div>
+
+    <script>
+        // 得到按钮和ul，ul整体移动
+        let leftbtn = document.querySelector('.leftbtn');
+        let rightbtn = document.querySelector('.rightbtn');
+        let list = document.querySelector('.list');
+
+        // 克隆第一张图片
+        let cloneli = list.firstElementChild.cloneNode(true);
+        list.appendChild(cloneli)
+        // 当前ul显示第几张
+        let idx = 0;
+
+        // 函数节流锁
+        let lock = true;
+        // 右按钮监听
+        rightbtn.onclick = function () {
+            // 判断锁的状态
+            if (!lock) return;
+            // 上锁
+            lock = false;
+
+            list.style.transition = 'left .5s ease 0s';
+            idx++;
+            if (idx > 4) {
+                // 设置延时器，将ul瞬间拉回0的位置，目的是让过渡动画结束之后拉回
+                setTimeout(() => {
+                    // 取消过渡，达到瞬间移动
+                    list.style.transition = 'none'
+                    list.style.left = 0;
+                    idx = 0;
+                }, 500);
+            }
+            list.style.left = -idx * 650 + 'px';
+
+            // 开锁
+            setTimeout(() => {
+                lock = true
+            }, 500);
+        }
+
+        // 左按钮监听
+        leftbtn.onclick = function () {
+            // 判断锁的状态
+            if (!lock) return;
+            // 上锁
+            lock = false;
+            // 判断是不是第零张，如果是，瞬间用假的替换真的
+            if (idx == 0) {
+                // 取消过渡，达到瞬间移动
+                list.style.transition = 'none'
+                list.style.left = -5 * 650 + 'px';
+                // 设置一个延时器，可以是0毫秒，虽然是0毫秒，但可以让过渡先瞬间取消，在恢复
+                setTimeout(() => {
+                    list.style.transition = 'left .5s ease 0s';
+                    // idx改为真正的最后一张图片的编号
+                    idx = 4;
+                    list.style.left = -idx * 650 + 'px';
+                }, 0);
+            } else {
+                idx--;
+                list.style.left = -idx * 650 + 'px';
+            }
+            // 开锁
+            setTimeout(() => {
+                lock = true
+            }, 500);
+
+        }
+    </script>
+</body>
+
+</html>
