@@ -1,0 +1,18 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "test1 code demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon  --inspect=9229 index.js"
+  },
+  "author": "qianhaipeng",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
