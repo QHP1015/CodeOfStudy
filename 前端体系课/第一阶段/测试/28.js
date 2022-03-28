@@ -108,18 +108,86 @@
 // console.log(obj2);
 
 // 上下文规则1
-let obj1 = {
-    a: 1,
-    b: 2,
-    fn: function () {
-        console.log(this.a + this.b);
-    }
-};
+// let obj1 = {
+//     a: 1,
+//     b: 2,
+//     fn: function () {
+//         console.log(this.a + this.b);
+//     }
+// };
 
-let obj2 = {
-    a: 3,
-    b: 4,
-    fn: obj1.fn
-};
+// let obj2 = {
+//     a: 3,
+//     b: 4,
+//     fn: obj1.fn
+// };
 
-obj2.fn()
+// obj2.fn()
+
+
+// function sum(a, b) {
+//     return a + b;
+// }
+// console.log(sum.prototype);
+// console.log(typeof sum.prototype);
+
+// function People(name, age, sex) {
+//     this.name = name;
+//     this.age = age;
+//     this.sex = sex;
+// }
+// // 往原型上添加属性
+// People.prototype.nationality = '中国'
+// var xiaoming = new People('小明', 12, '男')
+// console.log(xiaoming.nationality);
+// // 往原型上添加方法
+// People.prototype.sayHello = function () {
+//     console.log("你好，我是" + this.name);
+// }
+
+// var xiaohong = new People('小红', 11, '女')
+// console.log(xiaoming.sayHello === xiaohong.sayHello);
+
+// var arr = [1,2,3,4]
+// console.log(arr.__proto__ === Array.prototype);
+// console.log(arr.__proto__.__proto__ === Object.prototype);
+// console.log(Array.prototype.hasOwnProperty('push'));
+
+// 父类
+function People(name, age, sex) {
+    this.name = name;
+    this.age = age;
+    this.sex = sex;
+}
+People.prototype.sayHello = function () {
+    console.log('你好，我是' + this.name);
+}
+People.prototype.sleep = function () {
+    console.log(this.name + '开始睡觉');
+}
+// 子类
+function Student(name, age, sex, school, studentNumber) {
+    this.name = name;
+    this.age = age;
+    this.sex = sex;
+    this.school = school;
+    this.studentNumber = studentNumber
+}
+// 关键语句，实现继承
+Student.prototype = new People();
+
+Student.prototype.study = function () {
+    console.log(this.name + '正在学习');
+}
+Student.prototype.exam = function () {
+    console.log(this.name + '正在考试');
+}
+// 重写父类方法（override）
+Student.prototype.sayHello = function () {
+    console.log(this.name + '敬礼');
+}
+// 实例化
+var hanmeimei = new Student('韩梅梅', 9, '女','慕课小学',100556)
+hanmeimei.study();
+hanmeimei.sayHello();
+hanmeimei.sleep();
