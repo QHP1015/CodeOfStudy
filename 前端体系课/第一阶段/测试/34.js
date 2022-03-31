@@ -1,3 +1,11 @@
+// 寄生组合式继承
+
+// 接收两个参数，subType为子类的构造函数，superType是父类的构造函数
+function inheritPrototype(subType, superType) {
+    let prototype = Object.create(superType.prototype);
+    subType.prototype = prototype
+}
+
 // 父类
 function People(name, age, sex) {
     this.name = name;
@@ -17,8 +25,7 @@ function Student(name, age, sex, school, sid) {
     this.school = school;
     this.sid = sid
 }
-// 借助原型链实现继承
-Student.prototype = new People();
+inheritPrototype(Student, People);
 Student.prototype.study = function () {
     console.log(this.name + '正在学习');
 }
@@ -29,4 +36,6 @@ Student.prototype.exam = function () {
 Student.prototype.sayHello = function () {
     console.log(this.name + '敬礼');
 }
-var hanmeimei = new Student('韩梅梅', 9, '女', '慕课小学', 100556)
+var hanmeimei = new Student('韩梅梅', 9, '女', '慕课小学', 100556);
+hanmeimei.sleep();
+

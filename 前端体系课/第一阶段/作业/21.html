@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字取整</title>
+</head>
+
+<body>
+    <script>
+        let time = Number(prompt('请输入本次运动时间'));
+        if (time > 20) {
+            document.write('您本次运动时间为' + Math.ceil(time) + '分钟');
+        } else {
+            document.write('您本次运动时间为' + Math.floor(time) + '分钟');
+        }
+
+        let arr = [];
+        for (let i = 0; i < 10; i++) {
+            arr.push(parseInt(Math.random() * 101))
+        }
+        document.write(arr.sort((a, b) => {
+            return b - a;
+        }))
+
+        // 时间格式化
+        function Day() {
+            let self = this
+            setInterval(function () {
+                self.times()
+            }, 1000)
+        }
+
+        Day.prototype.times = function () {
+            let d = new Date();
+            let arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+
+            function result(n) {
+                if (n < 10) n = '0' + n;
+                return n;
+            }
+            let h = d.getHours();
+            let m = d.getMinutes();
+            let s = d.getSeconds();
+            let today = ('今天是' + d.getFullYear() + '年' + (d.getMonth() + 1) + '月' + d.getDate() + '日' + arr[d
+                .getDay()] + '<br>' + result(h) + ':' + result(m) + ':' + result(s))
+            document.body.innerHTML = today;
+        };
+
+        new Day();
+    </script>
+</body>
+
+</html>

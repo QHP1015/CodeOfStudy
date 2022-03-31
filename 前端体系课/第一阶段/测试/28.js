@@ -68,41 +68,41 @@
 // console.log(obj2);
 
 // 深克隆2
-// let obj1 = {
-//     a: 1,
-//     b: 2,
-//     c: [33, 44, {
-//         m: 55,
-//         n: 66,
-//         p: [77, 88]
-//     }]
-// };
+let obj1 = {
+    a: 1,
+    b: 2,
+    c: [33, 44, {
+        m: 55,
+        n: 66,
+        p: [77, 88]
+    }]
+};
 
-// function deepClone(obj = {}) {
-//     if (typeof obj !== 'object' || obj == null) {
-//         // obj是null，或者不是对象和数组，直接返回
-//         return obj;
-//     }
+function deepClone(obj = {}) {
+    if (typeof obj !== 'object' || obj == null) {
+        // obj是null，或者不是对象和数组，直接返回
+        return obj;
+    }
 
-//     // 初始化返回结果
-//     let result;
+    // 初始化返回结果
+    let result;
 
-//     if (obj instanceof Array) {   // 判断是否是数组
-//         result = []
-//     } else {
-//         result = {}
-//     }
+    if (obj instanceof Array) { // 判断是否是数组
+        result = []
+    } else {
+        result = {}
+    }
 
-//     for (let key in obj) {
-//         // 保证key不是原型的属性
-//         if (obj.hasOwnProperty(key)) {
-//             // 递归调用
-//             result[key] = deepClone(obj[key])
-//         }
-//     }
+    for (let key in obj) {
+        // 保证key不是原型的属性
+        if (obj.hasOwnProperty(key)) {
+            // 递归调用
+            result[key] = deepClone(obj[key])
+        }
+    }
 
-//     return result;
-// }
+    return result;
+}
 
 // let obj2 = deepClone(obj1);
 // console.log(obj2);
@@ -187,7 +187,7 @@ Student.prototype.sayHello = function () {
     console.log(this.name + '敬礼');
 }
 // 实例化
-var hanmeimei = new Student('韩梅梅', 9, '女','慕课小学',100556)
+var hanmeimei = new Student('韩梅梅', 9, '女', '慕课小学', 100556)
 hanmeimei.study();
 hanmeimei.sayHello();
 hanmeimei.sleep();

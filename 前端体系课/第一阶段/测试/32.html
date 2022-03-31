@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022高考倒计时</title>
+</head>
+
+<body>
+    <h1>2022高考倒计时</h1>
+    <h2 class="info"></h2>
+    <script>
+        let info = document.querySelector('.info');
+        let td = new Date(2022, 5, 7);
+
+        setInterval(function () {
+            let nd = new Date();
+            let diff = td - nd;
+            let day = parseInt(diff / (1000 * 60 * 60 * 24));
+            let hours = parseInt(diff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+            let minutes = parseInt(diff % (1000 * 60 * 60) / (1000 * 60));
+            let seconds = parseInt(diff % (1000 * 60 * 60) % (1000 * 60) / 1000);
+            info.innerText = day + '天' + hours + '时' + minutes + '分' + seconds + '秒';
+        }, 1000)
+    </script>
+</body>
+
+</html>
