@@ -1,0 +1,37 @@
+.app {
+  text-align: center;
+}
+
+.appHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 24px;
+}
+
+.appLogo {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion:no-preference) {
+  .appLogo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+h1 {
+  font-family: 'Slidefu';
+  font-size: 72px;
+}
+
+.robotList {
+  width: 85vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  /* 老师使用macos小屏幕看起来居中了，但是换到分辨率大的屏幕上是没居中的，效果不美观，因此建议加上这句代码 */
+  margin: 0 auto;
+}

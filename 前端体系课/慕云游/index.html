@@ -242,13 +242,36 @@
 
     <!-- banner -->
     <section class="banner">
-        <img src="images/banner1.jpg" alt="">
+        <ul class="carousel_list">
+            <li>
+                <img src="images/banner1.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/banner2.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/banner3.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/banner4.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/banner5.jpg" alt="">
+            </li>
+        </ul>
+        <ol class="circles">
+            <li data-n="0" class="current"></li>
+            <li data-n="1"></li>
+            <li data-n="2"></li>
+            <li data-n="3"></li>
+            <li data-n="4"></li>
+        </ol>
         <div class="center-wrap">
-            <a href="" class="leftbtn"></a>
-            <a href="" class="rightbtn"></a>
+            <a href="javascript:;" class="leftbtn"></a>
+            <a href="javascript:;" class="rightbtn"></a>
             <nav class="banner-nav">
-                <ul>
-                    <li class="hot">
+                <ul id="banner-nav-ul">
+                    <li class="hot" data-t="hot">
                         <dl>
                             <dt>热门出发地</dt>
                             <dd>
@@ -260,7 +283,7 @@
                             </dd>
                         </dl>
                     </li>
-                    <li class="hk">
+                    <li class="hk" data-t="hk">
                         <dl>
                             <dt>港澳台 国内</dt>
                             <dd>
@@ -271,7 +294,7 @@
                             </dd>
                         </dl>
                     </li>
-                    <li class="jp">
+                    <li class="jp" data-t="jp">
                         <dl>
                             <dt>日本 韩国</dt>
                             <dd>
@@ -283,7 +306,7 @@
                             </dd>
                         </dl>
                     </li>
-                    <li class="as">
+                    <li class="as" data-t="as">
                         <dl>
                             <dt>东南亚南亚</dt>
                             <dd>
@@ -295,7 +318,7 @@
                             </dd>
                         </dl>
                     </li>
-                    <li class="eu">
+                    <li class="eu" data-t="eu">
                         <dl>
                             <dt>欧洲 美洲</dt>
                             <dd>
@@ -306,7 +329,7 @@
                             </dd>
                         </dl>
                     </li>
-                    <li class="au">
+                    <li class="au" data-t="au">
                         <dl>
                             <dt>澳新 中东非</dt>
                             <dd>
@@ -318,7 +341,7 @@
                     </li>
                 </ul>
                 <div class="menus-box">
-                    <div class="menu">
+                    <div class="menu" data-t="hot">
                         <dl>
                             <dt>港澳台</dt>
                             <dd>
@@ -391,7 +414,7 @@
                             </dd>
                         </dl>
                     </div>
-                    <div class="menu">
+                    <div class="menu" data-t="hk">
                         <dl>
                             <dt>港澳台</dt>
                             <dd>
@@ -410,7 +433,7 @@
                             </dd>
                         </dl>
                     </div>
-                    <div class="menu">
+                    <div class="menu" data-t="jp">
                         <dl>
                             <dt>日本</dt>
                             <dd>
@@ -440,7 +463,7 @@
                             </dd>
                         </dl>
                     </div>
-                    <div class="menu">
+                    <div class="menu" data-t="as">
                         <dl>
                             <dt>泰新马</dt>
                             <dd>
@@ -503,7 +526,7 @@
                             </dd>
                         </dl>
                     </div>
-                    <div class="menu">
+                    <div class="menu" data-t="eu">
                         <dl>
                             <dt>欧洲</dt>
                             <dd>
@@ -584,7 +607,7 @@
                             </dd>
                         </dl>
                     </div>
-                    <div class="menu">
+                    <div class="menu" data-t="au">
                         <dl>
                             <dt>澳新 南太平洋</dt>
                             <dd>
@@ -641,6 +664,9 @@
             </nav>
         </div>
     </section>
+
+    <script src="js/carousel.js"></script>
+    <script src="js/meun.js"></script>
 
     <!-- 热门广告 -->
     <section class="hot-ads clearfix">
@@ -1328,11 +1354,12 @@
         </div>
     </footer>
 
-     <!-- 返回顶部按钮 -->
-     <a href="javascript:;" class="backtotop" id="backtotop">
+    <!-- 返回顶部按钮 -->
+    <a href="javascript:;" class="backtotop" id="backtotop">
         返回<br>顶部
     </a>
 
+    <script src="js/backtotop.js"></script>
 </body>
 
 </html>

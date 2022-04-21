@@ -276,14 +276,25 @@
 /* banner区域开发 */
 .banner {
     position: relative;
+    overflow: hidden;
 }
 
-.banner img {
+.banner .carousel_list {
+    width: 600%;
+    overflow: hidden;
+    /* translateX中的百分数表示相对于其本身的宽度的多少倍 */
+    /* transform: translateX(-16.66%); */
+    transition: transform .5s ease 0s;
+}
+
+.banner .carousel_list li {
+    float: left;
+    width: 16.666%;
+}
+
+.banner .carousel_list li img {
     width: 100%;
-    /* 使用min-width限制最小宽度 */
-    min-width: 1152px;
-    /* 图片和盒子的底部会产生缝隙，可以使用vertical-align: middle; */
-    /* 改变基线位置 */
+    /* 去除白边 */
     vertical-align: middle;
 }
 
@@ -303,6 +314,7 @@
 
 .banner .center-wrap .banner-nav {
     height: 100%;
+    width: 652px;
 }
 
 .banner .center-wrap .banner-nav>ul {
@@ -427,6 +439,11 @@
     left: 12px;
 }
 
+.banner .center-wrap .banner-nav>ul>li.current {
+    background-color: rgba(0, 0, 0, .63);
+
+}
+
 .banner .center-wrap .banner-nav .menus-box .menu {
     /* 让所有的menu隐藏 */
     display: none;
@@ -440,6 +457,12 @@
     padding: 16px;
     /* 设置box-sizing就不用考虑padding导致的盒子大小改变问题 */
     box-sizing: border-box;
+    z-index: 99999;
+}
+
+/* 有current类名的显示 */
+.banner .center-wrap .banner-nav .menus-box .menu.current {
+    display: block;
 }
 
 .banner .center-wrap .banner-nav .menus-box .menu a {
@@ -458,6 +481,36 @@
 .banner .center-wrap .banner-nav .menus-box .menu dl dd {
     line-height: 25px;
     font-size: 15px;
+}
+
+.banner .circles {
+    width: 160px;
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -75;
+    z-index: 9999;
+}
+
+.banner .circles li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(119, 240, 159);
+    margin-right: 10px;
+    border-radius: 10px;
+    transform: all .5s ease 0s;
+    cursor: pointer;
+}
+
+.banner .circles li:last-child {
+    margin-right: 0;
+}
+
+.banner .circles li.current {
+    width: 40px;
+    background-color: rgb(65, 173, 32);
 }
 
 /* 热门广告 */
