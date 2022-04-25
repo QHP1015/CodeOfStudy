@@ -33,5 +33,5 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
   /* 老师使用macos小屏幕看起来居中了，但是换到分辨率大的屏幕上是没居中的，效果不美观，因此建议加上这句代码 */
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
