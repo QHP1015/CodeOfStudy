@@ -1,44 +1,45 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from "./App.module.css"
-import { Header, Footer, SideMenu, Carousel, ProductCollection } from './components'
-import { Row, Col, Typography } from 'antd';
-import { productList1, productList2, productList3 } from "./mockups";
-import sideImage from "./assets/images/sider_2019_12-09.png";
-import sideImage2 from "./assets/images/sider_2019_02-04.png";
-import sideImage3 from "./assets/images/sider_2019_02-04-2.png";
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { DetailPage, HomePage, RegisterPage, SignInPage, SearchPage, ShoppingCartPage, PlaceOrderPage } from './pages';
+import { useSelector } from './redux/hooks';
+import { useDispatch } from 'react-redux';
+import { getShoppingCart } from './redux/shoppingCart/slice';
+
+const PrivateRoute = ({ isAuthentiacted, element }) => {
+  return isAuthentiacted ? (
+    element
+    // <element/>
+  ) : (
+    <Navigate to={"/signin"} />
+  );
+}
 
 function App() {
+  const jwt = useSelector(state => state.user.token);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (jwt) {
+      dispatch(getShoppingCart(jwt));
+    }
+  }, [jwt]);
+
   return (
     <div className={styles.App}>
-      <Header />
-      {/* 页面内容 */}
-      <div className={styles['page-content']}>
-        <Row style={{ marginTop: 20 }}>
-          <Col span={6}>
-            <SideMenu />
-          </Col>
-          <Col span={18}>
-            <Carousel />
-          </Col>
-        </Row>
-        <ProductCollection
-          title={<Typography.Title level={3} type="warning">爆款推荐</Typography.Title>}
-          sideImage={sideImage}
-          products={productList1}
-        />
-        <ProductCollection
-          title={<Typography.Title level={3} type="danger">新品上市</Typography.Title>}
-          sideImage={sideImage2}
-          products={productList2}
-        />
-        <ProductCollection
-          title={<Typography.Title level={3} type="success">国内游推荐</Typography.Title>}
-          sideImage={sideImage3}
-          products={productList3}
-        />
-      </div>
-
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/signin' element={<SignInPage />} />
+          <Route path='/register' element={<RegisterPage />} />
+          <Route path='/detail/:touristRouteId' element={<DetailPage />} />
+          <Route path='/search/:keywords' element={<SearchPage />} />
+          <Route path='/search' element={<SearchPage />} />
+          <Route path='/shoppingCart' element={<PrivateRoute isAuthentiacted={jwt !== null} element={<ShoppingCartPage />} />} />
+          <Route path='/placeOrder' element={<PrivateRoute isAuthentiacted={jwt !== null} element={<PlaceOrderPage />} />} />
+          <Route path='*' element={<h1>Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
