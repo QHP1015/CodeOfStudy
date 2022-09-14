@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            margin: 20px 0;
+            line-height: 30px;
+            background: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="start">开始</button>
+    <button id="stop">停止</button>
+    <div id="box"></div>
+    <script>
+        const startBtn = document.getElementById('start')
+        const stopBtn = document.getElementById('stop')
+        const box = document.getElementById('box')
+        var show = {
+            content: "Hello World",
+            timer: null,
+            lock: true,
+            start: function () {
+                // 在此补充代码
+                startBtn.addEventListener('click', () => {
+                    if (!this.lock) return;
+                    this.timer = setInterval(() => {
+                        box.innerHTML += (this.content + " ");
+                    }, 1000);
+                    this.lock = false;
+                }, false)
+            },
+            stop: function () {
+                // 在此补充代码
+                stopBtn.addEventListener('click', () => {
+                    clearInterval(this.timer);
+                    this.lock = true;
+                }, false)
+            },
+        }
+        // 在此补充代码
+        show.start();
+        show.stop();
+    </script>
+</body>
+
+</html>

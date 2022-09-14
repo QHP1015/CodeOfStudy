@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jquery</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>ES6</li>
+    </ul>
+    <script type="text/javascript">
+        //补充代码
+        let li=document.querySelectorAll('li');
+        for(let i=0;i<li.length;i++){
+            let text=li[i].innerText;
+                li[i].onmouseenter=function(){
+                    li[i].innerHTML+='我是第'+(i+1)+'个';
+                    li[i].style.color='red';
+                    li[i].style.fontSize=28+'px';
+                }
+                li[i].onmouseleave=function(){
+                    li[i].innerText=text;
+                    li[i].style.color='';
+                    li[i].style.fontSize='';
+                }
+        }
+    </script>
+</body>
+</html>

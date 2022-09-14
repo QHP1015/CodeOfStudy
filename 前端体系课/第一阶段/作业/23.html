@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 1000px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .box1 .footer {
+            padding: 40px;
+            float: left;
+        }
+
+        .box1 .box2 {
+            position: relative;
+            width: 400px;
+            padding: 32px;
+            float: right;
+
+        }
+
+        .box1 .box2 a {
+            padding: 5px;
+            background-color: black;
+            color: #ffff;
+            text-decoration: none;
+
+        }
+
+        .box1 .box2 .nav li {
+            list-style-type: none;
+            float: left;
+            width: 32px;
+            margin-right: 32px;
+            cursor: pointer;
+        }
+
+        .box1 .box2 .nav li.curr {
+            color: #f01400;
+        }
+
+        .box1 .box2 .box3 {
+            position: absolute;
+            width: 32px;
+            height: 6px;
+            background-color: #f01400;
+            margin-top: 10px;
+            left: 32px;
+            transition: left .4s ease 0s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <h2 class="footer">慕课手机</h2>
+        <div class="box2">
+            <ul class="nav" id="nav">
+                <li class="curr" data-t="1">首页</li>
+                <li data-t="3">外观</li>
+                <li data-t="5">设置</li>
+                <li data-t="7">型号</li>
+                <li data-t="9">说明</li>
+            </ul>
+            <a href="">立即购买</a>
+            <div class="box3" id="box3"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    let nav = document.getElementById('nav')
+    let box3 = document.getElementById('box3')
+    let list = document.querySelectorAll('.nav li')
+
+    nav.onmouseover = function (e) {
+        if (e.target.tagName.toLowerCase() == 'li') {
+            let t = e.target.getAttribute('data-t')
+            box3.style.left = (32 * t) + 'px'
+            for (i = 0; i < list.length; i++) {
+                list[i].className = ''
+            }
+            e.target.className += 'curr'
+        }
+    }
+</script>
