@@ -9,9 +9,8 @@ import { getShoppingCart } from './redux/shoppingCart/slice';
 const PrivateRoute = ({ isAuthentiacted, element }) => {
   return isAuthentiacted ? (
     element
-    // <element/>
   ) : (
-    <Navigate to={"/signin"} />
+    <Navigate to={"/signIn"} />
   );
 }
 
@@ -30,13 +29,19 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/signin' element={<SignInPage />} />
+          <Route path='/signIn' element={<SignInPage />} />
           <Route path='/register' element={<RegisterPage />} />
           <Route path='/detail/:touristRouteId' element={<DetailPage />} />
           <Route path='/search/:keywords' element={<SearchPage />} />
           <Route path='/search' element={<SearchPage />} />
-          <Route path='/shoppingCart' element={<PrivateRoute isAuthentiacted={jwt !== null} element={<ShoppingCartPage />} />} />
-          <Route path='/placeOrder' element={<PrivateRoute isAuthentiacted={jwt !== null} element={<PlaceOrderPage />} />} />
+          <Route path='/shoppingCart' element={
+            <PrivateRoute
+              isAuthentiacted={jwt !== null} element={<ShoppingCartPage />} />}
+          />
+          <Route path='/placeOrder' element={
+            <PrivateRoute
+              isAuthentiacted={jwt !== null} element={<PlaceOrderPage />} />}
+          />
           <Route path='*' element={<h1>Not Found</h1>} />
         </Routes>
       </BrowserRouter>
