@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    box-sizing: border-box;
+}
+/* layout */
+.wrap {
+    width:1200px;
+    margin: 0 auto;
+}
+.demo {
+    margin-bottom: 20px;
+}
+.demo {
+    background: #f2f2f2;
+}
+.slider-layout {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+
+}
+/* slider */
+
+.slider,
+.slider-content,
+.slider-item,
+.slider-img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+    border-radius:8px;
+    border: 1px solid gray;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    -ms-border-radius:8px;
+    -o-border-radius:8px;
+}
+
+.slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.slider-item img{
+    width: 100%;
+    height: 300px;
+}
+
+.slider-item-active {
+    opacity: 1;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+
+
+/* 小圆点 */
+
+.dots {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+}
+
+.dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #333;
+}
+
+.dots span.active {
+    background: #0058AA;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+
+
+/* arrow */
+
+.arrow div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3) no-repeat center center;
+    background-size: 48px 48px;
+}
+
+.arrow .prev {
+    left: 0;
+    background-image: url('../img/prev.png');
+}
+
+.arrow .next {
+    right: 0;
+    background-image: url('../img/next.png');
+}
+h3 {
+    font-size: 32px;
+    color: #696868;
+    font-weight: normal;
+    text-align: center;
+    padding: 20px 0;
+}

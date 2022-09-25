@@ -1,0 +1,36 @@
+
+/* 第二种样式 */
+.tab .slider-layout {
+    height: 360px;
+}
+.tab-slider {
+    padding-top: 60px;
+}
+.tab-slider  .pagination {
+    position: absolute;
+    top:0;
+    width: 100%;
+}
+.tab-slider  .pagination span{
+    float:left;
+    width: 33.33%;
+    line-height: 60px;
+    text-align:center;
+    border-radius:8px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    -ms-border-radius:8px;
+    -o-border-radius:8px;
+}
+.tab-slider .slider-item{
+    top: 60px;
+}
+.tab-slider  .pagination span.active {
+    color: #fff;
+    background: #0058AA;
+}
+
+/* 第三种方式 */
+.pagination-arrow  .arrow div{
+    opacity: 0;
+}
