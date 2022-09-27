@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>发送</button>
+
+    <script>
+        const btn = document.querySelector('button')
+        const url = 'https://www.imooc.com/api/http/json/search/suggest?words=js';
+        const xhr = new XMLHttpRequest();
+
+        btn.addEventListener('click', () => {
+            xhr.addEventListener('load', () => {
+                if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304)
+                    console.log(xhr.response);
+            }, false)
+
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.responseType = "json";
+            xhr.send(
+                JSON.stringify({
+                    username: 'imooc'
+                })
+            )
+        }, false);
+
+
+    </script>
+</body>
+
+</html>
