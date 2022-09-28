@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>搜索提示</title>
+</head>
+
+<body>
+    <input id="search" type="text" />
+    <ul id="result"></ul>
+
+    <script type="module">
+        import { getJSON } from './index.js';
+
+        const searchInput = document.getElementById('search');
+        const resultList = document.getElementById('result');
+
+        const url = 'https://www.imooc.com/api/http/search/suggest?words=';
+
+        const handleInputEvent = () => {
+            // trim 消除空格
+            if (searchInput.value.trim() !== '') {
+                getJSON(`${url}${searchInput.value}`).then(response => {
+                    console.log(response);
+
+                    let html = '';
+                    for (const item of response.data) {
+                        html += `<li>${item.word}</li>`
+                    }
+                    resultList.innerHTML = html
+                    resultList.style.display = '';
+                }).catch(err => {
+                    console.log(err);
+                });
+            } else {
+                resultList.innerHTML = '';
+                resultList.style.display = 'none';
+            }
+        }
+
+        let timer = null
+        searchInput.addEventListener('input', () => {
+            // 设表先关
+            if (timer)
+                clearTimeout(timer);
+
+            timer = setTimeout(handleInputEvent, 300);
+        }, false)
+    </script>
+</body>
+
+</html>
