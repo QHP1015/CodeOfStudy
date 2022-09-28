@@ -1,5 +1,7 @@
 import  BaseSlider  from "./baseSlider.js";
+import BannerSlider from "./bannerSlider.js"
 
 console.log(234);
 
-new BaseSlider(document.querySelector('.banner-slider'));
+// new BannerSlider(document.querySelector('.banner-slider'));
+

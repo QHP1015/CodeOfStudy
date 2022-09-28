@@ -2,7 +2,7 @@
 import DEFAULTS from "./defaults.js";
 import { ELEMENT_NODE } from "./constants.js";
 
-class BaseSlider {
+export default class BaseSlider {
   constructor(elem, options) {
     // 判断传入的是否为 DOM 元素
     if (elem.nodeType !== ELEMENT_NODE) throw new Error("实例化的时候，请传入 DOM 元素！");
@@ -12,9 +12,6 @@ class BaseSlider {
       ...DEFAULTS,
       ...options,
     };
-
-    // 定时器
-    let timer;
 
     // 获取 DOM 元素
     const slider = elem;
@@ -32,30 +29,31 @@ class BaseSlider {
     this.minIndex = 0;
     this.maxIndex = sliderItems.length - 1;
     this.currIndex = this.getCorrectedIndex(this.options.initialIndex);
+    console.log(this.options.initialIndex);
 
     // 每个 slider-item 的宽度（每次移动的距离）
-    this.itemWidth = sliderItems[0].offsetWidth;
-    console.log(this.itemWidth);
+    // this.itemWidth = sliderItems[0].offsetWidth;
+    // console.log(this.itemWidth);
 
     // 初始化
     this.init();
   }
 
   // 获取要移动的距离
-  getDistance(index = this.currIndex) {
-    return -this.itemWidth * index;
-  }
+  //   getDistance(index = this.currIndex) {
+  //     return -this.itemWidth * index;
+  //   }
 
   // 初始化
   init() {
     // 切换到初始索引 initialIndex
-    this.move(this.getDistance());
+    this.move(this.currIndex);
     // 是否开启自动播放
-    this.autoPlay(this.options.autoPlay);
-    console.log(123);
+    // this.autoPlay(this.options.autoPlay);
+    // console.log(123);
 
-    this.stopPlay(this.options.stopPlay);
-    this.recoverPlay(this.options.stopPlay);
+    // this.stopPlay(this.options.stopPlay);
+    // this.recoverPlay(this.options.stopPlay);
   }
 
   // 获取索引值
@@ -78,27 +76,33 @@ class BaseSlider {
     }
   }
 
-  stopPlay(boolean) {
-    if (boolean) {
-      this.slider.onmouseenter = () => {
-        clearInterval(this.timer);
-      };
-    }
-  }
+  //   stopPlay(boolean) {
+  //     if (boolean) {
+  //       this.slider.onmouseenter = () => {
+  //         clearInterval(this.timer);
+  //       };
+  //     }
+  //   }
 
-  recoverPlay(boolean) {
-    if (boolean) {
-      this.slider.onmouseout = () => {
-        this.autoPlay();
-      };
-    }
-  }
+  //   recoverPlay(boolean) {
+  //     if (boolean) {
+  //       this.slider.onmouseout = () => {
+  //         this.autoPlay();
+  //       };
+  //     }
+  //   }
 
   // 移动幻灯片
-  move(distance) {
+  move(index) {
     // this.sliderContent.style.transform = `translate3d(${distance}px, 0px, 0px)`;
-    console.log(distance);
-    this.sliderItems[this.currIndex].opacity=1;
+    // console.log(distance);
+    this.sliderItems.forEach((item, index) => {
+      if (item.className.length !== 0) {
+        item.className = "slider-item";
+      }
+    });
+    // this.sliderItems[index].opacity = 1;
+    this.sliderItems[index].className += " slider-item-active";
   }
 
   // 切换到 index 索引对应的幻灯片
@@ -108,8 +112,10 @@ class BaseSlider {
     if (this.currIndex === index) return;
 
     this.currIndex = index;
-    const distance = this.getDistance();
-    return this.move(distance);
+    console.log(`to${index}`);
+    // const distance = this.getDistance();
+    // const index = this.getCorrectedIndex(index);
+    return this.move(this.currIndex);
   }
 
   // 切换上一张
@@ -122,5 +128,3 @@ class BaseSlider {
     this.to(this.currIndex + 1);
   }
 }
-
-export default BaseSlider;
