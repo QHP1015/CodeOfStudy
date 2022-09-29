@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>二级菜单</title>
+    <style>
+        /* css reset */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /* menu */
+        .menu {
+            width: 100px;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+
+        .menu-item {
+            position: relative;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .menu-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 200px;
+            height: 100px;
+            padding: 0 5px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .menu-item:hover .menu-content {
+            display: block;
+        }
+
+        .menu-loading {
+            margin: 45px 0 0 92px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu" class="menu">
+        <!-- <li class="menu-item" data-key="hot" data-done="done">
+        <span>热门出发地</span>
+        <div class="menu-content">
+          <img class="menu-loading" src="./loading.gif" alt="加载中" />
+          <p>内地热门城市</p>
+          <p>热门景点</p>
+        </div>
+      </li> -->
+    </ul>
+
+    <script>
+        // https://www.imooc.com/api/mall-PC/index/menu
+        // https://www.imooc.com/api/mall-PC/index/menu/hot
+        // https://www.imooc.com/api/mall-PC/index/menu/hk
+        function wait(ms) {
+            return new Promise(resolve => {
+                setTimeout(resolve, ms);
+            });
+        }
+        function getJSON(url) {
+            return new Promise(resolve => {
+                const xhr = new XMLHttpRequest();
+
+                xhr.addEventListener(
+                    'load',
+                    async () => {
+                        if (
+                            (xhr.status >= 200 && xhr.status < 300) ||
+                            xhr.status === 304
+                        ) {
+                            // 模拟网络延迟
+                            await wait(1000);
+                            resolve(xhr.response);
+                        }
+                    },
+                    false
+                );
+
+                xhr.open('GET', url, true);
+
+                xhr.responseType = 'json';
+
+                xhr.send(null);
+            });
+        }
+
+        // (async () => {
+        //   const url = 'https://www.imooc.com/api/mall-PC/index/menu';
+        //   const $menu = document.getElementById('menu');
+
+        //   // 发送请求，获取数据，创建主菜单
+        //   const menuResult = await getJSON(url);
+        //   // console.log(menuResult);
+        //   createMenu($menu, menuResult.data);
+
+        //   // 循环绑定事件，发送请求，获取数据，创建子菜单
+        //   const $items = $menu.getElementsByClassName('menu-item');
+
+        // items为类数组，通过ES6方法变为数组
+        //   [...$items].forEach($item => {
+        //     $item.addEventListener(
+        //       'mouseenter',
+        //       async () => {
+        //         if ($item.dataset.done === 'done') return;
+
+        //         const subMenuResult = await getJSON(
+        //           `${url}/${$item.dataset.key}`
+        //         );
+        //         console.log(subMenuResult);
+        //         $item.dataset.done = 'done';
+
+        //         createSubMenu($item, subMenuResult.data);
+        //       },
+        //       false
+        //     );
+        //   });
+        // })();
+
+        // function createMenu($el, data) {
+        //   let html = '';
+        //   for (const item of data) {
+        //     html += `<li class="menu-item" data-key="${item.key}">
+        //   <span>${item.title}</span>
+        //   <div class="menu-content">
+        //     <img class="menu-loading" src="./loading.gif" alt="加载中" />
+        //   </div>
+        // </li>`;
+        //   }
+
+        //   $el.innerHTML = html;
+        // }
+
+        // function createSubMenu($el, data) {
+        //   let html = '';
+        //   for (const item of data) {
+        //     html += `<p>${item.title}</p>`;
+        //   }
+
+        //   $el.querySelector('.menu-content').innerHTML = html;
+        // }
+
+        class Menu {
+            constructor($el) {
+                this.$el = $el;
+                this.url = 'https://www.imooc.com/api/mall-PC/index/menu';
+            }
+
+            async getData(url = this.url) {
+                return (await getJSON(url)).data;
+            }
+
+            render(data) {
+                let html = '';
+                for (const item of data) {
+                    html += `<li class="menu-item" data-key="${item.key}">
+        <span>${item.title}</span>
+        <div class="menu-content">
+          <img class="menu-loading" src="./loading.gif" alt="加载中" />
+        </div>
+      </li>`;
+                }
+
+                this.$el.innerHTML = html;
+            }
+        }
+
+        class SubMenu {
+            constructor($el) {
+                this.$el = $el;
+                this.url = 'https://www.imooc.com/api/mall-PC/index/menu';
+            }
+
+            // 是否需要获取数据
+            needGetData() {
+                if (this.$el.dataset.done !== 'done') {
+                    this.$el.dataset.done = 'done';
+                    return true;
+                }
+                return false;
+            }
+
+            async getData(url = `${this.url}/${this.$el.dataset.key}`) {
+                return (await getJSON(url)).data;
+            }
+
+            render(data) {
+                let html = '';
+                for (const item of data) {
+                    html += `<p>${item.title}</p>`;
+                }
+
+                this.$el.querySelector('.menu-content').innerHTML = html;
+            }
+        }
+
+        // 面向对象
+        (async () => {
+            const $menu = document.getElementById('menu');
+
+            // 发送请求，获取数据，创建主菜单
+            const menu = new Menu($menu);
+            menu.render(await menu.getData());
+
+            // 循环绑定事件，发送请求，获取数据，创建子菜单
+            const $items = $menu.getElementsByClassName('menu-item');
+            for (const $item of $items) {
+                $item.addEventListener(
+                    'mouseenter',
+                    async () => {
+                        const subMenu = new SubMenu($item);
+
+                        if (!subMenu.needGetData()) return;
+
+                        subMenu.render(await subMenu.getData());
+                    },
+                    false
+                );
+            }
+        })();
+    </script>
+</body>
+
+</html>
