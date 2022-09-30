@@ -1,0 +1,83 @@
+<div class="hd">
+    <h3>特色当地体验</h3>
+</div>
+<div class="bd">
+    <ul>
+        <li class="grid">
+            <a href="">
+                <div class="pic">
+                    <img class="p-img" src="images/tsdd_01.png" alt="" />
+                </div>
+                <div class="tip">
+                    <div class="inn">
+                        <div class="title">
+                            香港迪士尼乐园门票(一日 / 两日) - 无需换票扫码入园）
+                        </div>
+                        <div class="extra">
+                            <span class="star iconfont">&#xe62b;</span>
+                            <span class="score">4.8</span>
+                            <span class="comment">（92833评价) 2334.69k人参加过</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="grid">
+            <a href="">
+                <div class="pic">
+                    <img class="p-img" src="images/tsdd_02.png" alt="" />
+                </div>
+                <div class="tip">
+                    <div class="inn">
+                        <div class="title">
+                            香港迪士尼乐园门票(一日 / 两日) - 无需换票扫码入园）
+                        </div>
+                        <div class="extra">
+                            <span class="star iconfont">&#xe62b;</span>
+                            <span class="score">4.8</span>
+                            <span class="comment">（92833评价) 2334.69k人参加过</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="grid">
+            <a href="">
+                <div class="pic">
+                    <img class="p-img" src="images/tsdd_03.png" alt="" />
+                </div>
+                <div class="tip">
+                    <div class="inn">
+                        <div class="title">
+                            香港迪士尼乐园门票(一日 / 两日) - 无需换票扫码入园）
+                        </div>
+                        <div class="extra">
+                            <span class="star iconfont">&#xe62b;</span>
+                            <span class="score">4.8</span>
+                            <span class="comment">（92833评价) 2334.69k人参加过</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="grid">
+            <a href="">
+                <div class="pic">
+                    <img class="p-img" src="images/tsdd_04.png" alt="" />
+                </div>
+                <div class="tip">
+                    <div class="inn">
+                        <div class="title">
+                            香港迪士尼乐园门票(一日 / 两日) - 无需换票扫码入园）
+                        </div>
+                        <div class="extra">
+                            <span class="star iconfont">&#xe62b;</span>
+                            <span class="score">4.8</span>
+                            <span class="comment">（92833评价) 2334.69k人参加过</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

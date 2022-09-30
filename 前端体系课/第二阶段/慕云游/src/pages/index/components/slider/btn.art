@@ -1,0 +1,4 @@
+<div class="btns">
+  <a id="leftbtn" href="javascript:;" class="btn leftbtn"></a>
+  <a id="rightbtn" href="javascript:;" class="btn rightbtn"></a>
+</div>

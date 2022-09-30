@@ -1,0 +1,31 @@
+<div class="slider">
+  <ul class="slider-content">
+    {{each items}}
+    <li class="slider-item">
+      <a href="javascript:;">
+        <img src="{{ $value.url }}" alt="" class="slider-img" />
+      </a>
+    </li>
+    {{/each}}
+    <!-- <li class="slider-item">
+      <a href="javascript:;">
+        <img src="images/banner_02.jpg" alt="" class="slider-img" />
+      </a>
+    </li>
+    <li class="slider-item">
+      <a href="javascript:;">
+        <img src="images/banner_03.jpg" alt="" class="slider-img" />
+      </a>
+    </li>
+    <li class="slider-item">
+      <a href="javascript:;">
+        <img src="images/banner_04.jpg" alt="" class="slider-img" />
+      </a>
+    </li>
+    <li class="slider-item">
+      <a href="javascript:;">
+        <img src="images/banner_05.jpg" alt="" class="slider-img" />
+      </a>
+    </li> -->
+  </ul>
+</div>

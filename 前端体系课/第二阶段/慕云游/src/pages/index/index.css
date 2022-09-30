@@ -1,0 +1,52 @@
+/* index.css */
+.site-head {
+    height: 150px;
+}
+
+.banner {
+    width: 100%;
+    min-width: 1152px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner .loading {
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+.banner .center-wrap {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1152px;
+    margin-left: -576px;
+}
+
+.fav-ad {
+    height: 110px;
+    padding: 32px 0;
+}
+
+.xxsw {
+    height: 738px;
+}
+
+.ddwl {
+    height: 586px;
+}
+
+.tsddty {
+    height: 456px;
+}
+
+footer .footer-nav {
+    background: #f7f7f7;
+    height: 220px;
+}
+
+footer .bottom-bar {
+    height: 200px;
+    background-color: #1c1f21;
+    color: white;
+}

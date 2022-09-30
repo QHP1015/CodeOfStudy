@@ -1,0 +1,93 @@
+<div class="hd">
+    <h3>新鲜甩尾</h3>
+    <div class="slogan">每日不可不看的好货</div>
+</div>
+<div class="bd">
+    <ul>
+        <li class="grid">
+            <a href="" title="北京直飞马尔代夫6-7天往返含税机票（首都航空/售完为止）">
+                <div class="pic">
+                    <img class="p-img" src="images/xxsw_01.png" alt="" />
+                </div>
+                <div class="tip">
+                    北京直飞马尔代夫6-7天往返含税机票（首都航空/售完为止）
+                </div>
+            </a>
+        </li>
+        <li class="grid">
+            <a href="" title="[甩尾狂欢] 北京/天津直飞日本东京/大阪/冲绳/札幌/福冈4-7天往返含机票和酒店">
+                <div class="pic">
+                    <img class="p-img" src="images/xxsw_02.png" alt="" />
+                </div>
+                <div class="tip">
+                    [甩尾狂欢]
+                    北京/天津直飞日本东京/大阪/冲绳/札幌/福冈4-7天往返含机票和酒店
+                </div>
+            </a>
+        </li>
+        <li class="grid">
+            <a href="" title="[拒签全退][全国25城联运] 北京往返格鲁吉亚+阿塞拜疆7-30天自由行">
+                <div class="pic">
+                    <img class="p-img" src="images/xxsw_03.png" alt="" />
+                </div>
+                <div class="tip">
+                    [拒签全退][全国25城联运] 北京往返格鲁吉亚+阿塞拜疆7-30天自由行
+                </div>
+            </a>
+        </li>
+        <li class="grid">
+            <a href="" title="[樱花季] 北京直飞东京/大阪/名古屋/冲绳/札幌/福冈/仙台2-30天往返含机票和酒店">
+                <div class="pic">
+                    <img class="p-img" src="images/xxsw_04.png" alt="" />
+                </div>
+                <div class="tip">
+                    [樱花季]
+                    北京直飞东京/大阪/名古屋/冲绳/札幌/福冈/仙台2-30天往返含机票和酒店
+                </div>
+            </a>
+        </li>
+        <li class="grid">
+            <a href="" title="[品质小团/快速确认] 新西兰福克斯冰川直升机观光+冰川徒步（提供含机票和酒店）">
+                <div class="pic">
+                    <img class="p-img" src="images/xxsw_05.png" alt="" />
+                </div>
+                <div class="tip">
+                    [品质小团/快速确认]
+                    新西兰福克斯冰川直升机观光+冰川徒步（提供含机票和酒店）
+                </div>
+            </a>
+        </li>
+        <li class="grid">
+            <a href="" title="[北欧破冰船] 芬兰+瑞典极地探险号破冰船活动+冰上漂浮+瑞典小含机票和酒店">
+                <div class="pic">
+                    <img class="p-img" src="images/xxsw_06.png" alt="" />
+                </div>
+                <div class="tip">
+                    [北欧破冰船]
+                    芬兰+瑞典极地探险号破冰船活动+冰上漂浮+瑞典小含机票和酒店
+                </div>
+            </a>
+        </li>
+        <li class="grid">
+            <a href="" title="[指定班期特惠][全程中文伴游] 摩洛哥全景深度10日游（卡萨进出含机票和酒店)">
+                <div class="pic">
+                    <img class="p-img" src="images/xxsw_07.png" alt="" />
+                </div>
+                <div class="tip">
+                    [指定班期特惠][全程中文伴游]
+                    摩洛哥全景深度10日游（卡萨进出含机票和酒店)
+                </div>
+            </a>
+        </li>
+        <li class="grid">
+            <a href="" title="马来西亚天空之镜+河口赏鹰+夜游萤火虫+寻找蓝眼泪（马来西亚瓜拉雪含机票和酒店)">
+                <div class="pic">
+                    <img class="p-img" src="images/xxsw_08.png" alt="" />
+                </div>
+                <div class="tip">
+                    马来西亚天空之镜+河口赏鹰+夜游萤火虫+寻找蓝眼泪（马来西亚瓜拉雪含机票和酒店)
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

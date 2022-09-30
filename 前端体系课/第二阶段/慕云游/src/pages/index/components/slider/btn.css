@@ -1,0 +1,22 @@
+.banner .center-wrap .btns .btn {
+  position: absolute;
+  width: 32px;
+  height: 44px;
+  background-image: url(images/icons.png);
+  top: 50%;
+  margin-top: -22px;
+}
+.banner .center-wrap .btns .btn.leftbtn {
+  left: -40px;
+  background-position: -145px -61px;
+}
+.banner .center-wrap .btns .btn.leftbtn:hover {
+  background-position: -191px -61px;
+}
+.banner .center-wrap .btns .btn.rightbtn {
+  right: -40px;
+  background-position: -144px -10px;
+}
+.banner .center-wrap .btns .btn.rightbtn:hover {
+  background-position: -190px -10px;
+}

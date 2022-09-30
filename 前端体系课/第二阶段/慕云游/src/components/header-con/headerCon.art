@@ -1,0 +1,13 @@
+<div class="header-con">
+    <div class="center-wrap">
+        <h1>
+            <a href="">慕云游商城</a>
+        </h1>
+        <div class="soso-box">
+            <input type="text" placeholder="搜目的地/酒店/攻略" />
+            <a href="javascript:;" class="btn">
+                <b class="iconfont">&#xe603;</b>
+            </a>
+        </div>
+    </div>
+</div>

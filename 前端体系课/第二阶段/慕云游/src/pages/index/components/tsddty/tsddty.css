@@ -1,0 +1,40 @@
+/* tsddty */
+.tsddty .hd h3 {
+    float: none;
+    text-align: center;
+}
+
+.tsddty li.grid {
+    width: 264px;
+    height: 290px;
+    float: left;
+    margin-right: 32px;
+}
+
+.tsddty li.grid:last-child {
+    margin-right: 0;
+}
+
+.tsddty li.grid .tip {
+    padding: 10px;
+}
+
+.tsddty li.grid .tip .inn .title {
+    font-size: 16px;
+    color: #000000;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.tsddty li.grid .tip .inn .extra {
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+.tsddty li.grid .tip .inn .extra .star {
+    color: #fa6400;
+}
+
+.tsddty li.grid .tip .inn .extra .score {
+    color: #fa6400;
+}

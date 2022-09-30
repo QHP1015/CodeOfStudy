@@ -1,0 +1,76 @@
+/* footer-nav */
+footer .footer-nav nav ul {
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+footer .footer-nav nav ul li {
+    float: left;
+    border-right: 1px solid #1c1f21;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 18px;
+    line-height: 18px;
+}
+
+footer .footer-nav nav ul li a {
+    color: #1c1f21;
+}
+
+footer .footer-nav nav ul li a:hover {
+    color: #20bd9a;
+}
+
+footer .footer-nav nav ul li:first-child {
+    padding-left: 0;
+}
+
+footer .footer-nav nav ul li:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
+footer .footer-nav .favs {
+    margin-top: 50px;
+}
+
+footer .footer-nav .favs dl {
+    float: left;
+    width: 33.33%;
+    height: 80px;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 75px;
+    padding-right: 30px;
+}
+
+footer .footer-nav .favs dl::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: url(images/icons.png) no-repeat 0 -100px;
+}
+
+footer .footer-nav .favs dl.no2::before {
+    background-position: 0 -200px;
+}
+
+footer .footer-nav .favs dl.no2::before {
+    background-position: 0 -300px;
+}
+
+footer .footer-nav .favs dl dt {
+    font-weight: bold;
+    font-size: 18px;
+    color: #1c1f21;
+    margin-bottom: 4px;
+}
+
+footer .footer-nav .favs dl dd {
+    font-size: 14px;
+    color: #757575;
+}

@@ -1,0 +1,18 @@
+/* fav-ad */
+.fav-ad ul li.grid {
+    float: left;
+    width: 264px;
+    height: 110px;
+    margin-right: 32px;
+    box-shadow: none;
+}
+
+.fav-ad ul li.grid:last-child {
+    margin-right: 0;
+}
+
+.fav-ad ul li.grid img.p-img {
+    width: 264px;
+    height: 110px;
+    transition: all 0.3s ease 0s;
+}

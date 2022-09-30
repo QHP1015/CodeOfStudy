@@ -1,0 +1,45 @@
+.banner .carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner .carousel ul {
+    width: 600%;
+    overflow: hidden;
+}
+
+.banner .carousel ul li {
+    float: left;
+    width: 16.66666667%;
+}
+
+.banner .carousel ul li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner .carousel .circles {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 99999;
+    width: 180px;
+    margin-left: -90px;
+}
+
+.banner .carousel .circles li {
+    cursor: pointer;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 14px;
+    background-color: rgba(248, 248, 248, 0.794);
+    border-radius: 60px;
+    transition: all 0.3s ease 0s;
+}
+
+.banner .carousel .circles li.cur {
+    background-color: #20bd9a;
+    width: 32px;
+}

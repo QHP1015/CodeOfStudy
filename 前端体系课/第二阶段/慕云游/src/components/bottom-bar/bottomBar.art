@@ -1,0 +1,23 @@
+<div class="bottom-bar">
+    <div class="center-wrap">
+        <div class="row1">
+            <div class="webname">慕云游商城</div>
+            <div class="description">
+                从一张机票、一家酒店的订购，到一次暖心的接机服务、一张轻松融入当地的交通卡让我们带你探索这个世界
+            </div>
+        </div>
+        <div class="row2">
+            <ul>
+                <li><a href="">关于慕云游商城</a></li>
+                <li><a href="">服务与隐私</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">旅游度假资质</a></li>
+                <li><a href="">营业执照</a></li>
+                <li><a href="">投诉建议</a></li>
+            </ul>
+        </div>
+        <div class="row3">
+            &copy; 2020 imooc.com 京ICP备12003892号-11 慕课网教学案例 非商业
+        </div>
+    </div>
+</div>

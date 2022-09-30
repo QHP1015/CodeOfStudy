@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>慕云游</title>
+</head>
+
+<body>
+  <header class="site-head">
+    <!-- topbar -->
+    {{include '../../components/topbar/topbar.art'}}
+    <!-- main-nav -->
+    {{include '../../components/main-nav/mainNav.art'}}
+    <!-- header-con -->
+    {{include '../../components/header-con/headerCon'}}
+
+  </header>
+  <!-- carousel -->
+  <section class="banner" id="banner">
+    {{include './components/carousel/carousel.art'}}
+    <div class="center-wrap">
+      <!-- {{include './components/slider/btn.art'}} -->
+      {{include './components/carousel/btn.art'}}
+
+      <!-- menu -->
+      {{include './components/menu/menu.art'}}
+    </div>
+  </section>
+  <!-- fav-ad -->
+  <section class="layer fav-ad">
+    <div class="center-wrap">
+      {{include './components/fav-ad/favAd.art'}}
+    </div>
+  </section>
+  <!-- xxsw -->
+  <section class="layer xxsw">
+    <div class="center-wrap">
+      {{include './components/xxsw/xxsw.art'}}
+    </div>
+  </section>
+  <!-- jjzyx -->
+  <section class="layer layer-common-style jjzyx">
+    <div class="center-wrap">
+      {{include './components/jjzyx/jjzyx.art'}}
+    </div>
+  </section>
+  <!-- ddwl -->
+  <section class="layer ddwl">
+    <div class="center-wrap">
+      {{include './components/ddwl/ddwl.art'}}
+    </div>
+  </section>
+  <!-- tsddty -->
+  <section class="layer tsddty">
+    <div class="center-wrap">
+      {{include './components/tsddty/tsddty.art'}}
+    </div>
+  </section>
+  <!-- zsj -->
+  <section class="layer layer-common-style another-style zsj">
+    <div class="center-wrap">
+      {{include './components/zsj/zsj.art'}}
+    </div>
+  </section>
+  <!-- gt -->
+  <section class="layer layer-common-style another-style gt">
+    <div class="center-wrap">
+      {{include './components/gt/gt.art'}}
+    </div>
+  </section>
+  <footer>
+    <!-- footer-nav -->
+    {{include '../../components/footer-nav/footerNav.art'}}
+
+    <!-- bottom-bar -->
+    {{include '../../components/bottom-bar/bottomBar.art'}}
+
+    <!-- backtotop -->
+    {{include '../../components/backtotop/backtotop.art'}}
+  </footer>
+</body>
+
+</html>

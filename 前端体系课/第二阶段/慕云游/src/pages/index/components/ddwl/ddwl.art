@@ -1,0 +1,132 @@
+<div class="hd">
+    <h3>当地玩乐</h3>
+    <div class="slogan">像当地人一样，体验本土的吃喝玩乐</div>
+    <div class="tabbar">
+        <ul>
+            <li class="current"><a href="javascript:;">国内</a></li>
+            <li><a href="javascript:;">日本</a></li>
+            <li><a href="javascript:;">韩国</a></li>
+            <li><a href="javascript:;">澳大利亚</a></li>
+            <li><a href="javascript:;">新西兰</a></li>
+            <li><a href="javascript:;">美国</a></li>
+            <li><a href="javascript:;">泰国</a></li>
+            <li><a href="javascript:;">斯里兰卡</a></li>
+        </ul>
+    </div>
+</div>
+<div class="bd">
+    <div class="col1">
+        <ul>
+            <li class="grid big">
+                <a href="">
+                    <div class="pic">
+                        <img class="p-img" src="images/ddwl_01.png" alt="" />
+                    </div>
+                    <div class="tip">
+                        <div class="inn">
+                            [亲子佳选]泰国清迈夜间动物园（可选接送；导游；长颈鹿餐厅）
+                        </div>
+                        <div class="type">城市玩乐</div>
+                        <div class="price">
+                            <span>199</span>
+                            元起
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="grid">
+                <a href="">
+                    <div class="pic">
+                        <img class="p-img" src="images/ddwl_02.png" alt="" />
+                    </div>
+                    <div class="tip">
+                        <div class="inn">
+                            [樱花季]
+                            北京/天津直飞东京/大阪/名古屋/福冈/广岛/北海道/冲绳往返…
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col2">
+        <ul>
+            <li class="grid">
+                <a href="">
+                    <div class="pic">
+                        <img class="p-img" src="images/ddwl_03.png" alt="" />
+                    </div>
+                    <div class="tip">
+                        <div class="inn">
+                            [网红新选] 泰国清迈黑白蓝庙一日游清莱黑庙 白庙 蓝庙
+                            温泉驿站中文导游+酒店接送+餐赠小…
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="grid">
+                <a href="">
+                    <div class="pic">
+                        <img class="p-img" src="images/ddwl_04.png" alt="" />
+                    </div>
+                    <div class="tip">
+                        <div class="inn">
+                            [全岛接送+中文导游]
+                            泰国普吉岛+皇帝岛+珊瑚岛一日游双体帆船海钓
+                            [帆船晚会+浮潜]…
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="grid">
+                <a href="">
+                    <div class="pic">
+                        <img class="p-img" src="images/ddwl_05.png" alt="" />
+                    </div>
+                    <div class="tip">
+                        <div class="inn">
+                            享行之旅|泰国苏梅岛一日游 越野车丛林环岛之旅
+                            骑大象纳蒙瀑布
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col3">
+        <ul>
+            <li class="grid">
+                <a href="">
+                    <div class="pic">
+                        <img class="p-img" src="images/ddwl_05.png" alt="" />
+                    </div>
+                    <div class="tip">
+                        <div class="inn">
+                            享行之旅|泰国苏梅岛一日游 越野车丛林环岛之旅
+                            骑大象纳蒙瀑布
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="more grid">
+                <a href="">
+                    <div class="more_con">
+                        查看更多<br />
+                        机酒自由行产品
+                    </div>
+                    <div class="arrow">
+                        <b class="iconfont">&#xe602;</b>
+                    </div>
+                    <div class="tj">
+                        <ul>
+                            <li>WiFi/电话卡</li>
+                            <li>交通票券</li>
+                            <li>景点门票</li>
+                            <li>特色体验</li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

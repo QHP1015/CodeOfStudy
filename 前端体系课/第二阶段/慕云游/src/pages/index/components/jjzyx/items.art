@@ -1,0 +1,106 @@
+<ul>
+  <li class="big grid">
+    <a href="">
+      <div class="pic">
+        <img class="p-img" src="{{ one.url }}" alt="" />
+      </div>
+      <div class="tip">
+        <div class="inn">
+          <p>{{ one.title }}</p>
+          <p>{{ one['extra-info'] }}</p>
+        </div>
+      </div>
+      <div class="type">
+        {{ one.type }}
+      </div>
+    </a>
+  </li>
+  {{each items}}
+  <li class="grid">
+    <a href="">
+      <div class="pic">
+        <img class="p-img" src="{{ $value.url }}" alt="" />
+      </div>
+      <div class="tip">
+        {{ $value.title }}
+      </div>
+      <div class="type">
+        {{ $value.type }}
+      </div>
+    </a>
+  </li>
+  {{/each}}
+  <!-- <li class="grid">
+    <a href="">
+      <div class="pic">
+        <img class="p-img" src="images/jjzyx_03.png" alt="" />
+      </div>
+      <div class="tip">
+        北京/天津直飞日本东京/大阪/东阪/福冈/名古屋冲绳/北海道4-7天往返非常好
+      </div>
+      <div class="type">
+        机票
+      </div>
+    </a>
+  </li>
+  <li class="grid">
+    <a href="">
+      <div class="pic">
+        <img class="p-img" src="images/jjzyx_04.png" alt="" />
+      </div>
+      <div class="tip">
+        [樱花季] 北京/天津直飞东京/大阪/名古屋/福冈/广岛/北海道/冲绳往返9日游
+      </div>
+      <div class="type">
+        机票
+      </div>
+    </a>
+  </li>
+  <li class="grid">
+    <a href="">
+      <div class="pic">
+        <img class="p-img" src="images/jjzyx_05.png" alt="" />
+      </div>
+      <div class="tip">
+        杭州/上海/宁波/义乌直飞越南芽庄/岘港4-6天往返含税机票（20KG行李免费）
+      </div>
+      <div class="type">
+        机票
+      </div>
+    </a>
+  </li>
+  <li class="grid">
+    <a href="">
+      <div class="pic">
+        <img class="p-img" src="images/jjzyx_06.png" alt="" />
+      </div>
+      <div class="tip">
+        [樱花季]天津直飞东京/大阪/名古屋/冲绳/札幌2-30天往返
+      </div>
+      <div class="type">
+        酒店
+      </div>
+    </a>
+  </li> -->
+  <li class="more grid">
+    <a href="">
+      <div class="more_con">
+        查看更多<br />
+        {{ more.title }}
+      </div>
+      <div class="arrow">
+        <b class="iconfont">&#xe602;</b>
+      </div>
+      <div class="tj">
+        <ul>
+          {{each more.items}}
+          <li>{{ $value }}</li>
+          <!-- <li>酒店</li>
+          <li>机+酒</li>
+          <li>游轮</li> -->
+          {{/each}}
+        </ul>
+      </div>
+    </a>
+  </li>
+</ul>

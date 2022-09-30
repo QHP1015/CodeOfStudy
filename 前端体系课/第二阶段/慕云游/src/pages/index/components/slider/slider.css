@@ -1,0 +1,25 @@
+.slider,
+.slider-content,
+.slider-item,
+.slider-img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slider-item {
+  float: left;
+}
+
+.slider-img {
+  /* display: block; */
+  vertical-align: top;
+}
+
+.slider-animation {
+  transition-property: transform;
+  transition-duration: 0ms;
+}

@@ -1,0 +1,126 @@
+/* menu */
+.banner .center-wrap .v-menu-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 296px;
+    height: 100%;
+}
+
+.banner .center-wrap .v-menu-box nav {
+    height: 100%;
+}
+
+.banner .center-wrap .v-menu-box nav ul {
+    height: 100%;
+}
+
+.banner .center-wrap .v-menu-box nav ul li {
+    height: 16.66666667%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.376);
+    cursor: pointer;
+}
+
+.banner .center-wrap .v-menu-box nav ul li .inn {
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+}
+
+.banner .center-wrap .v-menu-box nav ul li .t {
+    padding-left: 50px;
+    color: white;
+    font-size: 18px;
+    height: 18px;
+    line-height: 18px;
+}
+
+.banner .center-wrap .v-menu-box nav ul li .e {
+    padding-left: 50px;
+    color: white;
+    font-size: 14px;
+    padding-top: 8px;
+    height: 14px;
+    line-height: 14px;
+}
+
+.banner .center-wrap .v-menu-box nav ul li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    left: 14px;
+    width: 22px;
+    height: 18px;
+    background: url(images/icons.png) no-repeat;
+}
+
+.banner .center-wrap .v-menu-box nav ul li.active {
+    background-color: rgba(0, 0, 0, 0.486);
+}
+
+.banner .center-wrap .v-menu-box nav ul li[data-n='hot']::before {
+    background-position: -141px -328px;
+}
+
+.banner .center-wrap .v-menu-box nav ul li[data-n='hk']::before {
+    background-position: -143px -129px;
+}
+
+.banner .center-wrap .v-menu-box nav ul li[data-n='japan']::before {
+    background-position: -143px -167px;
+}
+
+.banner .center-wrap .v-menu-box nav ul li[data-n='asia']::before {
+    background-position: -143px -203px;
+}
+
+.banner .center-wrap .v-menu-box nav ul li[data-n='eu']::before {
+    background-position: -143px -246px;
+}
+
+.banner .center-wrap .v-menu-box nav ul li[data-n='au']::before {
+    background-position: -143px -287px;
+}
+
+.banner .center-wrap .v-menu-box .menu {
+    position: absolute;
+    width: 350px;
+    height: 1000px;
+    top: 0;
+    left: 296px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.486);
+    transition: all 0.4s ease 0s;
+}
+
+.banner .center-wrap .v-menu-box .menu.active {
+    display: block;
+}
+
+.banner .center-wrap .v-menu-box .menu .menu_inn {
+    padding: 10px;
+}
+
+.banner .center-wrap .v-menu-box .menu .menu_inn dl dt {
+    font-size: 17px;
+    color: white;
+    line-height: 30px;
+}
+
+.banner .center-wrap .v-menu-box .menu .menu_inn dl dd {
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+
+.banner .center-wrap .v-menu-box .menu .menu_inn dl dd a {
+    color: white;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.banner .center-wrap .v-menu-box .menu .menu_inn dl dd a:hover {
+    color: #20bd9a;
+}

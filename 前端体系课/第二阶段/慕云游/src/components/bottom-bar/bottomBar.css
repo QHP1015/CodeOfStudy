@@ -1,0 +1,54 @@
+/* bottom-bar */
+footer .bottom-bar .row1 {
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+footer .bottom-bar .row1 .webname {
+    float: left;
+    font-size: 46px;
+}
+
+footer .bottom-bar .row1 .description {
+    width: 480px;
+    float: left;
+    margin-left: 30px;
+    padding-top: 10px;
+    line-height: 24px;
+}
+
+footer .bottom-bar .row2 ul {
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+footer .bottom-bar .row2 ul li {
+    float: left;
+    border-right: 1px solid white;
+    padding: 0 10px;
+    height: 16px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+footer .bottom-bar .row2 ul li a {
+    color: white;
+}
+
+footer .bottom-bar .row2 ul li a:hover {
+    color: #20bd9a;
+}
+
+footer .bottom-bar .row2 ul li:first-child {
+    padding-left: 0;
+}
+
+footer .bottom-bar .row2 ul li:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
+footer .bottom-bar .row3 {
+    font-size: 14px;
+    padding-top: 10px;
+}

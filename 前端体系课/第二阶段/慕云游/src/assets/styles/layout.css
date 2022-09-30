@@ -1,0 +1,318 @@
+.layer {
+    overflow: hidden;
+}
+
+.layer:nth-child(2n + 1) {
+    background-color: #f7f7f7;
+}
+
+.layer .hd {
+    padding-top: 50px;
+    padding-bottom: 42px;
+    overflow: hidden;
+}
+
+.layer .hd h3 {
+    font-size: 36px;
+    color: #1c1f21;
+    line-height: 36px;
+    font-weight: bold;
+    float: left;
+}
+
+.layer .hd .slogan {
+    float: left;
+    color: #1c1f21;
+    padding-top: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.layer .hd .tabbar {
+    float: right;
+    margin-top: 10px;
+}
+
+.layer .hd .tabbar ul li {
+    float: left;
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+.layer .hd .tabbar ul li:last-child {
+    margin-right: 0;
+}
+
+.layer .hd .tabbar ul li.current {
+    border-bottom: 4px solid #20bd9a;
+    padding-bottom: 4px;
+}
+
+.layer .hd .tabbar ul li.current a {
+    color: #20bd9a;
+}
+
+.layer .hd .tabbar ul li:hover a {
+    color: #20bd9a;
+}
+
+.layer .grid {
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.layer .grid:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.layer .grid img.p-img {
+    transition: all 0.4s ease 0s;
+}
+
+.layer .grid .pic {
+    overflow: hidden;
+}
+
+.layer .grid:hover .pic {
+    overflow: hidden;
+}
+
+.layer .grid:hover .pic img.p-img {
+    transform: scale(1.1);
+}
+
+.layer .grid.more {
+    background: -webkit-linear-gradient(top, #34e3bc, #15af7a);
+    cursor: pointer;
+}
+
+.layer .grid.more a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.layer .grid.more .more_con {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+.layer .grid.more:hover .arrow {
+    animation: jump 0.2s ease 0s infinite alternate;
+}
+
+@keyframes jump {
+    from {
+        transform: translateY(4px);
+    }
+
+    to {
+        transform: translateY(-4px);
+    }
+}
+
+.layer .grid.more .arrow {
+    transition: all 0.4s ease 0s;
+    color: white;
+    position: absolute;
+    top: 100px;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    text-align: center;
+}
+
+.layer .grid.more .arrow b {
+    font-size: 60px;
+}
+
+.layer .grid.more .tj {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    text-align: center;
+}
+
+.layer .grid.more .tj ul li {
+    display: inline-block;
+    padding: 0 10px;
+    border-right: 1px solid white;
+    height: 14px;
+    line-height: 14px;
+    font-size: 14px;
+}
+
+.layer .grid.more .tj ul li:last-child {
+    border-right: none;
+}
+
+.layer-common-style {
+    height: 738px;
+}
+
+.layer-common-style .bd ul li.grid {
+    float: left;
+    width: 264px;
+    height: 270px;
+    margin-right: 32px;
+    background-color: white;
+    margin-bottom: 32px;
+    position: relative;
+    transition: all 0.4s ease 0s;
+}
+
+.layer-common-style .bd ul li.grid .pic {
+    width: 264px;
+    height: 184px;
+}
+
+.layer-common-style .bd ul li.grid .pic img.p-img {
+    width: 264px;
+    height: 184px;
+}
+
+.layer-common-style .bd ul li.grid .tip {
+    padding: 20px 10px 0;
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 24px;
+}
+
+.layer-common-style .bd ul li.grid:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.layer-common-style .bd ul li.grid .type {
+    width: 74px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.44);
+    color: white;
+    position: absolute;
+    top: 144px;
+    left: 0px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.layer-common-style .bd ul li.grid.big {
+    width: 560px;
+    position: relative;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.layer-common-style .bd ul li.grid.big .pic {
+    width: 560px;
+    height: 270px;
+}
+
+.layer-common-style .bd ul li.grid.big .pic img.p-img {
+    width: 560px;
+    height: 270px;
+}
+
+.layer-common-style .bd ul li.grid.big .tip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 560px;
+    height: 103px;
+    background-color: rgba(0, 0, 0, 0.44);
+    padding: 0;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.layer-common-style .bd ul li.grid.big .tip .inn {
+    padding: 20px;
+    color: white;
+}
+
+.layer-common-style .bd ul li.grid.big .type {
+    top: 127px;
+}
+
+.layer-common-style .bd ul li.grid:nth-child(3),
+.layer-common-style .bd ul li.grid:nth-child(7) {
+    margin-right: 0;
+}
+
+.another-style {
+    height: 738px;
+}
+
+.another-style .bd ul li.grid.big {
+    position: relative;
+}
+
+.another-style .bd ul li.grid.big .tip {
+    z-index: 9999;
+    height: 80px;
+    background: -webkit-linear-gradient(top,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.5));
+}
+
+.another-style .bd ul li.grid.big:hover .mask {
+    opacity: 1;
+}
+
+.another-style .bd ul li.grid.big:hover .y {
+    transform: none;
+}
+
+.another-style .bd ul li.grid.big:hover .y .e {
+    transform: none;
+}
+
+.another-style .bd ul li.grid.big:hover .y .c {
+    transform: none;
+}
+
+.another-style .bd ul li.grid.big .mask {
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.another-style .bd ul li.grid.big .y {
+    transition: all 0.5s ease 0s;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -53px;
+    width: 106px;
+    height: 106px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: scale(0);
+}
+
+.another-style .bd ul li.grid.big .y .c {
+    transition: all 0.3s ease 0.2s;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    font-size: 20px;
+    transform: scale(0);
+}
+
+.another-style .bd ul li.grid.big .y .e {
+    transition: all 0.3s ease 0.2s;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    transform: scale(0);
+}
