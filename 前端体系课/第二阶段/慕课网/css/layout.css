@@ -1,0 +1,75 @@
+/* layout */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header-layout {
+  position: relative;
+  /* position: fixed;
+  left: 0;
+  top: 0; */
+  flex-shrink: 0;
+
+  /* width: 320px; */
+  /* width: 100%;
+  height: 48px; */
+
+  width: 100%;
+  /* height: 9.6rem; */
+
+  height: 12.8vw;
+
+  /* background-color: red; */
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.nav-layout {
+  overflow: hidden;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: white;
+  transition: height .5s;
+}
+
+.nav-layout-extended {
+  height: 200px;
+}
+
+
+.main-layout {
+  /* padding: 48px 0 48px 0; */
+  overflow: auto;
+  flex-grow: 1;
+}
+
+.slider-layout {
+  /* height: 134px;
+  background-color: green; */
+  margin-bottom: 20px;
+}
+
+.course-layout {
+  /* height: 382px;
+  background-color: gray; */
+  margin-bottom: 10px;
+}
+
+.tabbar-layout {
+  /* position: fixed;
+  left: 0;
+  bottom: 0; */
+  flex-shrink: 0;
+
+  width: 100%;
+  /* height: 9.6rem; */
+  height: 12.8vw;
+  /* width: 100%;
+  height: 48px; */
+  background-color: yellow;
+  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.15);
+}

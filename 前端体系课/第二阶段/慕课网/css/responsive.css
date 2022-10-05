@@ -1,0 +1,42 @@
+/* 576px 768px 992px 1200px */
+.course-item {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .course-item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .course-item {
+        width: 33.333333%;
+    }
+
+    .header-toggle {
+        display: none;
+    }
+
+    .nav-layout {
+        position: static;
+        height: auto;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 992px) {
+    .course-item {
+        width: 25%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .course-item {
+        width: 16.666667%;
+    }
+}

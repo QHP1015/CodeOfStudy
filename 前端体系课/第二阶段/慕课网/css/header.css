@@ -1,0 +1,79 @@
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* height: 48px; */
+  height: 100%;
+  background-color: #fff;
+  padding: 0 20px;
+}
+
+.header-logo {
+  /* float: left; */
+  /* height: 100%; */
+}
+
+.header-logo-img {
+  /* 不要同时设置宽高，要让图片等比例缩放 */
+  /* width: 100px; */
+  /* height: 30px; */
+
+  height: 6rem;
+  /* margin-top: 9px; */
+}
+
+.header-toggle {
+  /* float: right; */
+  padding: 10px;
+  /* background-color: red; */
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  /* margin-top: 4px; */
+}
+
+.header-toggle-bar {
+  display: block;
+  /* width: 24px;
+  height: 4px; */
+
+  width: 4.8rem;
+  height: .8rem;
+  background-color: #363636;
+  border-radius: 2px;
+  /* margin-top: 4px; */
+}
+
+.header-toggle-bar+.header-toggle-bar {
+  /* margin-top: 4px; */
+  margin-top: .8rem;
+}
+
+.header-toggle-active {
+  background-color: #f1f1f1;
+}
+
+.header-toggle-active .header-toggle-bar {
+  background-color: #1428a0;
+}
+
+/* nav */
+.nav-list {
+  background-color: #fff;
+}
+
+.nav-link {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  color: #363636;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #1428a0;
+}

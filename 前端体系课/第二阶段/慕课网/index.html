@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>慕课网</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/slider.css" />
+  <link rel="stylesheet" href="./css/course.css" />
+  <link rel="stylesheet" href="./css/tabbar.css" />
+  <link rel="stylesheet" href="./icons/iconfont.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+
+  <style>
+    html {
+      font-size: 1.333333vw;
+    }
+  </style>
+  <script>
+    // {
+    //   const $doc = document.documentElement;
+    //   const setHtmlFontSize = () => {
+    //     const viewWidth = $doc.getBoundingClientRect().width;
+    //     $doc.style.fontSize = `${viewWidth / 75}px`
+    //   }
+
+    //   setHtmlFontSize();
+    //   window.addEventListener('resize', setHtmlFontSize(), false)
+    // }
+  </script>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header class="header-layout">
+    <div class="header">
+      <a href="./index.html" class="header-logo">
+        <img src="./images/logo.png" alt="logo" class="header-logo-img" /></a>
+
+      <button id="header-toggle" class="header-toggle">
+        <span class="header-toggle-bar"></span>
+        <span class="header-toggle-bar"></span>
+        <span class="header-toggle-bar"></span>
+      </button>
+
+      <!-- 导航 -->
+      <nav id="nav" class="nav-layout">
+        <ul class="nav-list">
+          <li>
+            <a href="./index.html" class="nav-link">首页</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="nav-link">免费课程</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="nav-link">实战课程&amp;金职位</a>
+          </li>
+          <li><a href="javascript:;" class="nav-link">专栏/手记/猿问</a></li>
+          <li><a href="javascript:;" class="nav-link">慕课教程</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 主体 -->
+  <div class="main-layout">
+    <!-- 幻灯片 -->
+    <div class="slider-layout">
+      <img src="./images/slider/1.jpg" alt="" />
+    </div>
+
+    <!-- 免费课程 -->
+    <div class="course-layout">
+      <div class="course">
+        <h2 class="course-title">免费课程</h2>
+        <ul class="course-list">
+          <li class="course-item">
+            <a href="javascript:;">
+              <p class="course-pic">
+                <img src="./images/course_free/1.jpg" alt="" class="course-img" />
+              </p>
+              <p class="course-name">初识 HTML(5) + CSS(3) - 2020升级版</p>
+              <p class="course-price">免费</p>
+            </a>
+          </li>
+          <li class="course-item">
+            <a href="javascript:;">
+              <p class="course-pic">
+                <img src="./images/course_free/2.jpg" class="course-img" />
+              </p>
+              <p class="course-name">
+                Java 入门第一课（IDEA 工具）2020 升级版
+              </p>
+              <p class="course-price">免费</p>
+            </a>
+          </li>
+          <li class="course-item">
+            <a href="javascript:;">
+              <p class="course-pic">
+                <img src="./images/course_free/3.jpg" class="course-img" />
+              </p>
+              <p class="course-name">Linux C 语言编程基本原理与实践</p>
+              <p class="course-price">免费</p>
+            </a>
+          </li>
+          <li class="course-item">
+            <a href="javascript:;">
+              <p class="course-pic">
+                <img src="./images/course_free/4.jpg" class="course-img" />
+              </p>
+              <p class="course-name">
+                炫丽的倒计时效果 Canvas 绘图与动画基础
+              </p>
+              <p class="course-price">免费</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 实战课程 -->
+    <div class="course-layout">
+      <div class="course">
+        <h2 class="course-title">实战课程</h2>
+        <ul class="course-list">
+          <li class="course-item">
+            <a href="javascript:;">
+              <p class="course-pic">
+                <img src="./images/course_coding/1.jpg" class="course-img" />
+              </p>
+              <p class="course-name">
+                Go微服务入门到容器化实践，落地可观测的微服务电商项目
+              </p>
+              <p class="course-price">¥328</p>
+            </a>
+          </li>
+          <li class="course-item">
+            <a href="javascript:;">
+              <p class="course-pic">
+                <img src="./images/course_coding/2.jpg" class="course-img" />
+              </p>
+              <p class="course-name">
+                Redis 专项进阶课 解决 Redis 工作实际问题 + 掌握Redis6.x 特性
+              </p>
+              <p class="course-price">¥298</p>
+            </a>
+          </li>
+          <li class="course-item">
+            <a href="javascript:;">
+              <p class="course-pic">
+                <img src="./images/course_coding/3.jpg" class="course-img" />
+              </p>
+              <p class="course-name">
+                体系课-数据可视化入门到精通-打造前端差异化竞争力
+              </p>
+              <p class="course-price">¥848</p>
+            </a>
+          </li>
+          <li class="course-item">
+            <a href="javascript:;">
+              <p class="course-pic">
+                <img src="./images/course_coding/4.png" class="course-img" />
+              </p>
+              <p class="course-name">
+                一天时间迅速准备前端面试 快速构建初级前端知识体系
+              </p>
+              <p class="course-price">¥299</p>
+            </a>
+          </li>
+          <li class="course-item">
+            <a href="javascript:;">
+              <p class="course-pic">
+                <img src="./images/course_coding/5.png" class="course-img" />
+              </p>
+              <p class="course-name">
+                PyTorch 入门到进阶 实战计算机视觉与自然语言处理项目
+              </p>
+              <p class="course-price">¥499</p>
+            </a>
+          </li>
+          <li class="course-item">
+            <a href="javascript:;">
+              <p class="course-pic">
+                <img src="./images/course_coding/6.png" class="course-img" />
+              </p>
+              <p class="course-name">
+                Vue3.0(正式版) + TS 仿知乎专栏企业级项目 深度剖析 Vue3 新特性
+              </p>
+              <p class="course-price">¥348</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 标签栏 -->
+  <div class="tabbar-layout">
+    <div class="tabbar">
+      <a href="./index.html" class="tabbar-item tabbar-item-active">
+        <i class="iconfont icon-home"></i>
+        <span>首页</span>
+      </a>
+      <a href="javascript:;" class="tabbar-item">
+        <i class="iconfont icon-search"></i>
+        <span>搜索</span>
+      </a>
+      <a href="javascript:;" class="tabbar-item">
+        <i class="iconfont icon-personal"></i>
+        <span>我的</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // 点击切换按钮，展开或收起导航菜单
+    {
+      const $toggleBtn = document.getElementById('header-toggle');
+      const $nav = document.getElementById('nav');
+      const navExtendedClassName = 'nav-layout-extended';
+      const toggleBtnExtendedClassName = 'header-toggle-active';
+
+      $toggleBtn.addEventListener(
+        'click',
+        function () {
+          // toggle 有则移出，没有则添加
+          this.classList.toggle(toggleBtnExtendedClassName);
+          $nav.classList.toggle(navExtendedClassName);
+        },
+        false
+      );
+    }
+  </script>
+</body>
+
+</html>
