@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣杯布局2</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            grid-template-rows: 80px 1fr 80px;
+            grid-template-columns: 200px auto 200px;
+            grid-template-areas:
+                'header header header'
+                'nav main sidebar'
+                'footer footer footer';
+
+            height: 100vh;
+            font-size: 24px;
+        }
+
+        /* 
+        .body-layout {
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+            grid-template-rows: 100%;
+            grid-template-areas: 'nav main sidebar';
+        } */
+
+        .header-layout,
+        .footer-layout {
+            height: 80px;
+        }
+
+        .header-layout {
+            background-color: red;
+            grid-area: header;
+
+        }
+
+        .footer-layout {
+            background-color: yellow;
+            grid-area: footer;
+        }
+
+        .main-layout {
+            background-color: grey;
+            grid-area: main;
+        }
+
+        .nav-layout {
+            background-color: green;
+            /* grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2; */
+            grid-area: nav;
+
+        }
+
+        .aside-layout {
+            background-color: lightblue;
+            grid-area: sidebar;
+        }
+
+        .grid-center {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-layout grid-center">头部</header>
+
+    <main class="main-layout grid-center">主体部分</main>
+    <nav class="nav-layout grid-center">导航</nav>
+    <aside class="aside-layout grid-center">侧栏</aside>
+
+    <footer class="footer-layout grid-center">底部</footer>
+</body>
+
+</html>
