@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>单指拖拽</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" class="box"></div>
+
+    <script>
+      // 1.touch 拖拽
+      // const drag = $el => {
+      //   // 每次拖拽最开始的触摸点
+      //   const startPoint = {};
+      //   // 拖拽过程中移动到的点
+      //   const movePoint = {};
+      //   // 被拖拽元素的当前位置
+      //   const curPos = {
+      //     x: 0,
+      //     y: 0
+      //   };
+
+      //   $el.addEventListener('touchstart', startHandler, false);
+      //   $el.addEventListener('touchmove', moveHandler, false);
+      //   $el.addEventListener('touchend', endHandler, false);
+      //   $el.addEventListener('touchcancel', endHandler, false);
+
+        // function startHandler(evt) {
+        //   evt.preventDefault();
+        //   const touch = evt.changedTouches[0];
+
+        //   startPoint.x = touch.pageX;
+        //   startPoint.y = touch.pageY;
+        // }
+      //   function moveHandler(evt) {
+      //     evt.preventDefault();
+
+      //     const touch = evt.changedTouches[0];
+
+      //     movePoint.x = curPos.x + touch.pageX - startPoint.x;
+      //     movePoint.y = curPos.y + touch.pageY - startPoint.y;
+
+      //     $el.style.transform = `translate3d(${movePoint.x}px, ${movePoint.y}px, 0)`;
+      //   }
+      //   function endHandler() {
+      //     curPos.x = movePoint.x;
+      //     curPos.y = movePoint.y;
+      //   }
+      // };
+
+      // 2.仿照 touch 的 Pointer 拖拽（有问题）
+      // const drag = $el => {
+      //   // 每次拖拽最开始的触摸点
+      //   const startPoint = {};
+      //   // 拖拽过程中移动到的点
+      //   const movePoint = {};
+      //   // 被拖拽元素的当前位置
+      //   const curPos = {
+      //     x: 0,
+      //     y: 0
+      //   };
+
+      //   $el.addEventListener('pointerdown', startHandler, false);
+      //   $el.addEventListener('pointermove', moveHandler, false);
+      //   $el.addEventListener('pointerup', endHandler, false);
+      //   $el.addEventListener('pointercancel', endHandler, false);
+      //   $el.addEventListener(
+      //     'touchstart',
+      //     evt => {
+      //       evt.preventDefault();
+      //     },
+      //     false
+      //   );
+
+      //   function startHandler(evt) {
+      //     startPoint.x = evt.pageX;
+      //     startPoint.y = evt.pageY;
+      //   }
+      //   function moveHandler(evt) {
+      //     evt.preventDefault();
+
+      //     movePoint.x = curPos.x + evt.pageX - startPoint.x;
+      //     movePoint.y = curPos.y + evt.pageY - startPoint.y;
+
+      //     $el.style.transform = `translate3d(${movePoint.x}px, ${movePoint.y}px, 0)`;
+      //   }
+      //   function endHandler() {
+      //     curPos.x = movePoint.x;
+      //     curPos.y = movePoint.y;
+      //   }
+      // };
+
+      // 3.使用技巧后的 Pointer 拖拽
+      const drag = $el => {
+        // 每次拖拽最开始的触摸点
+        const startPoint = {};
+        // 拖拽过程中移动到的点
+        const movePoint = {};
+        // 被拖拽元素的当前位置
+        const curPos = {
+          x: 0,
+          y: 0
+        };
+
+        $el.addEventListener('pointerdown', startHandler, false);
+        $el.addEventListener(
+          'touchstart',
+          evt => {
+            evt.preventDefault();
+          },
+          false
+        );
+
+        function startHandler(evt) {
+          startPoint.x = evt.pageX;
+          startPoint.y = evt.pageY;
+
+          document.addEventListener('pointermove', moveHandler, false);
+          document.addEventListener('pointerup', endHandler, false);
+          document.addEventListener('pointercancel', endHandler, false);
+        }
+        function moveHandler(evt) {
+          evt.preventDefault();
+
+          movePoint.x = curPos.x + evt.pageX - startPoint.x;
+          movePoint.y = curPos.y + evt.pageY - startPoint.y;
+
+          $el.style.transform = `translate3d(${movePoint.x}px, ${movePoint.y}px, 0)`;
+        }
+        function endHandler() {
+          curPos.x = movePoint.x;
+          curPos.y = movePoint.y;
+
+          document.removeEventListener('pointermove', moveHandler, false);
+          document.removeEventListener('pointerup', endHandler, false);
+          document.removeEventListener('pointercancel', endHandler, false);
+        }
+      };
+
+      drag(document.getElementById('box'));
+    </script>
+  </body>
+</html>
