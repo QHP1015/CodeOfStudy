@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>防抖/节流函数中的 args 和 context</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        .backtop {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 60px;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .none {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" id="backtop" class="backtop none">&uarr;</a>
+
+    <script>
+        const $backtop = document.getElementById('backtop');
+        let winHeight = window.innerHeight;
+
+        window.addEventListener(
+            'resize',
+            () => {
+                winHeight = window.innerHeight;
+            },
+            false
+        );
+
+        window.addEventListener(
+            'scroll',
+            // 这里指定 scrollHandler 中的 this 为 $backtop，参数为 winHeight
+            // bind返回函数，而不会直接执行
+            () => debounce(scrollHandler, 250, $backtop)(winHeight),
+            // debounce(scrollHandler, 250, $backtop).bind(null, winHeight),
+            false
+        );
+        // threshold 是我们希望按钮显示或隐藏的临界值
+        function scrollHandler(threshold) {
+            console.log(this, threshold);
+
+            if (document.documentElement.scrollTop >= threshold) {
+                // console.log(1);
+                this.classList.remove('none');
+            } else {
+                // console.log(2);
+                this.classList.add('none');
+            }
+        }
+
+        // 防抖 debounce
+        function debounce(fn, milliseconds = 250, context) {
+            let timer = null;
+
+            // debounce 调用后生成的函数 a
+            return function (...args) {
+                // console.log(...args);
+                const self = context || this;
+                if (timer) {
+                    clearTimeout(timer);
+                }
+
+                timer = setTimeout(() => {
+                    // console.log('test')
+                    fn.apply(self, args);
+                    timer = null;
+                }, milliseconds);
+            };
+        }
+    </script>
+</body>
+
+</html>
