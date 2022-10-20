@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from "redux";
-import languageReducer from './language/languageReducer'
+import languageReducer from "./language/languageReducer";
 import recommendProductsReducer from "./recommendProducts/recommendProductsReducer";
 import thunk from "redux-thunk";
 import { actionLog } from "./middlewares/actionLog";
@@ -11,33 +11,33 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { shoppingCartSlice } from "./shoppingCart/slice";
 import { orderSlice } from "./order/slice";
-
+import { changeLanguage } from "./middlewares/changeLanguage";
 // 登录持久化
 const persistConfig = {
-    key: "root",
-    storage,
-    whiteList: ["user"],
+  key: "root",
+  storage,
+  whiteList: ["user"],
 };
 
 const rootReducer = combineReducers({
-    language: languageReducer,
-    recommendProducts: recommendProductsReducer,
-    productDetail: productDetailSlice.reducer,
-    productSearch: productSearchSlice.reducer,
-    user: userSlice.reducer,
-    shoppingCart: shoppingCartSlice.reducer,
-    order: orderSlice.reducer,
-})
+  language: languageReducer,
+  recommendProducts: recommendProductsReducer,
+  productDetail: productDetailSlice.reducer,
+  productSearch: productSearchSlice.reducer,
+  user: userSlice.reducer,
+  shoppingCart: shoppingCartSlice.reducer,
+  order: orderSlice.reducer,
+});
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 // const store = createStore(rootReducer, applyMiddleware(thunk, actionLog));
 
 const store = configureStore({
-    reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) => [...getDefaultMiddleware(), actionLog],
-    devTools: true,
-})
+  reducer: persistedReducer,
+  middleware: getDefaultMiddleware => [...getDefaultMiddleware(), actionLog, changeLanguage],
+  devTools: true,
+});
 
 const persistor = persistStore(store);
 

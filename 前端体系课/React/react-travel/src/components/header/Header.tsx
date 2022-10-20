@@ -22,6 +22,11 @@ export const Header: React.FC = () => {
     const location = useLocation();
     const match = useMatch('');
     const params = useParams();
+
+    console.log('loaction:',location);
+    console.log('match:',match);
+    console.log('params:',params);
+    
     const language = useSelector((state) => state.language.language);
     const languageList = useSelector((state) => state.language.languageList);
     const dispatch = useDispatch();
