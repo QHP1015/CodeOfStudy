@@ -12,6 +12,7 @@ import storage from "redux-persist/lib/storage";
 import { shoppingCartSlice } from "./shoppingCart/slice";
 import { orderSlice } from "./order/slice";
 import { changeLanguage } from "./middlewares/changeLanguage";
+import { languageSlice } from "./language/slice";
 
 // 登录持久化
 const persistConfig = {
@@ -21,7 +22,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  language: languageReducer,
+  language: languageSlice.reducer,
   recommendProducts: recommendProductsReducer,
   productDetail: productDetailSlice.reducer,
   productSearch: productSearchSlice.reducer,
@@ -36,8 +37,8 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
   reducer: persistedReducer,
-  // middleware: getDefaultMiddleware => [...getDefaultMiddleware(), actionLog, changeLanguage],
-  middleware: getDefaultMiddleware => [...getDefaultMiddleware(), changeLanguage],
+  middleware: getDefaultMiddleware => [...getDefaultMiddleware(), actionLog, changeLanguage],
+  // middleware: getDefaultMiddleware => [...getDefaultMiddleware(), changeLanguage],
   devTools: true,
 });
 
