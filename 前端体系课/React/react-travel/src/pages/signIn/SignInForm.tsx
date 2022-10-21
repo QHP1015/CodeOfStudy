@@ -21,11 +21,11 @@ export const SignInForm = () => {
   const error = useSelector(s => s.user.error)
 
   const dispatch = useDispatch();
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (jwt !== null) {
-      history("/");
+      navigate("/");
     }
   }, [jwt])
 

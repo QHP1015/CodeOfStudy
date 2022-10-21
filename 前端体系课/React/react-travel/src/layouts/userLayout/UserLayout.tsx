@@ -35,7 +35,7 @@ export const UserLayout = ({ children }: { children: ReactNode }) => {
             </Link>
           </div>
           <div className={styles["desc"]}>
-            软件综合实训使用
+            React 学习使用
           </div>
           {children}
         </div>

@@ -12,7 +12,7 @@ const tailLayout = {
 };
 
 export const RegisterForm = () => {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const onFinish = async (values: any) => {
     console.log("Success:", values);
@@ -22,7 +22,7 @@ export const RegisterForm = () => {
         password: values.password,
         confirmPassword: values.confirm,
       });
-      history("/signIn/");
+      navigate("/signIn/");
     } catch (error) {
       alert("注册失败！");
     }

@@ -18,7 +18,7 @@ interface JwtPayload extends DefaultJwtPayload {
 }
 
 export const Header: React.FC = () => {
-    const history = useNavigate();
+    const navigate = useNavigate();
     const location = useLocation();
     const match = useMatch('');
     const params = useParams();
@@ -55,7 +55,7 @@ export const Header: React.FC = () => {
 
     const onLogout = () => {
         dispatch(userSlice.actions.logOut())
-        history("/")
+        navigate("/")
     }
 
     return (
@@ -86,7 +86,7 @@ export const Header: React.FC = () => {
                             </span>
                             <Button
                                 loading={shoppingCartLoading}
-                                onClick={() => history("/shoppingCart")}
+                                onClick={() => navigate("/shoppingCart")}
                             >
                                 {t("header.shoppingCart")}({shoppingCartItems.length})
                             </Button>
@@ -94,10 +94,10 @@ export const Header: React.FC = () => {
                         </Button.Group>
                     ) : (
                         <Button.Group className={styles["button-group"]}>
-                            <Button onClick={() => history("/register")}>
+                            <Button onClick={() => navigate("/register")}>
                                 {t("header.register")}
                             </Button>
-                            <Button onClick={() => history("/signIn")}>
+                            <Button onClick={() => navigate("/signIn")}>
                                 {t("header.signin")}
                             </Button>
                         </Button.Group>
@@ -105,7 +105,7 @@ export const Header: React.FC = () => {
                 </div>
             </div>
             <Layout.Header className={styles['main-header']}>
-                <span onClick={() => { history('/') }} style={{ cursor: "pointer" }}>
+                <span onClick={() => { navigate('/') }} style={{ cursor: "pointer" }}>
                     <img src={logo} alt="" className={styles['App-logo']} />
                     <Typography.Title level={3} className={styles.title}>
                         {t("header.title")}
@@ -114,7 +114,7 @@ export const Header: React.FC = () => {
                 <Input.Search
                     placeholder='请输入旅游目的地、主题或关键字'
                     className={styles['search-input']}
-                    onSearch={(keyword) => { history('/search/' + keyword) }}
+                    onSearch={(keyword) => { navigate('/search/' + keyword) }}
                 >
                 </Input.Search>
             </Layout.Header>

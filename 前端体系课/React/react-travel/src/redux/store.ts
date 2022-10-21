@@ -12,6 +12,7 @@ import storage from "redux-persist/lib/storage";
 import { shoppingCartSlice } from "./shoppingCart/slice";
 import { orderSlice } from "./order/slice";
 import { changeLanguage } from "./middlewares/changeLanguage";
+
 // 登录持久化
 const persistConfig = {
   key: "root",
@@ -35,7 +36,8 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
   reducer: persistedReducer,
-  middleware: getDefaultMiddleware => [...getDefaultMiddleware(), actionLog, changeLanguage],
+  // middleware: getDefaultMiddleware => [...getDefaultMiddleware(), actionLog, changeLanguage],
+  middleware: getDefaultMiddleware => [...getDefaultMiddleware(), changeLanguage],
   devTools: true,
 });
 
