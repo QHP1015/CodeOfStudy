@@ -13,6 +13,7 @@ import { shoppingCartSlice } from "./shoppingCart/slice";
 import { orderSlice } from "./order/slice";
 import { changeLanguage } from "./middlewares/changeLanguage";
 import { languageSlice } from "./language/slice";
+import { recommendProductsSlice } from "./recommendProducts/slice";
 
 // 登录持久化
 const persistConfig = {
@@ -23,7 +24,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   language: languageSlice.reducer,
-  recommendProducts: recommendProductsReducer,
+  recommendProducts: recommendProductsSlice.reducer,
   productDetail: productDetailSlice.reducer,
   productSearch: productSearchSlice.reducer,
   user: userSlice.reducer,
