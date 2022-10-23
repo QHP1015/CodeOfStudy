@@ -1,0 +1,27 @@
+$bgc: #f5f5f5;
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $bgc;
+  margin: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+img {
+  width: 100px;
+}

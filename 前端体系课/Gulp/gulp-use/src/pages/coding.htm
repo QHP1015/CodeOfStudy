@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>实战课</title>
+</head>
+
+<body>
+  <!-- <div>公共头部</div> -->
+  <!-- @@include('./header.html') -->
+  @@include('./header.html', { page: '实战课' })
+
+  <div>实战课内容</div>
+
+  <!-- <div>公共底部</div> -->
+  @@include('./footer.html')
+</body>
+
+</html>
