@@ -1,20 +1,14 @@
 import React, { useEffect } from "react";
-import { Header, Footer, SideMenu, Carousel, ProductCollection } from "../../components";
+import { SideMenu, Carousel, ProductCollection } from "../../components";
 import { Row, Col, Typography, Spin } from "antd";
 import sideImage from "../../assets/images/sider_2019_12-09.png";
 import sideImage2 from "../../assets/images/sider_2019_02-04.png";
 import sideImage3 from "../../assets/images/sider_2019_02-04-2.png";
-import styles from "./HomePage.module.css";
-import { useTranslation, withTranslation, WithTranslation } from "react-i18next";
-import axios from "axios";
-import { connect } from "react-redux";
-import { RootState } from "../../redux/store";
-import { giveMeDataActionCreator } from "../../redux/recommendProducts/recommendProductsAction";
+import { useTranslation } from "react-i18next";
 import { MainLayout } from "../../layouts/mainLayout/MainLayout";
 import { useDispatch } from "react-redux";
-import { giveMeData, recommendProductsSlice } from "../../redux/recommendProducts/slice";
+import { giveMeData } from "../../redux/recommendProducts/slice";
 import { useSelector } from "../../redux/hooks";
-
 
 export const HomePage: React.FC = props => {
   const productList = useSelector(state => state.recommendProducts.productList);
@@ -22,7 +16,7 @@ export const HomePage: React.FC = props => {
   const error = useSelector(state => state.recommendProducts.error);
   const { t } = useTranslation();
 
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(giveMeData());
