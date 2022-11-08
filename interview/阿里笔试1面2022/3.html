@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+  function camel(str) {
+    const a = str.split("_").filter(Boolean)
+    let first = true
+    let res = ""
+    a.forEach((item) => {
+
+      if (first) {
+        res += item.toLowerCase()
+        first = false
+      } else {
+        res += item.slice(0, 1).toUpperCase() + item.slice(1).toLowerCase()
+      }
+    })
+    console.log(res)
+    return res
+  }
+
+  if (camel('user_name') === 'userName') console.log('1. 回答正确');
+  if (camel('fate_sTay_night') === 'fateStayNight') console.log('2. 回答正确');
+  if (camel('You_are_LUCKY') === 'youAreLucky') console.log('3. 回答正确');
+  if (camel('_page_title') === 'pageTitle') console.log('4. 回答正确');
+  if (camel('__Mem_cache__') === 'memCache') console.log('5. 回答正确');
+</script>
+</body>
+</html>
