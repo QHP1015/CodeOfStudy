@@ -5,8 +5,7 @@ import { DetailPage, HomePage, RegisterPage, SignInPage, SearchPage, ShoppingCar
 import { useSelector } from "./redux/hooks";
 import { useDispatch } from "react-redux";
 import { getShoppingCart } from "./redux/shoppingCart/slice";
-import { Test } from "./index2";
-
+// import { Test } from "./index2";
 const PrivateRoute = ({ isAuthentiacted, element }) => {
   return isAuthentiacted ? element : <Navigate to={"/signIn"} />;
 };

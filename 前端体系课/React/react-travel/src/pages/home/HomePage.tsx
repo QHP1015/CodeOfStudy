@@ -16,6 +16,8 @@ export const HomePage: React.FC = props => {
   const error = useSelector(state => state.recommendProducts.error);
   const { t } = useTranslation();
 
+  console.log('productList',productList);
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -57,7 +59,7 @@ export const HomePage: React.FC = props => {
           </Typography.Title>
         }
         sideImage={sideImage}
-        products={productList[0].touristRoutes}
+        products={productList[0]?.touristRoutes}
       />
       <ProductCollection
         title={
@@ -66,7 +68,7 @@ export const HomePage: React.FC = props => {
           </Typography.Title>
         }
         sideImage={sideImage2}
-        products={productList[1].touristRoutes}
+        products={productList[1]?.touristRoutes}
       />
       <ProductCollection
         title={
@@ -75,7 +77,7 @@ export const HomePage: React.FC = props => {
           </Typography.Title>
         }
         sideImage={sideImage3}
-        products={productList[2].touristRoutes}
+        products={productList[2]?.touristRoutes}
       />
     </MainLayout>
   );

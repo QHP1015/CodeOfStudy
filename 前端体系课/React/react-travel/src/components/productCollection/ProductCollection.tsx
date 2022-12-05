@@ -8,6 +8,7 @@ interface PropsType {
     sideImage: string;
     products: any[];
 }
+
 export const ProductCollection: React.FC<PropsType> = ({ title, sideImage, products }) => {
     return (
         <div className={styles.content}>

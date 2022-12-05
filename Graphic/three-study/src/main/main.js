@@ -17,13 +17,28 @@ scene.add(camera);
 
 // 导入纹理
 const textureLoader = new THREE.TextureLoader();
-textureLoader.load();
+const doorColorTexture = textureLoader.load("./textures/door/color.jpg");
+
+// 设置纹理偏移
+doorColorTexture.offset.x = 0.5;
+
+// 设置旋转原点
+doorColorTexture.center.set(0.5, 0.5);
+
+// 设置纹理旋转
+// doorColorTexture.rotation = Math.PI / 4;
+
+// 设置纹理重复
+doorColorTexture.repeat.set(2, 3);
+doorColorTexture.wrapS = THREE.MirroredRepeatWrapping;
+doorColorTexture.wrapT = THREE.RepeatWrapping;
 
 // 3.添加物体
 // 几何体
 const cubeGeometry = new THREE.BoxBufferGeometry(1, 1, 1);
 const basicMaterial = new THREE.MeshBasicMaterial({
   color: "#ffff00",
+  map: doorColorTexture,
 });
 
 const cube = new THREE.Mesh(cubeGeometry, basicMaterial);
