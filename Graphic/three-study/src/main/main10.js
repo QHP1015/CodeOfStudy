@@ -23,8 +23,6 @@ const doorColorTexture = textureLoader.load("./textures/door/color.jpg");
 const doorAplhaTexture = textureLoader.load("./textures/door/alpha.jpg");
 // 环境贴图
 const doorAoTexture = textureLoader.load("./textures/door/ambientOcclusion.jpg");
-// 置换贴图
-const doorHeightTexture = textureLoader.load("./textures/door/height.jpg");
 
 // 设置纹理偏移
 // doorColorTexture.offset.x = 0.5;
@@ -48,8 +46,8 @@ const doorHeightTexture = textureLoader.load("./textures/door/height.jpg");
 
 // 3.添加物体
 // 几何体
-const cubeGeometry = new THREE.BoxBufferGeometry(1, 1, 1, 100, 100, 100);
-const basicMaterial = new THREE.MeshStandardMaterial({
+const cubeGeometry = new THREE.BoxBufferGeometry(1, 1, 1);
+const basicMaterial = new THREE.MeshBasicMaterial({
   color: "#ffff00",
   map: doorColorTexture,
   alphaMap: doorAplhaTexture,
@@ -58,9 +56,6 @@ const basicMaterial = new THREE.MeshStandardMaterial({
   transparent: true,
   // opacity: 0.5,
   // side: THREE.DoubleSide,
-  displacementMap: doorHeightTexture,
-  displacementScale: 0.05,
-  roughness:1.0,
 });
 
 const cube = new THREE.Mesh(cubeGeometry, basicMaterial);
@@ -68,21 +63,12 @@ scene.add(cube);
 cubeGeometry.setAttribute("uv2", new THREE.BufferAttribute(cubeGeometry.attributes.uv.array, 2));
 
 // 添加平面
-const planeGeometry = new THREE.PlaneGeometry(1, 1, 200, 200);
+const planeGeometry = new THREE.PlaneGeometry(1, 1);
 const plane = new THREE.Mesh(planeGeometry, basicMaterial);
-plane.position.set(1.5, 0, 0);
+plane.position.set(3, 0, 1);
 planeGeometry.setAttribute("uv2", new THREE.BufferAttribute(planeGeometry.attributes.uv.array, 2));
 
 scene.add(plane);
-
-// 灯光（环境光）
-const light = new THREE.AmbientLight(0xffffff, 0.5); // soft white light
-scene.add(light);
-
-// 平行光
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-directionalLight.position.set(10, 10, 10);
-scene.add(directionalLight);
 
 // 4.初始化渲染器
 const renderer = new THREE.WebGLRenderer();

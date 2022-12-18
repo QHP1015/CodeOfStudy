@@ -9,7 +9,9 @@ module.exports = {
   // Webpack 入口文件
   entry: {
     index: './src/pages/index',
-    destination: './src/pages/destination'
+    destination: './src/pages/destination',
+    // details:'./src/pages/details',
+    // personal:'./src/pages/personal',
   },
   // Webpack 输出路径
   output: {
