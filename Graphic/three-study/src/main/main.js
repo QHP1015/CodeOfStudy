@@ -25,6 +25,12 @@ const doorAplhaTexture = textureLoader.load("./textures/door/alpha.jpg");
 const doorAoTexture = textureLoader.load("./textures/door/ambientOcclusion.jpg");
 // 置换贴图
 const doorHeightTexture = textureLoader.load("./textures/door/height.jpg");
+// 粗糙度贴图
+const doorRouhgnessTexture = textureLoader.load("./texture/door/roughness.png");
+// 金属贴图
+const metalnessTexture = textureLoader.load("./textures/door/metalness.jpg");
+// 法线贴图
+const normalTexture = textureLoader.load("./textures/door/normal.jpg");
 
 // 设置纹理偏移
 // doorColorTexture.offset.x = 0.5;
@@ -60,7 +66,10 @@ const basicMaterial = new THREE.MeshStandardMaterial({
   // side: THREE.DoubleSide,
   displacementMap: doorHeightTexture,
   displacementScale: 0.05,
-  roughness:1.0,
+  roughness: 1.0,
+  roughnessMap: doorRouhgnessTexture,
+  metalness:1,
+  metalnessMap:metalnessTexture,
 });
 
 const cube = new THREE.Mesh(cubeGeometry, basicMaterial);
