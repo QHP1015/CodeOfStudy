@@ -70,6 +70,7 @@ const basicMaterial = new THREE.MeshStandardMaterial({
   roughnessMap: doorRouhgnessTexture,
   metalness:1,
   metalnessMap:metalnessTexture,
+  normalMap:normalTexture,
 });
 
 const cube = new THREE.Mesh(cubeGeometry, basicMaterial);
