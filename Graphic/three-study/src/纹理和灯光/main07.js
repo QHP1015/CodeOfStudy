@@ -18,15 +18,15 @@ scene.add(camera);
 // 3.添加物体
 // 几何体
 const geometry = new THREE.BufferGeometry();
-const vertices = new Float32Array( [
-	-1.0, -1.0,  1.0,
-	 1.0, -1.0,  1.0,
-	 1.0,  1.0,  1.0,
+const vertices = new Float32Array([
+  -1.0, -1.0, 1.0,
+  1.0, -1.0, 1.0,
+  1.0, 1.0, 1.0,
 
-	 1.0,  1.0,  1.0,
-	-1.0,  1.0,  1.0,
-	-1.0, -1.0,  1.0
-] );
+  1.0, 1.0, 1.0,
+  -1.0, 1.0, 1.0,
+  -1.0, -1.0, 1.0
+]);
 
 geometry.setAttribute("position", new THREE.BufferAttribute(vertices, 3));
 // 材质

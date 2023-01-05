@@ -67,7 +67,7 @@ const params = {
     }
     // gsap.to(cube.rotation, { x: 2 * Math.PI, duration: 5, ease: "power1.inOut" });
   },
-  fn1: () => {},
+  fn1: () => { },
 };
 gui.addColor(params, "color").onChange(value => {
   // console.log("change value:", value);
