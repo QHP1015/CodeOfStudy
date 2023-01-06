@@ -5,9 +5,9 @@ import gsap from "gsap";
 import * as dat from "dat.gui";
 
 // 顶点着色器
-import basicVertexShader from "./shader/raw/vertex.glsl";
+import basicVertexShader from "./shader/basic/vertex.glsl";
 // 片元着色器
-import basicFragmentShader from "./shader/raw/fragment.glsl";
+import basicFragmentShader from "./shader/basic/fragment.glsl";
 
 // 目标：认识shader
 
@@ -37,31 +37,21 @@ scene.add(axesHelper);
 
 // 创建纹理加载器对象
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load("./textures/ca.jpeg");
+const texture = textureLoader.load("./texture/da.jpeg");
 const params = {
   uFrequency: 10,
   uScale: 0.1,
 };
 
 // const material = new THREE.MeshBasicMaterial({ color: "#00ff00" });
-// 创建原始着色器材质
-const rawShaderMaterial = new THREE.RawShaderMaterial({
+// 创建着色器材质
+const shaderMaterial = new THREE.ShaderMaterial({
   vertexShader: basicVertexShader,
   fragmentShader: basicFragmentShader,
-  //   wireframe: true,
-  side: THREE.DoubleSide,
-  uniforms: {
-    uTime: {
-      value: 0,
-    },
-    uTexture: {
-      value: texture,
-    },
-  },
 });
 
 // 创建平面
-const floor = new THREE.Mesh(new THREE.PlaneBufferGeometry(1, 1, 64, 64), rawShaderMaterial);
+const floor = new THREE.Mesh(new THREE.PlaneBufferGeometry(1, 1, 64, 64), shaderMaterial);
 
 console.log(floor);
 scene.add(floor);
@@ -103,7 +93,6 @@ const clock = new THREE.Clock();
 function animate(t) {
   const elapsedTime = clock.getElapsedTime();
   //   console.log(elapsedTime);
-  rawShaderMaterial.uniforms.uTime.value = elapsedTime;
   requestAnimationFrame(animate);
   // 使用渲染器渲染相机看这个场景的内容渲染出来
   renderer.render(scene, camera);

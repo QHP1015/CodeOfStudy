@@ -1,4 +1,4 @@
-precision lowp float;
+precision mediump float;
 varying vec2 vUv;
 varying float vElevation;
 
@@ -13,6 +13,6 @@ void main(){
     // 根据UV,取出对应的颜色
     float height = vElevation + 0.05 * 20.0;
     vec4 textureColor = texture2D(uTexture,vUv);
-    textureColor.rgb*=height;
+    textureColor.rgb *= height;
     gl_FragColor = textureColor;
 }
