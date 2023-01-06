@@ -5,9 +5,9 @@ import gsap from "gsap";
 import * as dat from "dat.gui";
 
 // 顶点着色器
-import deepVertexShader from "./shader/deep/vertex.glsl";
+import basicVertexShader from "./shader/raw/vertex.glsl";
 // 片元着色器
-import deepFragmentShader from "./shader/deep/fragment.glsl";
+import basicFragmentShader from "./shader/raw/fragment.glsl";
 
 // 目标：认识shader
 
@@ -45,9 +45,9 @@ const params = {
 
 // const material = new THREE.MeshBasicMaterial({ color: "#00ff00" });
 // 创建原始着色器材质
-const rawShaderMaterial = new THREE.ShaderMaterial({
-  vertexShader: deepVertexShader,
-  fragmentShader: deepFragmentShader,
+const rawShaderMaterial = new THREE.RawShaderMaterial({
+  vertexShader: basicVertexShader,
+  fragmentShader: basicFragmentShader,
   //   wireframe: true,
   side: THREE.DoubleSide,
   uniforms: {
@@ -61,9 +61,9 @@ const rawShaderMaterial = new THREE.ShaderMaterial({
 });
 
 // 创建平面
-const floor = new THREE.Mesh(new THREE.PlaneGeometry(1, 1, 64, 64), rawShaderMaterial);
+const floor = new THREE.Mesh(new THREE.PlaneBufferGeometry(1, 1, 64, 64), rawShaderMaterial);
 
-console.log("floor", floor);
+console.log(floor);
 scene.add(floor);
 
 // 初始化渲染器
