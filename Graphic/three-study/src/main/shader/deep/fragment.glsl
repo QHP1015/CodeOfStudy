@@ -332,14 +332,13 @@ void main() {
     // float strength = step(0.9,sin(cnoise(vUv * 10.0)*20.0));
     // gl_FragColor =vec4(strength,strength,strength,1);
 
-
     // 使用混合函数混颜色
     vec3 purpleColor = vec3(1.0, 0.0, 1.0);
     vec3 whiteColor = vec3(1.0, 1.0, 1.0);
     vec3 uvColor = vec3(vUv,1.0);
     float strength = step(0.9,sin(cnoise(vUv * 10.0)*20.0))  ;
 
-    vec3 mixColor =  mix(greenColor,uvColor,strength);
+    vec3 mixColor =  mix(whiteColor,uvColor,strength);
     // gl_FragColor =vec4(mixColor,1.0);
     gl_FragColor =vec4(mixColor,1.0);
 }
