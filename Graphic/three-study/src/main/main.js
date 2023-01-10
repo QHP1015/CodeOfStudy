@@ -50,12 +50,25 @@ const rawShaderMaterial = new THREE.ShaderMaterial({
   fragmentShader: deepFragmentShader,
   //   wireframe: true,
   side: THREE.DoubleSide,
+  transparent: true,
   uniforms: {
     uTime: {
       value: 0,
     },
     uTexture: {
       value: texture,
+    },
+    // 动画时间
+    uTime: {
+      value: 0,
+    },
+    // 波浪的频率
+    uFrequency: {
+      value: params.uFrequency,
+    },
+    // 波浪的幅度
+    uScale: {
+      value: params.uScale,
     },
   },
 });
@@ -65,6 +78,23 @@ const floor = new THREE.Mesh(new THREE.PlaneGeometry(1, 1, 64, 64), rawShaderMat
 
 console.log("floor", floor);
 scene.add(floor);
+
+gui
+  .add(params, "uFrequency")
+  .min(0)
+  .max(50)
+  .step(0.1)
+  .onChange(value => {
+    rawShaderMaterial.uniforms.uFrequency.value = value;
+  });
+gui
+  .add(params, "uScale")
+  .min(0)
+  .max(1)
+  .step(0.01)
+  .onChange(value => {
+    rawShaderMaterial.uniforms.uScale.value = value;
+  });
 
 // 初始化渲染器
 const renderer = new THREE.WebGLRenderer({ alpha: true });
