@@ -8,8 +8,6 @@ import fragmentShader from "./shader/fragment.glsl";
 import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-// 目标：认识shader
-
 //创建gui对象
 const gui = new dat.GUI();
 
