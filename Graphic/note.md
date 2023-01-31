@@ -179,6 +179,16 @@ const vertices = new Float32Array([
   -1.0, -1.0, 1.0
 ]);
 
+// 每个顶点是一个三元组
 geometry.setAttribute("position", new THREE.BufferAttribute(vertices, 3));
 ```
 
+#### 属性
+
+- attributes：几何体属性，可用于shader中
+- 
+
+#### 方法
+
+- setAttribute(name: String, attribute: BufferAttribute)：设置attribute属性
+- getAttribute(name: String)：返回指定名称的attribute
