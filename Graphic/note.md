@@ -331,9 +331,13 @@ const doorColorTexture = textureLoader.load("./textures/door/color.jpg");
 - center：旋转中心点
 - minFilter：当一个纹素覆盖小于一个像素时，贴图如何采样
 - magFilter：当一个纹素覆盖大于一个像素时，贴图如何采样
-
-
-
+- mapping：图像如何应用到物体（对象）上
+  - THREE.UVMapping：默认值，纹理使用网格的坐标来进行映射
+  - THREE.CubeReflectionMapping：由6个纹理组合而成，每个纹理都是立方体的一个面
+  - THREE.CubeRefractionMapping：由6个纹理组合而成，每个纹理都是立方体的一个面
+  - THREE.EquirectangularReflectionMapping：用于等距圆柱投影的环境贴图，也被叫做经纬线映射贴图
+  - THREE.EquirectangularRefractionMapping：用于等距圆柱投影的环境贴图，也被叫做经纬线映射贴图
+  - THREE.CubeUVReflectionMapping：由6个纹理组合而成，每个纹理都是立方体的一个面
 
 
 

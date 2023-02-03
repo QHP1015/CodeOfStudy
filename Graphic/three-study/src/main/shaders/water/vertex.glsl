@@ -6,7 +6,12 @@ uniform float uNoiseFrequency;
 uniform float uNoiseScale;
 uniform float uXzScale;
 uniform float uTime;
+uniform float uXspeed;
+uniform float uZspeed;
+uniform float uNoiseSpeed;
+
 varying float vElevation;
+
 
 // 随机函数
 float random (vec2 st) {
@@ -75,8 +80,8 @@ float cnoise(vec2 P) {
 void main() {
     vec4 modelPosition = modelMatrix * vec4(position, 1.0);
 
-    float elevation = sin(modelPosition.x * uWaresFrequency) * sin(modelPosition.z * uWaresFrequency * uXzScale);
-    elevation += -abs(cnoise(vec2(modelPosition.xz * uNoiseFrequency + uTime)) * uNoiseScale);
+    float elevation = sin(modelPosition.x * uWaresFrequency + uTime * uXspeed) * sin(modelPosition.z * uWaresFrequency * uXzScale + uTime * uZspeed);
+    elevation += -abs(cnoise(vec2(modelPosition.xz * uNoiseFrequency + uTime * uNoiseSpeed)) * uNoiseScale);
     vElevation = elevation;
     elevation *= uScale;
 
