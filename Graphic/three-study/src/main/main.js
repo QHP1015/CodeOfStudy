@@ -87,7 +87,7 @@ let galaxyColor = new THREE.Color(params.color);
 let outGalaxyColor = new THREE.Color(params.outColor);
 let material;
 const generateGalaxy = () => {
-  // 如果已经存在这些顶点，那么先释放内存，在删除顶点数据
+  // 如果已经存在这些顶点，那么先释放内存，再删除顶点数据
   if (points !== null) {
     geometry.dispose();
     material.dispose();

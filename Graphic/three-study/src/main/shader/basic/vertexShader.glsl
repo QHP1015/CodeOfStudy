@@ -19,7 +19,7 @@ void main(){
     // 根据顶点到中心的距离，设置旋转偏移度数
     float angleOffset = 1.0/distanceToCenter*uTime;
     // 目前旋转的度数
-    angle+=angleOffset;
+    angle+=angleOffset; 
 
     modelPosition.x = cos(angle)*distanceToCenter;
     modelPosition.z = sin(angle)*distanceToCenter;
