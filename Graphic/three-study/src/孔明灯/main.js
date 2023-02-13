@@ -118,6 +118,7 @@ controls.enableDamping = true;
 // 设置自动旋转
 controls.autoRotate = true;
 controls.autoRotateSpeed = 0.1;
+// 最大旋转角度
 controls.maxPolarAngle = (Math.PI / 3) * 2;
 controls.minPolarAngle = (Math.PI / 3) * 2;
 
