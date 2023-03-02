@@ -99,7 +99,7 @@ onMounted(() => {
     requestAnimationFrame(render);
   };
   render();
-
+  
   // 射线获取鼠标点击的位置
   const raycaster = new THREE.Raycaster();
   const mouse = new THREE.Vector2();
