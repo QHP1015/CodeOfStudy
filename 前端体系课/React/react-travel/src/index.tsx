@@ -9,7 +9,7 @@ import rootStore from './redux/store';
 import axios from 'axios';
 import { PersistGate } from 'redux-persist/integration/react';
 
-axios.defaults.headers['x-icode'] = 'J856AB21CA34331D8'
+axios.defaults.headers['x-icode'] = 'JFF939C6C79CA0965'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
